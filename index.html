@@ -5,41 +5,142 @@
   <title>Markdown Docs</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      display: flex;
-      height: 100vh;
-    }
-    #sidebar {
-      width: 260px;
-      background: #f5f5f5;
-      padding: 1rem;
-      overflow-y: auto;
-      border-right: 1px solid #ddd;
-    }
-    #content {
-      flex: 1;
-      padding: 2rem;
-      overflow-y: auto;
-    }
-    .item {
-      cursor: pointer;
-      padding: 4px 0;
-    }
-    .nested {
-      padding-left: 1rem;
-      font-size: 0.95em;
-    }
-    .item:hover {
-      text-decoration: underline;
-    }
-  </style>
+:root {
+  --bg: #f8f9fb;
+  --border: #e5e7eb;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: #6366f1;
+  --success-bg: #e8f5e9;
+  --success-border: #2e7d32;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Top bar */
+.topbar {
+  height: 56px;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  font-weight: 600;
+}
+
+/* App layout */
+.app {
+  display: flex;
+  height: calc(100vh - 56px);
+}
+
+/* Sidebar */
+#sidebar {
+  width: 280px;
+  background: white;
+  border-right: 1px solid var(--border);
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Sidebar items */
+.item {
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.item:hover {
+  background: #f3f4f6;
+}
+
+.item.active {
+  background: #eef2ff;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.section {
+  margin-top: 16px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.nested {
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+/* Content */
+#content {
+  flex: 1;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+#content > * {
+  max-width: 860px;
+}
+
+/* Markdown typography */
+#content h1 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+#content h2 {
+  margin-top: 32px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+}
+
+#content p {
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* Callout (REQUIREMENTS-style) */
+.callout {
+  display: flex;
+  gap: 12px;
+  border-left: 4px solid var(--success-border);
+  background: var(--success-bg);
+  padding: 16px;
+  border-radius: 6px;
+  margin: 24px 0;
+}
+
+.callout strong {
+  text-transform: uppercase;
+  font-size: 13px;
+}
+</style>
+
 </head>
+
 <body>
 
-<div id="sidebar"></div>
-<div id="content">Loading…</div>
+<header class="topbar">
+  <div class="logo">My Docs</div>
+</header>
+
+<div class="app">
+  <aside id="sidebar"></aside>
+  <main id="content"></main>
+</div>
 
 <script>
 const sidebar = document.getElementById("sidebar");
@@ -55,18 +156,18 @@ function buildSidebar(tree) {
     if (typeof tree[key] === "string") {
       sidebar.appendChild(linkItem(key, tree[key]));
     } else {
-      const header = document.createElement("div");
-      header.textContent = key;
-      header.style.fontWeight = "bold";
-      sidebar.appendChild(header);
+      const section = document.createElement("div");
+      section.className = "section";
+      section.textContent = key;
+      sidebar.appendChild(section);
 
       for (const sub in tree[key]) {
         sidebar.appendChild(linkItem(sub, tree[key][sub], true));
       }
     }
   }
-  loadFromHash();
 }
+
 
 function linkItem(label, path, nested = false) {
   const div = document.createElement("div");

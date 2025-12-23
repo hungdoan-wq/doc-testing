@@ -3,6 +3,6 @@
   "Assess test coverage": "docs/assess-test-coverage.md",
   "Understand project progress": "docs/understand-project-progress.md",
   "Assess test quality": "docs/assess-test-quality.md",
-  "Assess defects and errors": "docs/understand-defects-and-troubleshoot.md",
+  "Assess defects and errors": "docs/understand-defects-and-errors.md",
   "References": "docs/references.md"
 }

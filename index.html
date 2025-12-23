@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown Docs</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+    #sidebar {
+      width: 260px;
+      background: #f5f5f5;
+      padding: 1rem;
+      overflow-y: auto;
+      border-right: 1px solid #ddd;
+    }
+    #content {
+      flex: 1;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+    .item {
+      cursor: pointer;
+      padding: 4px 0;
+    }
+    .nested {
+      padding-left: 1rem;
+      font-size: 0.95em;
+    }
+    .item:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div id="sidebar"></div>
+<div id="content">Loading…</div>
+
+<script>
+const sidebar = document.getElementById("sidebar");
+const content = document.getElementById("content");
+
+fetch("manifest.json")
+  .then(r => r.json())
+  .then(buildSidebar);
+
+function buildSidebar(tree) {
+  sidebar.innerHTML = "";
+  for (const key in tree) {
+    if (typeof tree[key] === "string") {
+      sidebar.appendChild(linkItem(key, tree[key]));
+    } else {
+      const header = document.createElement("div");
+      header.textContent = key;
+      header.style.fontWeight = "bold";
+      sidebar.appendChild(header);
+
+      for (const sub in tree[key]) {
+        sidebar.appendChild(linkItem(sub, tree[key][sub], true));
+      }
+    }
+  }
+  loadFromHash();
+}
+
+function linkItem(label, path, nested = false) {
+  const div = document.createElement("div");
+  div.textContent = label;
+  div.className = "item" + (nested ? " nested" : "");
+  div.onclick = () => {
+    location.hash = path;
+  };
+  return div;
+}
+
+function loadFromHash() {
+  const file = location.hash.slice(1) || "intro.md";
+  loadMarkdown(file);
+}
+
+window.addEventListener("hashchange", loadFromHash);
+
+function loadMarkdown(file) {
+  fetch(file)
+    .then(r => r.text())
+    .then(md => {
+      content.innerHTML = marked.parse(md);
+      rewriteLinks();
+    });
+}
+
+function rewriteLinks() {
+  content.querySelectorAll("a").forEach(a => {
+    const href = a.getAttribute("href");
+    if (href && href.endsWith(".md")) {
+      a.onclick = e => {
+        e.preventDefault();
+        location.hash = href;
+      };
+    }
+  });
+}
+</script>
+
+</body>
+</html>

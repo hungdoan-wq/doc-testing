@@ -1,4 +1,4 @@
-{
+module.exports = {
   "katalon-platform": [
     "about-katalon-testops",
     {
@@ -23,14 +23,14 @@
           "User Management": [
             "administer/administration-and-licensing-alternate/manage-organizations/user-management/user-management",
             "administer/administration-and-licensing-alternate/manage-organizations/user-management/add-users-to-an-organization",
-            "administer/administration-and-licensing-alternate/manage-organizations/user-management/add-a-user-to-projects"
+            "administer/administration-and-licensing-alternate/manage-organizations/user-management/add-a-user-to-projects",
           ]
         },
         {
           "Configurations": [
               "administer/administration-and-licensing-alternate/manage-systems/configurations/configure-ai-services",
               "administer/administration-and-licensing-alternate/manage-systems/configurations/configure-ks",
-              "administer/administration-and-licensing-alternate/manage-systems/configurations/customizable-fields"            
+              "administer/administration-and-licensing-alternate/manage-systems/configurations/customizable-fields",            
           ]
         },
         {
@@ -50,14 +50,14 @@
             "administer/administration-and-licensing-alternate/manage-accounts/license-management/about-testops-license-types",
             "administer/administration-and-licensing-alternate/manage-accounts/license-management/assign-dedicated-licenses",
             "administer/administration-and-licensing-alternate/manage-accounts/license-management/edit-or-revoke-dedicated-licenses",
-            "administer/administration-and-licensing-alternate/manage-accounts/license-management/about-guest-licenses"
+            "administer/administration-and-licensing-alternate/manage-accounts/license-management/about-guest-licenses",
           ]
         },
         {
           "License Utilization": [
             "administer/administration-and-licensing-alternate/manage-accounts/license-utilization/seat-based-license-reports-kse",
             "administer/administration-and-licensing-alternate/manage-accounts/license-utilization/session-based-license-reports-kre",
-            "administer/administration-and-licensing-alternate/manage-accounts/license-utilization/seat-based-license-reports-testops"
+            "administer/administration-and-licensing-alternate/manage-accounts/license-utilization/seat-based-license-reports-testops",
           ]
         },
         {
@@ -73,34 +73,34 @@
             ]
           }
         ]
-        }
+        },
       ]
     },
     {
       "Plans": [
-        "plan/about-the-sprint-release-timeline"
+        "plan/about-the-sprint-release-timeline",
       ]
     },
     {
       "Tests": [
         "create-tests/create-new-test-cases",
         "create-tests/create-new-test-suite-and-add-test-cases",
-        "create-tests/generate-test-cases-with-ai"
+        "create-tests/generate-test-cases-with-ai",
       ]
     },
     {
       "Executions": [
         {
           "Manual executions": [
-            "execute/manual-executions/create-a-manual-test-run"
+            "execute/manual-executions/create-a-manual-test-run",
           ]
         },
         {
           "Automated executions": [
             "execute/automated-executions/create-an-automated-test-run",
-            "execute/automated-executions/monitor-automated-tests"
+            "execute/automated-executions/monitor-automated-tests",
           ]
-        }
+        },
       ]
     },
     {
@@ -122,7 +122,7 @@
             "analyze/reports/defect-status-analysis-report",
             "analyze/reports/configuration-coverage-report",
             "analyze/reports/requirement-test-coverage-report",
-            "analyze/reports/requirement-traceability-report"
+            "analyze/reports/requirement-traceability-report",
           ]
         },
         "analyze/smart-tags"
@@ -157,13 +157,13 @@
               "integrations/repository/github-integration",
               "integrations/repository/gitlab-integration",
               "integrations/repository/bitbucket-integration",
-              "integrations/repository/azure-repos-integration"
+              "integrations/repository/azure-repos-integration",
           ]
         },
         {
           "ALM and Test Management": [
               "integrations/alm-and-test-management/azure-devops-integration",
-              "integrations/alm-and-test-management/jira-integration"
+              "integrations/alm-and-test-management/jira-integration",
           ]
         },
         {
@@ -175,7 +175,8 @@
             "integrations/ci-cd/docker-integration",
             "integrations/ci-cd/github-action-integration",
             "integrations/ci-cd/gitlab-ci-integration",
-            "integrations/ci-cd/katalon-cli-integration"
+            // "integrations/ci-cd/jenkins-integration",
+            "integrations/ci-cd/katalon-cli-integration",
           ]
         },
         {
@@ -186,9 +187,15 @@
             "integrations/testing-framework/protractor-jasmine-integration",
             "integrations/testing-framework/protractor-mocha-integration",
             "integrations/testing-framework/pytest-integration",
-            "integrations/testing-framework/robot-framework-integration"
+            "integrations/testing-framework/robot-framework-integration",
           ]
         },
+        // {
+        //   "Jenkins": [
+        //     "integrations/cicd-integrations/jenkins-integration/use-katalon-plugins-for-jenkins-integration/integrate-jenkins-with-testops",
+        //     "integrations/cicd-integrations/jenkins-integration/execute-katalon-tests-on-jenkins-with-testcloud-environment",
+        //   ]
+        // },
         "integrations/cypress-integration",
         "integrations/daily-summary-emails",
         "integrations/playwright-integration",
@@ -339,6 +346,7 @@
     },
     {
       "Proof of concept": [
+        //"proof-of-concept/parameterize-azure-devops-test-case-id-list-in-katalon-studio-poc",
         "proof-of-concept/dependencies-management-with-native-gradle-support-poc-in-katalon-studio",
         "proof-of-concept/virtual-data-analyst"
       ]
@@ -363,7 +371,8 @@
             "troubleshooting/troubleshooting-common-execution-issues/spawn-git-enoent",
             "troubleshooting/troubleshooting-common-execution-issues/fix-empty-or-corrupted-screenshots-when-executing-tests-in-docker",
             "troubleshooting/troubleshooting-common-execution-issues/disable-proxytype-direct-saucelabs-remote-capabilities",
-            "troubleshooting/troubleshooting-common-execution-issues/windows-desktop-app-testing-on-later-versions-after-9.7.x"
+            "troubleshooting/troubleshooting-common-execution-issues/windows-desktop-app-testing-on-later-versions-after-9.7.x",
+            //"troubleshooting/troubleshooting-common-execution-issues/windows-desktop-app-testing-unavailable-in-katalon-studio-10.x"
           ]
         },
         {
@@ -412,7 +421,7 @@
             "plan/create-and-edit-releases-in-testops",
             "plan/create-and-manage-builds-in-katalon-testops",
             "plan/link-test-runs-to-a-release-in-testops",
-            "plan/link-test-execution-with-a-testops-release-using-command-builder"
+            "plan/link-test-execution-with-a-testops-release-using-command-builder",
           ]
         },
         {
@@ -422,8 +431,8 @@
             {
               "Test execution with TestOps": [
                 "execute/test-execution-with-testops/test-execution-with-testops",
-                "execute/test-execution-with-testops/schedule-test-runs-in-testops"
-              ]
+                "execute/test-execution-with-testops/schedule-test-runs-in-testops",
+              ],
             },
             {
               "Local Test Environments": [
@@ -455,7 +464,7 @@
           },
           {
             "Manage tests in TestOps": [
-              "organize/manage-tests-in-testops/manage-test-cases-in-katalon-testops"
+              "organize/manage-tests-in-testops/manage-test-cases-in-katalon-testops",
             ]
           }
         ]
@@ -535,7 +544,7 @@
                 "analyze/analytics/defects-report/defects-report-automations",
                 "analyze/analytics/defects-report/defects-report-slack-notifications"
               ]
-            }
+            },
           ]
         },
         {
@@ -598,7 +607,7 @@
                 }
               ]
             },
-            "administer/profile/configure-email-notifications-in-testops"
+            "administer/profile/configure-email-notifications-in-testops",
           ]
         },
         {
@@ -623,10 +632,10 @@
                 "integrations/xray-integration/link-a-katalon-test-run-with-an-xray-test-plan",
                 "integrations/xray-integration/manually-push-katalon-test-result-to-xray"
               ]
-            }
+            },
           ]
-        }
+        },  
       ]
     }
   ]
-}
+};

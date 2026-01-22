@@ -146,55 +146,99 @@ body {
 const sidebar = document.getElementById("sidebar");
 const content = document.getElementById("content");
 
+/* ---------------------------
+   Load JSON tree
+---------------------------- */
 fetch("docs_structure.json")
   .then(r => r.json())
-  .then(buildSidebar);
+  .then(tree => {
+    buildSidebar(tree);
+    loadFromHash();
+  });
 
+/* ---------------------------
+   Sidebar rendering
+---------------------------- */
 function buildSidebar(tree) {
   sidebar.innerHTML = "";
-  for (const key in tree) {
-    if (typeof tree[key] === "string") {
-      sidebar.appendChild(linkItem(key, tree[key]));
-    } else {
-      const section = document.createElement("div");
-      section.className = "section";
-      section.textContent = key;
-      sidebar.appendChild(section);
 
-      for (const sub in tree[key]) {
-        sidebar.appendChild(linkItem(sub, tree[key][sub], true));
-      }
+  Object.entries(tree).forEach(([title, node]) => {
+    // Section header
+    const section = document.createElement("div");
+    section.className = "section";
+    section.textContent = title;
+    sidebar.appendChild(section);
+
+    // Section index link
+    if (node.path) {
+      sidebar.appendChild(linkItem(title, node.path));
     }
-  }
+
+    // Children
+    if (node.children) {
+      Object.entries(node.children).forEach(([childTitle, childPath]) => {
+        sidebar.appendChild(linkItem(childTitle, childPath, true));
+      });
+    }
+  });
 }
 
-
+/* ---------------------------
+   Sidebar item
+---------------------------- */
 function linkItem(label, path, nested = false) {
   const div = document.createElement("div");
   div.textContent = label;
   div.className = "item" + (nested ? " nested" : "");
+  div.dataset.path = path;
+
   div.onclick = () => {
     location.hash = path;
   };
+
   return div;
 }
 
+/* ---------------------------
+   Markdown loading
+---------------------------- */
 function loadFromHash() {
-  const file = location.hash.slice(1) || "intro.md";
-  loadMarkdown(file);
+  const file = location.hash.slice(1);
+  if (file) {
+    loadMarkdown(file);
+  }
 }
 
 window.addEventListener("hashchange", loadFromHash);
 
 function loadMarkdown(file) {
   fetch(file)
-    .then(r => r.text())
+    .then(r => {
+      if (!r.ok) throw new Error("Markdown not found");
+      return r.text();
+    })
     .then(md => {
       content.innerHTML = marked.parse(md);
+      highlightActive(file);
       rewriteLinks();
+    })
+    .catch(() => {
+      content.innerHTML = "<p>Document not found.</p>";
     });
 }
 
+/* ---------------------------
+   Active item highlight
+---------------------------- */
+function highlightActive(path) {
+  document.querySelectorAll(".item").forEach(el => {
+    el.classList.toggle("active", el.dataset.path === path);
+  });
+}
+
+/* ---------------------------
+   Rewrite markdown links
+---------------------------- */
 function rewriteLinks() {
   content.querySelectorAll("a").forEach(a => {
     const href = a.getAttribute("href");

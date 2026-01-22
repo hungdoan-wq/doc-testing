@@ -1,60 +1,113 @@
 {
-  "Overview": "docs/overview.md",
-  "Get Started": "docs/get-started.md",
-  "Monitor Projects": {
+  "Release notes": {
+    "children": ""
+  },
+  "Getting started": {
+    "children": ""
+  },
+  "Administration": {
+    "children": ""
+  },
+  "Plans": {
+    "children": ""
+  },
+  "Tests": {
+    "children": ""
+  },
+  "Executions": {
+    "children": ""
+  },
+  "Analytics": {
     "children": {
-      "Monitor Real-Time Test Execution": "docs/monitor-projects/monitor-real-time-test-execution.md",
-      "Track Historical Quality Trends": "docs/monitor-projects/track-historical-quality-trends.md",
-      "Assess Release Readiness": "docs/monitor-projects/assess-release-readiness.md"
+      "Overview": "docs/overview.md",
+      "Get Started": "docs/get-started.md",
+      "Monitor Projects": {
+        "children": {
+          "Monitor Real-Time Test Execution": "docs/monitor-projects/monitor-real-time-test-execution.md",
+          "Track Historical Quality Trends": "docs/monitor-projects/track-historical-quality-trends.md",
+          "Assess Release Readiness": "docs/monitor-projects/assess-release-readiness.md"
+        }
+      },
+      "Test Results & Failures": {
+        "children": {
+          "View Test Result Details": "docs/test-results-failures/view-test-result-details.md",
+          "Investigate Test Failures": "docs/test-results-failures/investigate-test-failures.md",
+          "Investigate Flaky Tests": "docs/test-results-failures/investigate-flaky-tests.md",
+          "Analyze Error Patterns": "docs/test-results-failures/analyze-error-patterns.md"
+        }
+      },
+      "Test Coverage": {
+        "children": {
+          "Track Requirement Coverage": "docs/test-coverage/track-requirement-coverage.md",
+          "Analyze Traceability": "docs/test-coverage/analyze-traceability.md",
+          "Analyze Configuration Coverage": "docs/test-coverage/analyze-configuration-coverage.md"
+        }
+      },
+      "Defects": {
+        "children": {
+          "Analyze Defects & Issues": "docs/defects/analyze-defects-issues.md",
+          "View Defect Trends": "docs/defects/view-defect-trends.md"
+        }
+      },
+      "Test Case Activity": {
+        "children": {
+          "Track Test Case Stability": "docs/test-case-activity/track-test-case-stability.md",
+          "Analyze Execution History": "docs/test-case-activity/analyze-execution-history.md",
+          "Assess Test Case Quality": "docs/test-case-activity/assess-test-case-quality.md",
+          "Monitor Test Case Productivity": "docs/test-case-activity/monitor-test-case-productivity.md",
+          "Track Automation Progress": "docs/test-case-activity/track-automation-progress.md"
+        }
+      },
+      "Configurations": {
+        "children": {
+          "Quality Gates": "docs/configurations/quality-gates.md",
+          "Smart Tags": "docs/configurations/smart-tags.md"
+        }
+      },
+      "Customizations": {
+        "children": {
+          "Custom Widgets": "docs/customizations/custom-widgets.md",
+          "Custom Dashboards": "docs/customizations/custom-dashboards.md",
+          "Advanced Filters & Combinations": "docs/customizations/advanced-filters-combinations.md"
+        }
+      },
+      "References": {
+        "children": {
+          "Test Stability Metrics": "docs/references/test-stability-metrics.md",
+          "Defect Metrics": "docs/references/defect-metrics.md"
+        }
+      }
     }
   },
-  "Test Results & Failures": {
-    "children": {
-      "View Test Result Details": "docs/test-results-failures/view-test-result-details.md",
-      "Investigate Test Failures": "docs/test-results-failures/investigate-test-failures.md",
-      "Investigate Flaky Tests": "docs/test-results-failures/investigate-flaky-tests.md",
-      "Analyze Error Patterns": "docs/test-results-failures/analyze-error-patterns.md"
-    }
+  "Visual Testing": {
+    "children": ""
   },
-  "Test Coverage": {
-    "children": {
-      "Track Requirement Coverage": "docs/test-coverage/track-requirement-coverage.md",
-      "Analyze Traceability": "docs/test-coverage/analyze-traceability.md",
-      "Analyze Configuration Coverage": "docs/test-coverage/analyze-configuration-coverage.md"
-    }
+  "Project Settings": {
+    "children": ""
   },
-  "Defects": {
-    "children": {
-      "Analyze Defects & Issues": "docs/defects/analyze-defects-issues.md",
-      "View Defect Trends": "docs/defects/view-defect-trends.md"
-    }
+  "Integrations": {
+    "children": ""
   },
-  "Test Case Activity": {
-    "children": {
-      "Track Test Case Stability": "docs/test-case-activity/track-test-case-stability.md",
-      "Analyze Execution History": "docs/test-case-activity/analyze-execution-history.md",
-      "Assess Test Case Quality": "docs/test-case-activity/assess-test-case-quality.md",
-      "Monitor Test Case Productivity": "docs/test-case-activity/monitor-test-case-productivity.md",
-      "Track Test Case Automation Progress": "docs/test-case-activity/track-test-case-automation-progress.md"
-    }
+  "Katalon TestOps MCP Server": {
+    "children": ""
   },
-  "Configurations": {
-    "children": {
-      "Quality Gates": "docs/configurations/quality-gates.md",
-      "Smart Tags": "docs/configurations/smart-tags.md"
-    }
+  "Plugins and add-ons": {
+    "children": ""
   },
-  "Customizations": {
-    "children": {
-      "Custom Widgets": "docs/customizations/custom-widgets.md",
-      "Custom Dashboards": "docs/customizations/custom-dashboards.md",
-      "Advanced Filters & Combinations": "docs/customizations/advanced-filters-combinations.md"
-    }
+  "Proof of concept": {
+    "children": ""
   },
-  "References": {
-    "children": {
-      "Test Stability Metrics": "docs/references/test-stability-metrics.md",
-      "Defect Metrics": "docs/references/defect-metrics.md"
-    }
+  "Troubleshooting": {
+    "children": ""
+  },
+  "User Profile Settings": {
+    "children": ""
+  },
+  "Security and Privacy FAQ": {
+    "children": ""
+  },
+  "Customer Support FAQs": {
+    "children": ""
   }
+  
 }

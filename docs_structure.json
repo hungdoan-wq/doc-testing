@@ -3,7 +3,15 @@
     "children": ""
   },
   "Getting started": {
-    "children": ""
+    "children": {
+      "Get Started": "docs/get-started/get-started-with-katalon-testops.md",
+      "Quick Guide for Admins": "docs/get-started/quick-guide-for-admin.md",
+      "Quick Guide for Billing Managers": "docs/get-started/quick-guide-for-billing-managers.md",
+      "Quick Guide for QA Managers": "docs/get-started/quick-guide-for-qa-managers-1.md",
+      "Quick Guide for Manual Testers": "docs/get-started/quick-guide-for-manual-testers.md",
+      "Quick Guide for Automation Engineers": "docs/get-started/quick-guide-for-automation-engineers.md",
+      "Quick Guide for Product Owners": "docs/get-started/quick-guide-for-product-owners.md"
+    }
   },
   "Administration": {
     "children": ""
@@ -19,8 +27,6 @@
   },
   "Analytics": {
     "children": {
-      "Overview": "docs/overview.md",
-      "Get Started": "docs/get-started.md",
       "Monitor Projects": {
         "children": {
           "Monitor Real-Time Test Execution": "docs/monitor-projects/monitor-real-time-test-execution.md",

@@ -1,0 +1,1 @@
+# Quick guide for QA managers

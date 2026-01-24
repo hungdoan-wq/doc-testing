@@ -1,3 +1,0 @@
-# References
-
-Content coming soon.

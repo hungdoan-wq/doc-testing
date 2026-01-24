@@ -1,3 +1,0 @@
-# Defects
-
-Content coming soon.

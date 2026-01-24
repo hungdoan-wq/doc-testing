@@ -2811,3 +2811,1631 @@ Best practice for large distributions:
 - Estimated reading time: 21 minutes
 
 [Configuration & Sharing OverviewLearn how to share TestOps dashboards and reports with external stakeholders, export data for analysis, and configure access control for collaboration without license barriers.](/docs/configuration-sharing/configuration-and-sharing-overview)[Export Reports and DashboardsExport report data as CSV for analysis in Excel or BI tools, and export individual test run results in Excel, HTML, or PDF formats for documentation and compliance records.](/docs/configuration-sharing/export-reports-and-dashboards)
+
+
+Getting Started
+# Getting Started: Overview and Getting Started
+
+Navigate Reports & Analytics confidently with task-to-tool mapping, basic filtering, and dashboard exploration for all testing roles.
+
+# Getting Started: Overview and Getting Started
+
+Reading time: 8 minutes
+
+Reports & Analytics offers dozens of dashboards, reports, and analysis tools. Without a map, it's easy to get lost or miss critical capabilities. This guide gives you that map—showing you where to start, which tool to use for each task, and how to navigate confidently from day one.
+
+## What This Section Covers
+
+This section provides capabilities to:
+
+- Navigate the Reports & Analytics module structure (dashboards vs. reports, navigation patterns, core interface elements)
+
+- Access and explore the Project Dashboard to understand real-time quality metrics and test execution status
+
+- Apply basic filtering with the time range selector to focus analysis on specific time periods
+
+- Map common testing tasks to the right tools (task-to-tool reference covering daily monitoring, failure investigation, coverage tracking, release readiness)
+
+## What You'll Achieve
+
+By completing this section, you will:
+
+- Navigate confidently between Reports & Analytics dashboards and reports using the left navigation menu
+
+- Distinguish between dashboards (real-time monitoring) and reports (historical analysis) and know when to use each
+
+- Access the Project Dashboard and interpret key metrics (total executions, pass rate, failed tests, execution trends)
+
+- Apply basic time range filtering to adjust dashboard and report scope for day-to-day analysis
+
+- Identify which tool to use for common testing tasks using the task-to-tool mapping reference (monitoring live tests, investigating failures, checking coverage, assessing release readiness)
+
+- Understand navigation patterns and next learning steps based on your role (QA Engineer, QA Manager, Automation Engineer, Product Owner)
+
+## Prerequisites
+
+Before you begin: You need an active TestOps account with access to at least one project containing test execution data. If you don't have access yet, contact your TestOps administrator.
+
+## Visual Journey Map
+
+The diagram below shows your navigation journey from arriving at TestOps to finding the insights you need:
+
+
+## Task-to-Tool Mapping: Finding the Right Tool Fast
+
+The table below maps common testing tasks to the specific dashboard or report that answers your question:
+
+| I Need To...                               | Use This Tool                                                                                                                                                                                                                          | Why?                                                                                                           |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Monitor tests running RIGHT NOW            | [Live Monitor Dashboard](https://ktl-docs-ra.vercel.app/docs/dashboards/live-monitor)                                                                                                                                                  | Real-time progress tracking with 5-second refresh during active executions                                     |
+| See project's overall quality today        | [Project Dashboard](https://ktl-docs-ra.vercel.app/docs/getting-started/project-dashboard)                                                                                                                                             | Consolidated current metrics (pass rate, total executions, failed tests, trends)                               |
+| Investigate why tests failed last week     | [Test Results Analysis Report](https://ktl-docs-ra.vercel.app/docs/test-failures/test-results-analysis)                                                                                                                                | Historical drill-down analysis with filters for time ranges, configurations, and test cases                    |
+| Check if release is ready to ship          | [Release Health Dashboard](https://ktl-docs-ra.vercel.app/docs/release-readiness/release-health-dashboard)                                                                                                                             | Quality gates, release-specific metrics, and READY/AT RISK indicator for go/no-go decisions                    |
+| Find which requirements lack coverage      | [Requirements Coverage Report](https://ktl-docs-ra.vercel.app/docs/coverage/requirements-coverage)                                                                                                                                     | Coverage percentages linked to requirements, showing gaps and completion status                                |
+| Identify flaky/unstable tests              | [Test Failures Analysis Report](https://ktl-docs-ra.vercel.app/docs/test-failures/test-failures-analysis) or [Project Dashboard Flaky Tests widget](https://ktl-docs-ra.vercel.app/docs/getting-started/project-dashboard#flaky-tests) | Highlights intermittent failures with Probabilistic Flakiness Score (PFS)                                      |
+| Track defect trends over time              | [Defect Activity Analysis Report](https://ktl-docs-ra.vercel.app/docs/defects/defect-activity-analysis)                                                                                                                                | Historical defect patterns showing discovery rate, resolution velocity, and trend analysis                     |
+| See automated vs. manual test distribution | [Automation Progress Report](https://ktl-docs-ra.vercel.app/docs/coverage/automation-progress)                                                                                                                                         | Automation coverage tracking with breakdown by test type and execution method                                  |
+| Verify testing across browsers/devices     | [Configuration Coverage Report](https://ktl-docs-ra.vercel.app/docs/coverage/configuration-coverage)                                                                                                                                   | Platform and environment coverage showing which configurations have been tested                                |
+| Generate compliance audit report           | [Requirement Traceability Report](https://ktl-docs-ra.vercel.app/docs/coverage/requirement-traceability)                                                                                                                               | Full traceability chain (requirements → tests → results → defects) in audit-ready format with PDF/Excel export |
+## Understanding Dashboards vs. Reports
+
+Before diving into specific tools, understand the key distinction that shapes how you'll navigate Reports & Analytics:
+
+Dashboards:
+
+- Widget-based, composable layouts - users arrange multiple widgets (charts, metrics, alerts) into personalized views
+
+- Purpose: Monitoring and alerting - "How are we doing right now?" across multiple concerns simultaneously
+
+- At-a-glance operational awareness - like a car's instrument panel showing multiple indicators together
+
+- Emphasize visual patterns, trend detection, and proactive decision-making
+
+- Ideal for: Stakeholders who need to spot issues quickly and take action (e.g., "Test stability dropped below 90%, investigate now")
+
+- Use case: Continuous monitoring, anomaly detection, operational oversight
+
+Reports:
+
+- Predefined, deep-dive analytical views - structured to answer specific analytical questions
+
+- Purpose: Investigation and documentation - "Why did this happen?" or "Which requirements lack coverage?"
+
+- Detailed data tables with drill-down capabilities - comprehensive data exploration and root cause analysis
+
+- Emphasize data completeness, traceability, and exportable formats
+
+- Ideal for: Practitioners who need to investigate problems, prove compliance, or document findings (e.g., generating requirement traceability matrix for auditors)
+
+- Use case: Root cause analysis, compliance documentation, detailed investigation
+
+When to use each:
+
+- Use dashboards proactive monitoring (high-level, customizable, multi-metric views)
+
+- Use reports for reactive analysis (detailed, predefined, single-question focus)
+
+## Section Contents Overview
+
+This section includes 2 tutorials, 1 how-to guide, 1 explanation, and 1 reference document to build your navigation foundation:
+
+Tutorials:
+
+- [Exploring the Project Dashboard](/docs/getting-started/project-dashboard) - Learn core metrics, widgets, and quality indicators on the universal quality dashboard all users access daily
+
+- [Quick Start: Your First 5 Minutes](/docs/getting-started/quick-start) - Hands-on walkthrough from login to finding your first insight in under 5 minutes
+
+How-To Guides:
+
+- [Using Filters & Analysis Scope](/docs/getting-started/filters-analysis-scope) - Master time range, release scope, and current filters to focus analysis efficiently
+
+Explanations:
+
+- [Core Concepts: Understanding Reports & Analytics](/docs/getting-started/core-concepts) - Deep dive into module architecture, data flow, and terminology standards
+
+Reference:
+
+- [All Reports & Dashboards Quick Reference](/docs/reference/all-reports) - Complete catalog with descriptions, use cases, and links for every tool in Reports & Analytics
+
+## Recommended Learning Path
+
+[### For QA Engineers
+Start: Investigating Test Failures - Learn systematic failure investigation workflow for daily debugging tasks, including AI-powered root cause analysisThen: Using Filters & Analysis Scope - Master filtering system to focus analysis efficiently on relevant time periods, releases, and configurationsFinally: Identifying Flaky Tests - Distinguish flaky tests from real failures to prioritize work and improve test reliability](/docs/test-failures/introduction)[### For QA Managers
+Start: Dashboards & Monitoring - Understand Live Monitor, Analytics & Trends, and Release Health dashboards for team oversight and quality trackingThen: Assessing Release Readiness - Set up quality gates and release readiness workflows to make objective go/no-go decisionsFinally: Tracking Requirement Coverage - Monitor test coverage for completeness and compliance with audit-ready traceability](/docs/dashboards/introduction)
+
+## Common Questions
+
+### What's the difference between dashboards and reports in TestOps?
+
+### I don't see any data in my dashboard. What should I check?
+
+### Can I customize the Project Dashboard or other built-in dashboards?
+
+Yes. TestOps allows dashboard customization including adding/removing widgets, resizing, and configuring widget settings. You can also create completely custom dashboards from scratch. Admin permissions required for organization-wide customizations.
+
+Learn more: [Dashboard Configuration Guide](/docs/customization/dashboard-configuration)
+
+### How do I know which report to use for compliance audits?
+
+### What if I can't find a specific dashboard or report in my navigation?
+
+## See Also
+
+Foundation Concepts:
+
+- [Core Concepts: Understanding Reports & Analytics](/docs/getting-started/core-concepts) - Deep dive into module architecture, data flow, and terminology standards
+
+Next Sections:
+
+- [Dashboards & Monitoring](/docs/dashboards/introduction) - Apply navigation knowledge to real-time monitoring with Live Monitor and Analytics & Trends
+
+- [Test Failures](/docs/test-failures/introduction) - When dashboards show quality issues, learn systematic investigation workflows
+
+Advanced Topics:
+
+- [Customization & External Sharing](/docs/customization/introduction) - Customize dashboards and reports to match your team's workflow after mastering navigation
+
+## 📍 Where to Go Next
+
+Common next steps after Getting Started:
+
+- [Exploring the Project Dashboard](/docs/getting-started/project-dashboard) - Start hands-on by exploring the universal quality dashboard all users access daily
+
+- [Dashboards & Monitoring](/docs/dashboards/introduction) - Understand Live Monitor, Analytics & Trends, and Release Health for team oversight
+
+- [Workflow Guide: Role-Based Pathways](/docs/workflows/overview) - Not sure which section to explore next? Find your role's recommended learning path
+
+Need help deciding? See [Workflow Guide: Role-Based Pathways](/docs/workflows/overview)
+[Core Concepts - Understanding Reports & AnalyticsBuild a mental model of TestOps Reports & Analytics—understand dashboards vs reports, role-based use cases, data models, and how R&A fits into your testing workflow.](/docs/getting-started/why-testops-for-test-analytics)
+
+Getting Started
+# Core Concepts - Understanding Reports & Analytics
+
+Build a mental model of TestOps Reports & Analytics—understand dashboards vs reports, role-based use cases, data models, and how R&A fits into your testing workflow.
+
+# Core Concepts: Understanding Reports & Analytics
+
+Reading time: 12 minutes
+
+Looking for hands-on practice? If you prefer learning by doing, start with [Getting Started with Reports & Analytics](/docs/getting-started/introduction) for a step-by-step tutorial. This document provides conceptual understanding that complements the hands-on guide.
+
+## Introduction
+
+Imagine managing a software testing operation without visibility into what's happening. You don't know which tests are passing or failing, which builds are stable, or whether your team is ready to release. You're flying blind.
+
+This is the problem Katalon TestOps Reports & Analytics solves. It transforms raw test execution data into actionable insights, giving you the visibility and intelligence you need to make confident quality decisions.
+
+This guide helps you build a mental model of Reports & Analytics: what it does, how it works, and when to use each feature. Whether you're a QA Manager planning adoption, a Tester learning the platform, or an Engineer integrating automation, understanding these core concepts will help you use TestOps more effectively.
+
+## What is Reports & Analytics?
+
+### The Testing Visibility Challenge
+
+Modern software teams face a common challenge: testing generates massive amounts of data, but data alone doesn't tell you what to do.
+
+Consider a typical scenario:
+
+- Your CI/CD pipeline runs 2,000 automated tests every night
+
+- Manual testers execute 150 test cases daily
+
+- Multiple teams work on different features simultaneously
+
+- Tests run across different environments, browsers, and devices
+
+Without Reports & Analytics, you'd need to manually sift through logs, spreadsheets, and CI/CD outputs to answer basic questions like "Are we ready to release?" or "Why did yesterday's build fail?"
+
+### What Reports & Analytics Provides
+
+Reports & Analytics (R&A) is TestOps's intelligence layer—it collects test execution data from all sources and transforms it into four key capabilities:
+
+- Real-time monitoring: See what's happening right now with live dashboards
+
+- Historical analysis: Understand trends, patterns, and changes over time
+
+- Quality insights: Identify flaky tests, coverage gaps, and risk areas
+
+- Compliance traceability: Link tests to requirements for regulatory reporting
+
+#_r_8e_{margin:1.5rem auto 0;}#_r_8e_{font-family:inherit;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#_r_8e_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#_r_8e_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#_r_8e_ .error-icon{fill:#552222;}#_r_8e_ .error-text{fill:#552222;stroke:#552222;}#_r_8e_ .edge-thickness-normal{stroke-width:1px;}#_r_8e_ .edge-thickness-thick{stroke-width:3.5px;}#_r_8e_ .edge-pattern-solid{stroke-dasharray:0;}#_r_8e_ .edge-thickness-invisible{stroke-width:0;fill:none;}#_r_8e_ .edge-pattern-dashed{stroke-dasharray:3;}#_r_8e_ .edge-pattern-dotted{stroke-dasharray:2;}#_r_8e_ .marker{fill:#333333;stroke:#333333;}#_r_8e_ .marker.cross{stroke:#333333;}#_r_8e_ svg{font-family:inherit;font-size:16px;}#_r_8e_ p{margin:0;}#_r_8e_ .label{font-family:inherit;color:#333;}#_r_8e_ .cluster-label text{fill:#333;}#_r_8e_ .cluster-label span{color:#333;}#_r_8e_ .cluster-label span p{background-color:transparent;}#_r_8e_ .label text,#_r_8e_ span{fill:#333;color:#333;}#_r_8e_ .node rect,#_r_8e_ .node circle,#_r_8e_ .node ellipse,#_r_8e_ .node polygon,#_r_8e_ .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#_r_8e_ .rough-node .label text,#_r_8e_ .node .label text,#_r_8e_ .image-shape .label,#_r_8e_ .icon-shape .label{text-anchor:middle;}#_r_8e_ .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#_r_8e_ .rough-node .label,#_r_8e_ .node .label,#_r_8e_ .image-shape .label,#_r_8e_ .icon-shape .label{text-align:center;}#_r_8e_ .node.clickable{cursor:pointer;}#_r_8e_ .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#_r_8e_ .arrowheadPath{fill:#333333;}#_r_8e_ .edgePath .path{stroke:#333333;stroke-width:2.0px;}#_r_8e_ .flowchart-link{stroke:#333333;fill:none;}#_r_8e_ .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_8e_ .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#_r_8e_ .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_8e_ .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#_r_8e_ .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#_r_8e_ .cluster text{fill:#333;}#_r_8e_ .cluster span{color:#333;}#_r_8e_ div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:inherit;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#_r_8e_ .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#_r_8e_ rect.text{fill:none;stroke-width:0;}#_r_8e_ .icon-shape,#_r_8e_ .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_8e_ .icon-shape p,#_r_8e_ .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#_r_8e_ .icon-shape rect,#_r_8e_ .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_8e_ .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#_r_8e_ .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#_r_8e_ :root{--mermaid-font-family:inherit;}
+Insights & Actions
+
+Reports & Analytics
+
+Test Data Sources
+
+Katalon Studio
+
+Playwright/Other Tools
+
+Manual Tests
+
+CI/CD Pipelines
+
+Data Collection
+
+Processing & Calculation
+
+Metrics Engine
+
+Real-time Dashboards
+
+Historical Reports
+
+Quality Insights
+
+Compliance Traceability
+
+Figure 1: How Reports & Analytics transforms test data into actionable insights
+
+### How R&A Fits in the TestOps Ecosystem
+
+Reports & Analytics doesn't work in isolation—it's deeply integrated with other TestOps modules:
+
+- Test Management → R&A: Test case execution results feed into quality reports
+
+- Requirements → R&A: Traceability reports link test coverage to requirements
+
+- Visual Testing → R&A: Visual comparison results appear in quality dashboards
+
+- Integrations → R&A: Jira issues, GitHub PRs, and CI/CD data enrich analytics
+
+- Test Environments → R&A: Environment-specific analysis helps isolate issues
+
+Think of R&A as the "brain" that makes sense of all the testing activity happening across your organization.
+
+## Who Uses Reports & Analytics?
+
+Reports & Analytics serves different roles with different needs. Understanding these perspectives helps you choose the right features for your situation.
+
+Five key roles:
+
+- QA Managers: Strategic oversight, release readiness, quality trends
+
+- Manual Testers: Execution tracking, failure investigation
+
+- Automation Engineers: Flaky test detection, test optimization
+
+- DevOps Engineers: Pipeline integration, quality gates
+
+- Product Managers: Feature quality, requirement traceability
+
+### QA Managers: Strategic Oversight
+
+### Manual Testers: Execution and Investigation
+
+### Automation Engineers: Maintenance and Optimization
+
+### DevOps Engineers: Pipeline Integration
+
+### Product Managers: Feature Quality
+
+## Dashboards vs Reports: When to Use What
+
+One of the most common questions new users ask is: "Should I use a dashboard or a report?" Understanding the conceptual difference helps you choose the right tool.
+
+### Dashboards: Multi-Metric Monitoring Interfaces
+
+Purpose: Dashboards are designed for ongoing vigilance across multiple concerns—they show you several related metrics simultaneously for proactive decision-making.
+
+Conceptual Model: Think of a dashboard like a car's instrument panel. You glance at it while driving to monitor speed, fuel, engine temperature, and warning lights all at once. It gives you just enough information across multiple dimensions to make immediate decisions.
+
+When to use dashboards:
+
+- You need to monitor multiple related metrics simultaneously (not just one thing)
+
+- You want at-a-glance pattern recognition across different dimensions
+
+- You check the same set of concerns repeatedly (daily standup, release monitoring)
+
+- You need customizable layouts to arrange widgets for your specific workflow
+
+- You want alerting and anomaly detection (visual cues when things go wrong)
+
+Example use cases:
+
+- QA Manager checks Release Health Dashboard every morning (pass rate + defects + coverage in one view)
+
+- Team displays Live Monitor Dashboard on office TV during test runs (execution progress + failures + environment status)
+
+- Automation Engineer monitors Flaky Test Dashboard weekly (stability trends + top flaky tests + impact)
+
+### Reports: Single-Question Analytical Deep Dives
+
+Purpose: Reports are designed for focused investigation and documentation—they answer specific analytical questions with comprehensive detail.
+
+Conceptual Model: Think of a report like a medical diagnostic test. It provides detailed, structured data to answer a specific question thoroughly and can be exported for records.
+
+When to use reports:
+
+- You need to answer a specific analytical question (e.g., "Which requirements lack coverage?")
+
+- You require detailed data tables with drill-down capabilities for investigation
+
+- You want exportable documentation for compliance, audits, or stakeholder communication
+
+- You need comprehensive data completeness for a particular concern (not just highlights)
+
+- You're conducting root cause analysis that requires exploring granular details
+
+Example use cases:
+
+- QA Manager generates Requirement Coverage Report to identify untested requirements (detailed table with drill-down)
+
+- Compliance Officer exports Requirement Traceability Report for audit (complete documentation)
+
+- Automation Engineer creates Test Failure Analysis Report to investigate why specific tests failed (detailed logs, stack traces, history)
+
+### Decision Guide: Dashboard or Report?
+
+QuestionDashboardReportWhen do I use it?Repeatedly, ongoingOnce or occasionallyWhat am I trying to do?Monitor multiple concernsInvestigate specific questionWhat's the depth?High-level patterns across metricsDetailed analysis of one concernHow do I view it?Composable widgets, customizable layoutPredefined structure, data tablesWho consumes it?Internal team monitoringInternal + external stakeholdersDo I need to export it?RarelyOften (PDF, CSV, etc.)What's the interaction model?Glanceable, visual patternsDrill-down, explore details
+#_r_8g_{margin:1.5rem auto 0;}#_r_8g_{font-family:inherit;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#_r_8g_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#_r_8g_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#_r_8g_ .error-icon{fill:#552222;}#_r_8g_ .error-text{fill:#552222;stroke:#552222;}#_r_8g_ .edge-thickness-normal{stroke-width:1px;}#_r_8g_ .edge-thickness-thick{stroke-width:3.5px;}#_r_8g_ .edge-pattern-solid{stroke-dasharray:0;}#_r_8g_ .edge-thickness-invisible{stroke-width:0;fill:none;}#_r_8g_ .edge-pattern-dashed{stroke-dasharray:3;}#_r_8g_ .edge-pattern-dotted{stroke-dasharray:2;}#_r_8g_ .marker{fill:#333333;stroke:#333333;}#_r_8g_ .marker.cross{stroke:#333333;}#_r_8g_ svg{font-family:inherit;font-size:16px;}#_r_8g_ p{margin:0;}#_r_8g_ .label{font-family:inherit;color:#333;}#_r_8g_ .cluster-label text{fill:#333;}#_r_8g_ .cluster-label span{color:#333;}#_r_8g_ .cluster-label span p{background-color:transparent;}#_r_8g_ .label text,#_r_8g_ span{fill:#333;color:#333;}#_r_8g_ .node rect,#_r_8g_ .node circle,#_r_8g_ .node ellipse,#_r_8g_ .node polygon,#_r_8g_ .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#_r_8g_ .rough-node .label text,#_r_8g_ .node .label text,#_r_8g_ .image-shape .label,#_r_8g_ .icon-shape .label{text-anchor:middle;}#_r_8g_ .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#_r_8g_ .rough-node .label,#_r_8g_ .node .label,#_r_8g_ .image-shape .label,#_r_8g_ .icon-shape .label{text-align:center;}#_r_8g_ .node.clickable{cursor:pointer;}#_r_8g_ .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#_r_8g_ .arrowheadPath{fill:#333333;}#_r_8g_ .edgePath .path{stroke:#333333;stroke-width:2.0px;}#_r_8g_ .flowchart-link{stroke:#333333;fill:none;}#_r_8g_ .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_8g_ .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#_r_8g_ .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_8g_ .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#_r_8g_ .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#_r_8g_ .cluster text{fill:#333;}#_r_8g_ .cluster span{color:#333;}#_r_8g_ div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:inherit;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#_r_8g_ .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#_r_8g_ rect.text{fill:none;stroke-width:0;}#_r_8g_ .icon-shape,#_r_8g_ .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_8g_ .icon-shape p,#_r_8g_ .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#_r_8g_ .icon-shape rect,#_r_8g_ .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_8g_ .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#_r_8g_ .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#_r_8g_ :root{--mermaid-font-family:inherit;}
+Multiple concerns
+
+Single question
+
+Repeatedly
+
+One-time
+
+Yes
+
+No
+
+Need insights about your tests?
+
+Multiple related concernsor single question?
+
+Need detailed tablesor export?
+
+Check repeatedly orone-time investigation?
+
+Use Dashboard
+
+Use Report
+
+Use Dashboardfor quick patterns
+
+Use Reportfor documentation
+
+Examples:• Monitor release health• Track test stability trends• Spot anomalies across metrics
+
+Examples:• Investigate test failures• Audit requirement coverage• Document quality for stakeholders
+
+Figure 3: Decision tree for choosing dashboards vs reports
+
+### Can I Use Both?
+
+Absolutely! Most teams use dashboards for ongoing monitoring and reports for periodic deep-dives. For example:
+
+Weekly workflow:
+
+- Monday-Friday: Check Live Monitor Dashboard during test runs (monitoring multiple execution metrics)
+
+- When failures occur: Generate Test Failure Analysis Report to investigate root cause (detailed drill-down)
+
+- Friday afternoon: Generate End-of-Sprint Coverage Report for stakeholders (documentation)
+
+- Sprint retrospective: Review Release Health Dashboard for trends, then export detailed reports for records
+
+## Common Workflows & Use Cases
+
+Understanding how R&A fits into real-world testing workflows helps you apply it effectively. Here are three common scenarios:
+
+### Scenario 1: Daily Standup Check-In
+
+Role: QA Manager
+Goal: Provide quality update to team
+
+Workflow:
+
+- Open Release Health Dashboard filtered to current sprint
+
+- Check pass rate trend (is quality improving or declining?)
+
+- Review open critical defects (any blockers?)
+
+- Note test execution progress (are we on track?)
+
+- Share key metrics in standup (2 minutes)
+
+Why R&A helps: Provides instant, accurate quality snapshot without manual data gathering.
+
+### Scenario 2: Investigating Test Failures
+
+Role: Automation Engineer
+Goal: Understand why nightly tests failed
+
+Workflow:
+
+- Open Live Monitor Dashboard showing last night's test run
+
+- Identify failed tests and sort by failure rate
+
+- Click into individual test result to see logs, screenshots, error messages
+
+- Notice pattern: 5 tests failed with same "timeout" error
+
+- Cross-reference with Environment Analysis (is it environment-specific?)
+
+- Create Jira ticket linked to failing tests
+
+- Mark tests as "known issue" to track resolution
+
+Why R&A helps: Connects test results to context (environment, history, related failures) for faster root cause analysis.
+
+### Scenario 3: Preparing for Release
+
+Role: Product Manager + QA Manager
+Goal: Decide if release is ready for production
+
+Workflow:
+
+- Generate Requirement Coverage Report (are all features tested?)
+
+- Review Release Health Dashboard (current quality status)
+
+- Check Defect Analysis Report (any high-severity open bugs?)
+
+- Compare pass rate trend (quality improving or declining?)
+
+- Evaluate against release criteria:
+
+95%+ pass rate → ✅
+All critical requirements covered → ✅
+No P0/P1 open defects → ✅
+
+- Make go/no-go decision with data-backed confidence
+
+Why R&A helps: Provides comprehensive, objective view of release readiness rather than relying on subjective opinions.
+
+#_r_8j_{margin:1.5rem auto 0;}#_r_8j_{font-family:inherit;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#_r_8j_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#_r_8j_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#_r_8j_ .error-icon{fill:#552222;}#_r_8j_ .error-text{fill:#552222;stroke:#552222;}#_r_8j_ .edge-thickness-normal{stroke-width:1px;}#_r_8j_ .edge-thickness-thick{stroke-width:3.5px;}#_r_8j_ .edge-pattern-solid{stroke-dasharray:0;}#_r_8j_ .edge-thickness-invisible{stroke-width:0;fill:none;}#_r_8j_ .edge-pattern-dashed{stroke-dasharray:3;}#_r_8j_ .edge-pattern-dotted{stroke-dasharray:2;}#_r_8j_ .marker{fill:#333333;stroke:#333333;}#_r_8j_ .marker.cross{stroke:#333333;}#_r_8j_ svg{font-family:inherit;font-size:16px;}#_r_8j_ p{margin:0;}#_r_8j_ .label{font-family:inherit;color:#333;}#_r_8j_ .cluster-label text{fill:#333;}#_r_8j_ .cluster-label span{color:#333;}#_r_8j_ .cluster-label span p{background-color:transparent;}#_r_8j_ .label text,#_r_8j_ span{fill:#333;color:#333;}#_r_8j_ .node rect,#_r_8j_ .node circle,#_r_8j_ .node ellipse,#_r_8j_ .node polygon,#_r_8j_ .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#_r_8j_ .rough-node .label text,#_r_8j_ .node .label text,#_r_8j_ .image-shape .label,#_r_8j_ .icon-shape .label{text-anchor:middle;}#_r_8j_ .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#_r_8j_ .rough-node .label,#_r_8j_ .node .label,#_r_8j_ .image-shape .label,#_r_8j_ .icon-shape .label{text-align:center;}#_r_8j_ .node.clickable{cursor:pointer;}#_r_8j_ .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#_r_8j_ .arrowheadPath{fill:#333333;}#_r_8j_ .edgePath .path{stroke:#333333;stroke-width:2.0px;}#_r_8j_ .flowchart-link{stroke:#333333;fill:none;}#_r_8j_ .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_8j_ .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#_r_8j_ .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_8j_ .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#_r_8j_ .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#_r_8j_ .cluster text{fill:#333;}#_r_8j_ .cluster span{color:#333;}#_r_8j_ div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:inherit;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#_r_8j_ .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#_r_8j_ rect.text{fill:none;stroke-width:0;}#_r_8j_ .icon-shape,#_r_8j_ .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_8j_ .icon-shape p,#_r_8j_ .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#_r_8j_ .icon-shape rect,#_r_8j_ .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_8j_ .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#_r_8j_ .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#_r_8j_ :root{--mermaid-font-family:inherit;}
+Release Readiness (Product + QA)
+
+Generate CoverageReport
+
+Review HealthDashboard
+
+Check Defect Report
+
+Evaluate againstcriteria
+
+Make go/no-godecision
+
+Test Failure Investigation (Engineer)
+
+Open Live MonitorDashboard
+
+Identify failed tests
+
+Review logs & errors
+
+Find failure patterns
+
+Check environmentcorrelation
+
+Create Jira ticket
+
+Daily Standup (QA Manager)
+
+Open Release HealthDashboard
+
+Check pass rate trend
+
+Review critical defects
+
+Note execution progress
+
+Share in standup
+
+Figure 4: Three common workflows using Reports & Analytics
+
+## Understanding the Data Behind Reports
+
+To use Reports & Analytics effectively, you need to understand the data model—how TestOps organizes and calculates test information.
+
+### Test Execution Hierarchy
+
+TestOps structures test data in three levels:
+
+1. Test Run (highest level)
+
+- A complete execution session (e.g., "Nightly Regression - Jan 15, 2025")
+
+- Contains multiple test executions
+
+- Has overall status: Passed, Failed, Error, Incomplete
+
+2. Test Execution
+
+- A single test case's execution within a test run
+
+- Links to a specific test case in Test Management
+
+- Has individual status: Passed, Failed, Error, Skipped
+
+3. Test Result (most granular)
+
+- Detailed outcome of a test execution
+
+- Includes logs, screenshots, error messages, duration
+
+- Used for debugging and analysis
+
+Example:
+
+Test Run: "Nightly Regression - Jan 15"
+├── Test Execution: "Login - Valid Credentials"
+│   └── Test Result: Passed (2.3 seconds)
+├── Test Execution: "Login - Invalid Password"
+│   └── Test Result: Failed (timeout error)
+└── Test Execution: "Login - Locked Account"
+    └── Test Result: Passed (1.8 seconds)
+
+### How Metrics Are Calculated
+
+Understanding metric calculations helps you interpret results accurately:
+
+Pass Rate:
+
+Pass Rate = (Passed Tests / Total Tests) × 100
+
+- Includes only Passed and Failed (excludes Skipped, Error)
+
+- Calculated per test run, release, or custom scope
+
+Flaky Rate:
+
+Flaky Rate = (Tests with inconsistent results / Total Tests) × 100
+
+- A test is "flaky" if it passes sometimes and fails sometimes (same code, environment)
+
+- Calculated over multiple executions (default: last 30 days)
+
+Test Duration:
+
+- Sum of all test execution times in a test run
+
+- Used to identify slow tests for optimization
+
+- Calculated as median (not average) to reduce outlier impact
+
+Coverage Percentage:
+
+Coverage = (Requirements with ≥1 linked test / Total Requirements) × 100
+
+- Measures how many requirements have test coverage
+
+- Used in compliance and traceability reports
+
+### Why Analysis Scope Matters
+
+The same test data can tell different stories depending on analysis scope—the time window or release boundary you apply.
+
+Time-Based Scope:
+
+- Analyzes test results within a specific timeframe (e.g., last 7 days, last 30 days)
+
+- Best for: Trend analysis, identifying recent changes
+
+- Example: "Our pass rate dropped from 95% to 87% in the last week—what changed?"
+
+Release-Based Scope:
+
+- Analyzes test results for a specific release or build
+
+- Best for: Release readiness decisions, version comparison
+
+- Example: "How does Release 2.5 quality compare to Release 2.4?"
+
+Current Scope (Latest Results):
+
+- Shows only the most recent test execution result per test
+
+- Best for: Real-time monitoring, immediate status checks
+
+- Example: "What's the current status of our test suite right now?"
+
+Example: Same Tests, Different Insights:
+
+- Time-based (last 30 days): "Test A" passed 28/30 times → 93% pass rate (slightly flaky)
+
+- Release-based (v2.5): "Test A" passed 10/10 times → 100% pass rate (stable this release)
+
+- Current scope: "Test A" passed on last execution → Shows as Passed
+
+Choosing the right scope is critical for accurate analysis. See [Using Filters & Analysis Scope](/docs/getting-started/filters-and-scope) for detailed guidance.
+
+### Data Freshness and Synchronization
+
+Real-time data: Dashboards update automatically as tests complete (typically 5-10 second delay)
+
+Historical data: Reports capture point-in-time snapshots and don't auto-update
+
+Integration sync: Data from Jira, GitHub, etc. syncs every 15 minutes (configurable)
+
+Understanding data timing helps set realistic expectations for report accuracy.
+
+## How R&A Integrates with Other Modules
+
+Reports & Analytics becomes more powerful when integrated with other TestOps modules. Here's how data flows:
+
+Test Management → R&A:
+
+- Test case metadata (name, priority, tags) enriches test results
+
+- Test suite organization reflects in dashboard filters
+
+- Manual test execution status appears in Live Monitor Dashboard
+
+Requirements → R&A:
+
+- Requirement links enable traceability reports
+
+- Coverage metrics show which requirements lack tests
+
+- Test results map to specific user stories or epics
+
+Visual Testing → R&A:
+
+- Visual comparison results (passed/failed) appear in quality dashboards
+
+- Visual diffs are accessible from test result details
+
+- Visual test trends show UI stability over time
+
+Integrations (Jira, GitHub) → R&A:
+
+- Jira issues linked to tests appear in defect analysis reports
+
+- GitHub PR commits correlate with test failures for blame analysis
+
+- CI/CD build metadata enriches test run context
+
+Test Environments → R&A:
+
+- Environment-specific analysis isolates infrastructure issues
+
+- Cross-environment comparisons identify inconsistencies
+
+- Environment tags enable filtered dashboards
+
+#_r_8n_{margin:1.5rem auto 0;}#_r_8n_{font-family:inherit;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#_r_8n_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#_r_8n_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#_r_8n_ .error-icon{fill:#552222;}#_r_8n_ .error-text{fill:#552222;stroke:#552222;}#_r_8n_ .edge-thickness-normal{stroke-width:1px;}#_r_8n_ .edge-thickness-thick{stroke-width:3.5px;}#_r_8n_ .edge-pattern-solid{stroke-dasharray:0;}#_r_8n_ .edge-thickness-invisible{stroke-width:0;fill:none;}#_r_8n_ .edge-pattern-dashed{stroke-dasharray:3;}#_r_8n_ .edge-pattern-dotted{stroke-dasharray:2;}#_r_8n_ .marker{fill:#333333;stroke:#333333;}#_r_8n_ .marker.cross{stroke:#333333;}#_r_8n_ svg{font-family:inherit;font-size:16px;}#_r_8n_ p{margin:0;}#_r_8n_ .label{font-family:inherit;color:#333;}#_r_8n_ .cluster-label text{fill:#333;}#_r_8n_ .cluster-label span{color:#333;}#_r_8n_ .cluster-label span p{background-color:transparent;}#_r_8n_ .label text,#_r_8n_ span{fill:#333;color:#333;}#_r_8n_ .node rect,#_r_8n_ .node circle,#_r_8n_ .node ellipse,#_r_8n_ .node polygon,#_r_8n_ .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#_r_8n_ .rough-node .label text,#_r_8n_ .node .label text,#_r_8n_ .image-shape .label,#_r_8n_ .icon-shape .label{text-anchor:middle;}#_r_8n_ .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#_r_8n_ .rough-node .label,#_r_8n_ .node .label,#_r_8n_ .image-shape .label,#_r_8n_ .icon-shape .label{text-align:center;}#_r_8n_ .node.clickable{cursor:pointer;}#_r_8n_ .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#_r_8n_ .arrowheadPath{fill:#333333;}#_r_8n_ .edgePath .path{stroke:#333333;stroke-width:2.0px;}#_r_8n_ .flowchart-link{stroke:#333333;fill:none;}#_r_8n_ .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_8n_ .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#_r_8n_ .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_8n_ .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#_r_8n_ .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#_r_8n_ .cluster text{fill:#333;}#_r_8n_ .cluster span{color:#333;}#_r_8n_ div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:inherit;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#_r_8n_ .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#_r_8n_ rect.text{fill:none;stroke-width:0;}#_r_8n_ .icon-shape,#_r_8n_ .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_8n_ .icon-shape p,#_r_8n_ .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#_r_8n_ .icon-shape rect,#_r_8n_ .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_8n_ .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#_r_8n_ .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#_r_8n_ :root{--mermaid-font-family:inherit;}
+Test execution resultsTest case metadata
+
+Requirement linksCoverage mapping
+
+Visual test resultsUI comparison data
+
+Defect statusBuild metadataPR commits
+
+Environment tagsConfiguration data
+
+Quality dashboardsTrend analysis
+
+Coverage reportsTraceability matrix
+
+Visual stability metrics
+
+Quality gatesTest insights
+
+Environment analysisStability reports
+
+Reports & AnalyticsIntelligence Layer
+
+Test Management
+
+Requirements
+
+Visual Testing
+
+IntegrationsJira/GitHub/CI-CD
+
+Test Environments
+
+Figure 5: How Reports & Analytics integrates with other TestOps modules
+
+## Next Steps
+
+Now that you understand the core concepts of Reports & Analytics, you're ready to apply them:
+
+For hands-on practice:
+
+- [Getting Started with Reports & Analytics](/docs/getting-started/introduction) - Step-by-step tutorial
+
+- [Creating Your First Dashboard](/docs/dashboards/creating-dashboards) - Build a custom dashboard
+
+- [Generating Reports](/docs/reports/generating-reports) - Create your first report
+
+For deeper understanding:
+
+- [Understanding Report Types](/docs/getting-started/report-types) - Learn about each report's purpose
+
+- [Using Filters & Analysis Scope](/docs/getting-started/filters-and-scope) - Master data filtering
+
+- [Dashboard Configuration Guide](/docs/dashboards/how-to/configuration) - Customize your monitoring
+
+For role-specific guidance:
+
+- [Reports & Analytics for QA Managers](/docs/advanced/qa-manager-guide) - Strategic usage patterns
+
+- [Reports & Analytics for Testers](/docs/advanced/tester-guide) - Daily workflow tips
+
+- [Reports & Analytics for Engineers](/docs/advanced/engineer-guide) - Automation and optimization
+
+## See Also
+
+- [Getting Started with Reports & Analytics](/docs/getting-started/introduction) - Hands-on tutorial
+
+- [Understanding Report Types](/docs/getting-started/report-types) - Report catalog and use cases
+
+- [Using Filters & Analysis Scope](/docs/getting-started/filters-and-scope) - Data filtering concepts
+
+- [Dashboard vs Report Decision Guide](/docs/getting-started/dashboard-vs-report) - Detailed comparison
+
+- [All Reports Reference](/docs/reference/all-reports) - Complete report catalog
+
+- [All Widgets Reference](/docs/reference/all-widgets) - Widget catalog for dashboards
+
+[Getting Started: Overview and Getting StartedNavigate Reports & Analytics confidently with task-to-tool mapping, basic filtering, and dashboard exploration for all testing roles.](/docs/getting-started/welcome-to-reports-analytics)[Understanding Report TypesLearn the conceptual differences between dashboards and reports in Katalon TestOps, understand when to use each, and make informed decisions about which tool best fits your monitoring and analysis needs.](/docs/getting-started/understanding-reports-vs-dashboards)
+
+Getting Started
+# Understanding Analysis Scope Types
+
+Learn the conceptual differences between Time-Based, Release-Based, and Current scope types in TestOps Reports & Analytics, and understand when to use each for optimal test data analysis and decision-making.
+
+# Understanding Analysis Scope Types
+
+Reading time: 15 minutes
+
+Looking for hands-on steps? This document explains the concepts behind Analysis Scope types. For step-by-step instructions on selecting and applying scopes, see [Using Filters & Analysis Scope](/docs/getting-started/filters-and-scope).
+
+## Introduction
+
+Analysis Scope is one of TestOps' most powerful—yet often misunderstood—features. At its core, scope defines the universe of data you're analyzing before any filters are applied. Think of it as choosing which data "pool" to analyze, while filters then narrow down within that pool.
+
+The same test execution can appear (or not appear) in your analysis depending on which scope you choose. Understanding why these different scopes exist and when to use each helps you make better testing decisions and avoid common analytical pitfalls.
+
+This document explores three scope types in depth:
+
+- Time-Based Scope: Analyzes data within a time period
+
+- Release-Based Scope: Analyzes data for specific releases
+
+- Current Scope: Shows the latest status per test case
+
+By understanding the conceptual purpose of each, you'll know exactly which scope answers your question most accurately.
+
+## What is Analysis Scope?
+
+### The Problem Scope Solves
+
+Imagine asking "What's my pass rate?" Without context, this question is ambiguous:
+
+- Pass rate for all test runs this week?
+
+- Pass rate for Release 2.5 specifically?
+
+- Pass rate for the current status of all test cases?
+
+Each interpretation requires analyzing a different set of test executions. Analysis Scope makes this distinction explicit.
+
+### Scope Defines the Data Universe
+
+Analysis Scope operates at the foundational level of your analysis—it determines which test executions TestOps considers before filters, widgets, or metrics come into play.
+
+Key concept: Scope first, then filter.
+
+- Scope selection → Defines the universe of relevant executions
+
+- Filter application → Narrows within that universe
+
+- Metric calculation → Computes results from filtered scope
+
+#_r_9a_{margin:1.5rem auto 0;}#_r_9a_{font-family:inherit;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#_r_9a_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#_r_9a_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#_r_9a_ .error-icon{fill:#552222;}#_r_9a_ .error-text{fill:#552222;stroke:#552222;}#_r_9a_ .edge-thickness-normal{stroke-width:1px;}#_r_9a_ .edge-thickness-thick{stroke-width:3.5px;}#_r_9a_ .edge-pattern-solid{stroke-dasharray:0;}#_r_9a_ .edge-thickness-invisible{stroke-width:0;fill:none;}#_r_9a_ .edge-pattern-dashed{stroke-dasharray:3;}#_r_9a_ .edge-pattern-dotted{stroke-dasharray:2;}#_r_9a_ .marker{fill:#333333;stroke:#333333;}#_r_9a_ .marker.cross{stroke:#333333;}#_r_9a_ svg{font-family:inherit;font-size:16px;}#_r_9a_ p{margin:0;}#_r_9a_ .label{font-family:inherit;color:#333;}#_r_9a_ .cluster-label text{fill:#333;}#_r_9a_ .cluster-label span{color:#333;}#_r_9a_ .cluster-label span p{background-color:transparent;}#_r_9a_ .label text,#_r_9a_ span{fill:#333;color:#333;}#_r_9a_ .node rect,#_r_9a_ .node circle,#_r_9a_ .node ellipse,#_r_9a_ .node polygon,#_r_9a_ .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#_r_9a_ .rough-node .label text,#_r_9a_ .node .label text,#_r_9a_ .image-shape .label,#_r_9a_ .icon-shape .label{text-anchor:middle;}#_r_9a_ .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#_r_9a_ .rough-node .label,#_r_9a_ .node .label,#_r_9a_ .image-shape .label,#_r_9a_ .icon-shape .label{text-align:center;}#_r_9a_ .node.clickable{cursor:pointer;}#_r_9a_ .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#_r_9a_ .arrowheadPath{fill:#333333;}#_r_9a_ .edgePath .path{stroke:#333333;stroke-width:2.0px;}#_r_9a_ .flowchart-link{stroke:#333333;fill:none;}#_r_9a_ .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_9a_ .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#_r_9a_ .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_9a_ .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#_r_9a_ .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#_r_9a_ .cluster text{fill:#333;}#_r_9a_ .cluster span{color:#333;}#_r_9a_ div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:inherit;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#_r_9a_ .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#_r_9a_ rect.text{fill:none;stroke-width:0;}#_r_9a_ .icon-shape,#_r_9a_ .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_9a_ .icon-shape p,#_r_9a_ .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#_r_9a_ .icon-shape rect,#_r_9a_ .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_9a_ .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#_r_9a_ .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#_r_9a_ :root{--mermaid-font-family:inherit;}
+All Test Execution Data
+2. Filters Narrow Results
+Filtered Data:Status = Failed
+
+Platform = Chrome
+
+Final Result Set
+1. Scope Selects Universe
+Time-BasedUniverse
+
+Release-BasedUniverse
+
+CurrentUniverse
+
+Analysis Process
+
+Scope first, then filter
+
+Analysis Scope chooses the data pool; Filters refine within that pool
+
+### Why Scope Matters: Same Filters, Different Results
+
+Here's a critical insight: The same filters applied to different scopes produce different results.
+
+Example scenario:
+
+- Filter: "Automated tests with status = Failed"
+
+- Time-Based (Last 7 days): Shows all automated tests that failed anytime in the past week (may include same test multiple times)
+
+- Release-Based (Release 2.5): Shows all automated tests that failed when run against Release 2.5 (regardless of when)
+
+- Current: Shows automated tests whose most recent execution failed (each test counted once)
+
+Understanding this distinction prevents misinterpretation of your metrics and ensures you're analyzing the right data for your decision.
+
+## Time-Based Scope: Analyzing Activity Over Time
+
+### What Time-Based Scope Does
+
+Time-Based scope analyzes all test executions that occurred within a specified time period. It creates a temporal "window" and includes every execution that falls within that window.
+
+Technical definition: TestOps queries executions where execution_time falls between start_date and end_date.
+
+#_r_9c_{margin:1.5rem auto 0;}#_r_9c_{font-family:inherit;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#_r_9c_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#_r_9c_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#_r_9c_ .error-icon{fill:#552222;}#_r_9c_ .error-text{fill:#552222;stroke:#552222;}#_r_9c_ .edge-thickness-normal{stroke-width:1px;}#_r_9c_ .edge-thickness-thick{stroke-width:3.5px;}#_r_9c_ .edge-pattern-solid{stroke-dasharray:0;}#_r_9c_ .edge-thickness-invisible{stroke-width:0;fill:none;}#_r_9c_ .edge-pattern-dashed{stroke-dasharray:3;}#_r_9c_ .edge-pattern-dotted{stroke-dasharray:2;}#_r_9c_ .marker{fill:#333333;stroke:#333333;}#_r_9c_ .marker.cross{stroke:#333333;}#_r_9c_ svg{font-family:inherit;font-size:16px;}#_r_9c_ p{margin:0;}#_r_9c_ .mermaid-main-font{font-family:inherit;}#_r_9c_ .exclude-range{fill:#eeeeee;}#_r_9c_ .section{stroke:none;opacity:0.2;}#_r_9c_ .section0{fill:rgba(102, 102, 255, 0.49);}#_r_9c_ .section2{fill:#fff400;}#_r_9c_ .section1,#_r_9c_ .section3{fill:white;opacity:0.2;}#_r_9c_ .sectionTitle0{fill:#333;}#_r_9c_ .sectionTitle1{fill:#333;}#_r_9c_ .sectionTitle2{fill:#333;}#_r_9c_ .sectionTitle3{fill:#333;}#_r_9c_ .sectionTitle{text-anchor:start;font-family:inherit;}#_r_9c_ .grid .tick{stroke:lightgrey;opacity:0.8;shape-rendering:crispEdges;}#_r_9c_ .grid .tick text{font-family:inherit;fill:#333;}#_r_9c_ .grid path{stroke-width:0;}#_r_9c_ .today{fill:none;stroke:red;stroke-width:2px;}#_r_9c_ .task{stroke-width:2;}#_r_9c_ .taskText{text-anchor:middle;font-family:inherit;}#_r_9c_ .taskTextOutsideRight{fill:black;text-anchor:start;font-family:inherit;}#_r_9c_ .taskTextOutsideLeft{fill:black;text-anchor:end;}#_r_9c_ .task.clickable{cursor:pointer;}#_r_9c_ .taskText.clickable{cursor:pointer;fill:#003163!important;font-weight:bold;}#_r_9c_ .taskTextOutsideLeft.clickable{cursor:pointer;fill:#003163!important;font-weight:bold;}#_r_9c_ .taskTextOutsideRight.clickable{cursor:pointer;fill:#003163!important;font-weight:bold;}#_r_9c_ .taskText0,#_r_9c_ .taskText1,#_r_9c_ .taskText2,#_r_9c_ .taskText3{fill:white;}#_r_9c_ .task0,#_r_9c_ .task1,#_r_9c_ .task2,#_r_9c_ .task3{fill:#8a90dd;stroke:#534fbc;}#_r_9c_ .taskTextOutside0,#_r_9c_ .taskTextOutside2{fill:black;}#_r_9c_ .taskTextOutside1,#_r_9c_ .taskTextOutside3{fill:black;}#_r_9c_ .active0,#_r_9c_ .active1,#_r_9c_ .active2,#_r_9c_ .active3{fill:#bfc7ff;stroke:#534fbc;}#_r_9c_ .activeText0,#_r_9c_ .activeText1,#_r_9c_ .activeText2,#_r_9c_ .activeText3{fill:black!important;}#_r_9c_ .done0,#_r_9c_ .done1,#_r_9c_ .done2,#_r_9c_ .done3{stroke:grey;fill:lightgrey;stroke-width:2;}#_r_9c_ .doneText0,#_r_9c_ .doneText1,#_r_9c_ .doneText2,#_r_9c_ .doneText3{fill:black!important;}#_r_9c_ .crit0,#_r_9c_ .crit1,#_r_9c_ .crit2,#_r_9c_ .crit3{stroke:#ff8888;fill:red;stroke-width:2;}#_r_9c_ .activeCrit0,#_r_9c_ .activeCrit1,#_r_9c_ .activeCrit2,#_r_9c_ .activeCrit3{stroke:#ff8888;fill:#bfc7ff;stroke-width:2;}#_r_9c_ .doneCrit0,#_r_9c_ .doneCrit1,#_r_9c_ .doneCrit2,#_r_9c_ .doneCrit3{stroke:#ff8888;fill:lightgrey;stroke-width:2;cursor:pointer;shape-rendering:crispEdges;}#_r_9c_ .milestone{transform:rotate(45deg) scale(0.8,0.8);}#_r_9c_ .milestoneText{font-style:italic;}#_r_9c_ .doneCritText0,#_r_9c_ .doneCritText1,#_r_9c_ .doneCritText2,#_r_9c_ .doneCritText3{fill:black!important;}#_r_9c_ .vert{stroke:navy;}#_r_9c_ .vertText{font-size:15px;text-anchor:middle;fill:navy!important;}#_r_9c_ .activeCritText0,#_r_9c_ .activeCritText1,#_r_9c_ .activeCritText2,#_r_9c_ .activeCritText3{fill:black!important;}#_r_9c_ .titleText{text-anchor:middle;font-size:18px;fill:#333;font-family:inherit;}#_r_9c_ :root{--mermaid-font-family:inherit;}Jan 18Jan 19Jan 20Jan 21Jan 22Jan 23Jan 24Jan 25Jan 26Jan 27Jan 28Jan 29Jan 30Jan 31Feb 01Old Executions ❌ More Old Tests ❌ Test Execution 1 Test Execution 2 Test Execution 3 Test Execution 4 Test Execution 5 Test Execution 6 Test Execution 7 Excluded (Before Window)Included (Last 7 Days) ✅Time-Based Scope: Last 7 Days Window
+
+Only executions within the time window are analyzed
+
+## Release-Based Scope: Analyzing Release Quality
+
+### What Release-Based Scope Does
+
+Release-Based scope analyzes all test executions associated with specific release(s), regardless of when those tests ran. It groups data by release version, not by time.
+
+Technical definition: TestOps queries executions where release_id matches the selected release(s), ignoring execution_time.
+
+#_r_9f_{margin:1.5rem auto 0;}#_r_9f_{font-family:inherit;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#_r_9f_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#_r_9f_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#_r_9f_ .error-icon{fill:#552222;}#_r_9f_ .error-text{fill:#552222;stroke:#552222;}#_r_9f_ .edge-thickness-normal{stroke-width:1px;}#_r_9f_ .edge-thickness-thick{stroke-width:3.5px;}#_r_9f_ .edge-pattern-solid{stroke-dasharray:0;}#_r_9f_ .edge-thickness-invisible{stroke-width:0;fill:none;}#_r_9f_ .edge-pattern-dashed{stroke-dasharray:3;}#_r_9f_ .edge-pattern-dotted{stroke-dasharray:2;}#_r_9f_ .marker{fill:#333333;stroke:#333333;}#_r_9f_ .marker.cross{stroke:#333333;}#_r_9f_ svg{font-family:inherit;font-size:16px;}#_r_9f_ p{margin:0;}#_r_9f_ .label{font-family:inherit;color:#333;}#_r_9f_ .cluster-label text{fill:#333;}#_r_9f_ .cluster-label span{color:#333;}#_r_9f_ .cluster-label span p{background-color:transparent;}#_r_9f_ .label text,#_r_9f_ span{fill:#333;color:#333;}#_r_9f_ .node rect,#_r_9f_ .node circle,#_r_9f_ .node ellipse,#_r_9f_ .node polygon,#_r_9f_ .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#_r_9f_ .rough-node .label text,#_r_9f_ .node .label text,#_r_9f_ .image-shape .label,#_r_9f_ .icon-shape .label{text-anchor:middle;}#_r_9f_ .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#_r_9f_ .rough-node .label,#_r_9f_ .node .label,#_r_9f_ .image-shape .label,#_r_9f_ .icon-shape .label{text-align:center;}#_r_9f_ .node.clickable{cursor:pointer;}#_r_9f_ .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#_r_9f_ .arrowheadPath{fill:#333333;}#_r_9f_ .edgePath .path{stroke:#333333;stroke-width:2.0px;}#_r_9f_ .flowchart-link{stroke:#333333;fill:none;}#_r_9f_ .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_9f_ .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#_r_9f_ .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_9f_ .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#_r_9f_ .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#_r_9f_ .cluster text{fill:#333;}#_r_9f_ .cluster span{color:#333;}#_r_9f_ div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:inherit;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#_r_9f_ .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#_r_9f_ rect.text{fill:none;stroke-width:0;}#_r_9f_ .icon-shape,#_r_9f_ .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_9f_ .icon-shape p,#_r_9f_ .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#_r_9f_ .icon-shape rect,#_r_9f_ .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_9f_ .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#_r_9f_ .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#_r_9f_ :root{--mermaid-font-family:inherit;}
+Release-Based Grouping
+
+Release 2.5
+
+Test A: Pass
+
+Test C: Pass
+
+Test E: Pass
+
+Test F: Pass
+
+Release 2.4
+
+Test A: Pass
+
+Test B: Pass
+
+Test D: Fail
+
+Test E: Pass
+
+Release 2.3
+
+Test A: Pass
+
+Test B: Fail
+
+Test C: Pass
+
+Calendar Timeline (Time-Independent)
+
+Week 1
+
+Week 2
+
+Week 3
+
+Week 4
+
+Grouped by release tag,not execution time
+
+Grouped by release association, not execution time
+
+## Current Scope: Understanding Latest Test Status
+
+### What Current Scope Does
+
+Current scope shows the most recent execution result for each test case, creating a snapshot of your test suite's current state. Each test case appears exactly once—with its latest result.
+
+Technical definition: TestOps queries MAX(execution_time) per test_case_id and returns only those latest executions.
+
+## Decision Framework: Which Scope Should I Use?
+
+Choosing the right scope depends on the question you're trying to answer. Use this decision table to quickly identify the appropriate scope:
+
+My QuestionUse This ScopeWhyHow many tests ran last week?Time-Based (Last 7 days)Counts all executions within time windowIs Release 2.5 ready to ship?Release-Based (2.5)Release-specific quality assessmentWhat's my current pass rate?CurrentLatest status snapshot per test caseHow is our quality trending this month?Time-Based (Last 30 days)Time-based trend analysis with historical dataWhich release had better quality: 2.4 or 2.5?Release-Based (2.4, 2.5)Multi-release comparisonWhich test cases are currently failing?Current + Failed filterLatest status per test case, filtered to failures onlyDid we have any test failures yesterday?Time-Based (Last 24 hours)Executions within specific time periodHow many test cases do we have total?CurrentEach test case counted once (inventory)How complete is testing for Release 3.0?Release-Based (3.0)Release-specific progress trackingAre we executing more tests this sprint than last?Time-Based (This Sprint)Compare execution volume over time
+
+### Time-Based Scope: Detailed Usage Guide
+
+### Release-Based Scope: Detailed Usage Guide
+
+### Current Scope: Detailed Usage Guide
+
+### Common Scope Selection Mistakes
+
+### How Scope Affects Metric Calculations
+
+### Real-World Scenario Examples
+
+## Summary
+
+Analysis Scope is a foundational concept in TestOps that determines which data universe you analyze before applying filters or viewing metrics. Choosing the right scope ensures you're answering the right question with the right data.
+
+Quick reference:
+
+- Time-Based: Use for trend analysis, operational monitoring, and time-based questions
+
+- Release-Based: Use for release readiness, version comparison, and release-specific questions
+
+- Current: Use for status snapshots, test case inventory, and "right now" questions
+
+Remember: Scope defines the data universe; filters narrow within it. Choose scope first based on your question, then apply filters to refine your analysis.
+
+Next steps:
+
+- Practice selecting scopes using the [Using Filters & Analysis Scope](/docs/getting-started/filters-and-scope) tutorial
+
+- Learn about scope-specific features in [Dashboard Configuration Guide](/docs/dashboards/how-to/configuration)
+
+- Explore release-specific analysis in [Assessing Release Readiness](/docs/release-readiness/assessing-release-readiness)
+
+## See Also
+
+- [Using Filters & Analysis Scope](/docs/getting-started/filters-and-scope) - Hands-on tutorial for selecting and applying scopes
+
+- [Build Advanced Filter Combinations](/docs/getting-started/build-advanced-filter-combinations) - Complex filter combinations with scope
+
+- [Getting Started with Reports & Analytics](/docs/getting-started/introduction) - Foundation concepts
+
+- [Understanding Report Types](/docs/getting-started/understanding-report-types) - Dashboard vs Report differences
+
+- [Release Metrics & Tracking](/docs/release-readiness/release-metrics-tracking) - Release-Based scope in practice
+
+- [Dashboard Configuration Guide](/docs/dashboards/how-to/configuration) - Configuring scope at dashboard level
+
+[Understanding Report TypesLearn the conceptual differences between dashboards and reports in Katalon TestOps, understand when to use each, and make informed decisions about which tool best fits your monitoring and analysis needs.](/docs/getting-started/understanding-reports-vs-dashboards)[Using Filters & Analysis ScopeHands-on tutorial teaching you how to use filters and analysis scope to focus your Reports & Analytics data on specific time periods, releases, and test execution criteria.](/docs/getting-started/understanding-analysis-scope)
+
+Getting Started
+# Understanding Report Types
+
+Learn the conceptual differences between dashboards and reports in Katalon TestOps, understand when to use each, and make informed decisions about which tool best fits your monitoring and analysis needs.
+
+# Understanding Report Types
+
+Katalon TestOps provides two primary tools for visualizing and analyzing test data: Dashboards and Reports. While they both help you understand your testing quality and progress, they serve fundamentally different purposes and are designed for different use cases.
+
+This guide explains the conceptual differences between these two report types, helping you choose the right tool for your needs.
+
+## What Are Dashboards?
+
+Dashboards are interactive, real-time monitoring views that provide immediate visibility into your testing operations. Think of a dashboard like the instrument panel in a car—it shows you what's happening right now and alerts you to issues that need immediate attention.
+
+### Dashboard Characteristics
+
+- Real-time data: Updates continuously as new test results arrive
+
+- Live monitoring focus: Designed for active observation and quick decision-making
+
+- Interactive widgets: Click, filter, and drill down into specific data points
+
+- Customizable layouts: Arrange widgets to prioritize the metrics that matter most to your team
+
+- Team collaboration: Multiple team members can view the same dashboard simultaneously
+
+- At-a-glance insights: Visual indicators (colors, charts, gauges) highlight status instantly
+
+### Types of Dashboards in TestOps
+
+TestOps provides several pre-configured dashboards tailored to specific monitoring needs:
+
+Live Monitor Dashboard
+
+- Purpose: Track all test executions in real-time across your organization
+
+- Use when: You need to monitor active test runs, identify failures immediately, or observe overall testing activity
+
+Project Dashboard
+
+- Purpose: Monitor quality metrics and trends for a specific project
+
+- Use when: You're responsible for a particular project and need comprehensive project-level visibility
+
+Release Health Dashboard
+
+- Purpose: Assess the quality and readiness of a specific release
+
+- Use when: You're preparing for a release and need to evaluate test pass rates, flakiness, and coverage
+
+Release Readiness Dashboard
+
+- Purpose: Track progress toward release goals with pass/fail criteria
+
+- Use when: You need to determine if a release meets predefined quality gates before deployment
+
+Figure 1: The Dashboards landing page showing all available dashboard types with real-time indicators. Each dashboard tile displays a preview of current metrics and provides immediate access to live monitoring views.
+
+## What Are Reports?
+
+Reports are analytical documents that provide deep insights into specific aspects of your testing operations over a defined time period. Think of a report like a trip log or flight recorder—it captures what happened in the past so you can analyze trends, identify patterns, and make informed strategic decisions.
+
+### Report Characteristics
+
+- Historical data: Analyzes data from a specific time period (last sprint, last release, last 30 days)
+
+- Analytical focus: Designed for investigation, root cause analysis, and trend identification
+
+- Static snapshots: Generated at a specific point in time for documentation and sharing
+
+- Detailed information: Provides comprehensive data tables, drilldowns, and contextual details
+
+- Exportable: Can be downloaded as PDF, Excel, or CSV for stakeholder distribution
+
+- Compliance-ready: Serves as evidence for audits, regulatory reviews, and documentation requirements
+
+### Categories of Reports in TestOps
+
+TestOps organizes reports into four main categories based on their analytical purpose:
+
+Test Execution Analysis
+
+- Focus on execution metrics, pass/fail rates, test run status, and execution patterns
+
+- Examples: Test Runs Analysis, Test Results Analysis, Test Case Status Analysis
+
+Coverage & Traceability
+
+- Focus on measuring test coverage across requirements and configurations, with end-to-end traceability
+
+- Examples: Requirements Coverage Analysis, Configuration Coverage Analysis, Requirement Traceability Analysis
+
+Failure & Quality Analysis
+
+- Focus on understanding test failures, error patterns, and defect trends to improve quality
+
+- Examples: Test Failures Analysis, Common Automation Errors, Defects Activity Analysis, Defect Status Analysis, Defect Trend Analysis
+
+Test Case Management
+
+- Focus on test case lifecycle, publishing activity, and automation progress tracking
+
+- Examples: Test Cases Publishing Activity Analysis, Automation Progress Analysis
+
+Figure 2: The Reports landing page showing categorized report types. Each category groups related reports together, making it easy to find the right analysis tool for your specific question or investigation.
+
+## Key Differences Explained
+
+Understanding when to use dashboards versus reports comes down to understanding six fundamental differences:
+
+AspectDashboardsReportsData FreshnessReal-time, continuously updatingPoint-in-time snapshot, static after generationPrimary Use CaseMonitoring current activity, immediate alertsAnalyzing historical trends, deep investigationTime Scope"What's happening now?" or "How are we trending?""What happened during [specific period]?"InteractivityHighly interactive with drill-down, filtering, live updatesStatic or limited interactivity; designed for reading and sharingDetail DepthHigh-level overview with ability to drill downComprehensive detail with tables, lists, and contextual informationOutput FormatInteractive web view onlyExportable (PDF, Excel, CSV) for distribution and compliance
+
+### Data Freshness
+
+Dashboards show you the current state of your testing operations. When a test run completes, dashboard widgets update immediately to reflect the new results. This makes dashboards ideal for scenarios where you need to react quickly to failures or monitor progress throughout the day.
+
+Reports capture data from a defined time period and generate a snapshot at a specific moment. Once generated, a report's data doesn't change—even if new test results arrive. This makes reports ideal for documenting quality status at a specific milestone (e.g., end of sprint, release approval) or comparing different time periods.
+
+### Use Case Focus
+
+Dashboards answer questions like:
+
+- "Are there any failing tests right now?"
+
+- "How is our pass rate trending this week?"
+
+- "Which teams are running tests today?"
+
+- "Is this release improving or degrading?"
+
+Reports answer questions like:
+
+- "What were the most common failure types last sprint?"
+
+- "Which requirements still lack test coverage?"
+
+- "How does our automation coverage compare to last quarter?"
+
+- "Which test cases have been failing consistently?"
+
+### Interactivity
+
+Dashboards are built for interaction. You can:
+
+- Click on chart elements to drill down into specific test runs
+
+- Apply filters to focus on specific projects, releases, or configurations
+
+- Adjust time ranges to see different trend windows
+
+- Rearrange widgets to prioritize the information you need most
+
+Reports are designed for reading and documentation. While some reports offer limited filtering (usually set at generation time), they're primarily meant to be read, reviewed, and shared with stakeholders who need comprehensive information about a specific aspect of testing.
+
+### Detail Depth
+
+Dashboards prioritize high-level visibility. A widget might show you "Pass Rate: 85%" with a trend line, giving you instant awareness of status without overwhelming detail.
+
+Reports provide comprehensive detail. A pass rate report would show not just the overall percentage, but a breakdown by test suite, execution environment, time period, and potentially a list of every test result included in the calculation.
+
+## Choosing the Right Tool
+
+Select the tool based on your immediate need:
+
+### Use a Dashboard When:
+
+✅ You need real-time visibility
+
+- Monitoring test executions as they run
+
+- Tracking live build status in a CI/CD pipeline
+
+- Observing team activity throughout the day
+
+✅ You need to react quickly
+
+- Identifying and responding to test failures immediately
+
+- Alerting teams to quality regressions as they happen
+
+- Making go/no-go decisions based on current data
+
+✅ You want interactive exploration
+
+- Investigating different time ranges, filters, or breakdowns
+
+- Drilling down from high-level metrics to specific test results
+
+- Collaborating with team members in real-time
+
+✅ You need team coordination
+
+- Daily standup meetings where you review current status
+
+- War room scenarios during critical testing periods
+
+- Continuous monitoring on shared team displays
+
+### Use a Report When:
+
+✅ You need historical analysis
+
+- Comparing performance across sprints or releases
+
+- Identifying long-term trends or patterns
+
+- Conducting retrospectives or post-mortems
+
+✅ You need detailed investigation
+
+- Root cause analysis of recurring failures
+
+- Comprehensive coverage analysis across requirements
+
+- Detailed traceability for compliance or audits
+
+✅ You need to share insights
+
+- Distributing quality metrics to stakeholders via email
+
+- Presenting testing progress in executive reviews
+
+- Providing documentation for audits or regulatory reviews
+
+✅ You need point-in-time documentation
+
+- Capturing release readiness status for approval
+
+- Documenting test coverage for specific milestones
+
+- Creating compliance evidence for specific time periods
+
+### Decision Framework: Ask These Questions
+
+- Is the data still changing?
+
+Yes, actively changing → Dashboard
+No, analyzing a completed period → Report
+
+- Do you need to react immediately?
+
+Yes, need immediate action → Dashboard
+No, analyzing for planning → Report
+
+- Will you export or share this?
+
+Yes, for distribution → Report
+No, for live viewing → Dashboard
+
+- How much detail do you need?
+
+High-level monitoring → Dashboard
+Comprehensive analysis → Report
+
+- Are you monitoring or investigating?
+
+Monitoring ongoing activity → Dashboard
+Investigating specific questions → Report
+
+## How They Work Together
+
+Dashboards and reports aren't competing tools—they're complementary and work best when used together in a coordinated workflow:
+
+### Typical Workflow Pattern
+
+- Start with Dashboards for continuous monitoring
+
+Monitor the Release Health Dashboard during your sprint
+Notice a concerning trend: pass rate has dropped from 95% to 85% over the past week
+
+- Investigate with Reports when you spot issues
+
+Generate a Failure Pattern Analysis report for the past 7 days
+Discover that most failures are concentrated in the login module
+Generate a Flaky Test Report to identify unreliable tests
+
+- Return to Dashboards to monitor improvements
+
+After fixing issues, monitor the dashboard to verify pass rate improves
+Watch real-time metrics to confirm fixes are effective
+
+- Document with Reports at milestones
+
+At the end of the sprint, generate a Test Run Summary report
+Export a Requirement Coverage report to document testing completeness
+Share reports with stakeholders to communicate quality status
+
+### Example Scenario: Sprint Quality Management
+
+During the sprint:
+
+- Daily: Check the Project Dashboard each morning to monitor overnight test runs
+
+- Ongoing: Keep the Live Monitor Dashboard visible to catch failures immediately
+
+- Weekly: Review the Release Health Dashboard in team meetings to assess progress
+
+At sprint end:
+
+- Generate: Test Run Summary report for the sprint time period
+
+- Generate: Requirement Coverage report to verify all sprint requirements were tested
+
+- Generate: Flaky Test Report to identify tests that need maintenance
+
+- Export: All reports as PDFs for sprint retrospective and stakeholder review
+
+For retrospective:
+
+- Compare: Current sprint's Test Run Summary with previous sprint's report
+
+- Analyze: Trend data from dashboards over the sprint duration
+
+- Identify: Improvement opportunities based on report findings
+
+## Related Resources
+
+Getting Started:
+
+- [Introduction to Reports & Analytics](/docs/getting-started/introduction) — Overview of the entire Reports & Analytics module
+
+How-To Guides:
+
+- [How to Navigate Dashboards](/docs/dashboards/navigate-dashboards) — Step-by-step guide to using dashboard features
+
+- [How to Generate and Export Reports](/docs/reports/generate-export-reports) — Complete guide to creating reports
+
+- [How to Apply Filters and Analysis Scope](/docs/getting-started/filters-analysis-scope) — Control what data appears in dashboards and reports
+
+Reference:
+
+- [All Reports Reference](/docs/reports/all-reports-reference) — Complete catalog of all available reports
+
+- [Dashboard Types Reference](/docs/dashboards/dashboard-types-reference) — Detailed specifications for each dashboard
+
+- [Report Metrics Glossary](/docs/reference/metrics-glossary) — Definitions of all metrics and KPIs
+
+Explanation:
+
+- [Understanding Filters and Analysis Scope](/docs/getting-started/filters-analysis-scope) — Learn how to control data scope in visualizations
+
+- [Understanding Test Execution Data Model](/docs/concepts/data-model) — Foundational concepts for how TestOps organizes test data
+
+[Core Concepts - Understanding Reports & AnalyticsBuild a mental model of TestOps Reports & Analytics—understand dashboards vs reports, role-based use cases, data models, and how R&A fits into your testing workflow.](/docs/getting-started/why-testops-for-test-analytics)[Understanding Analysis Scope TypesLearn the conceptual differences between Time-Based, Release-Based, and Current scope types in TestOps Reports & Analytics, and understand when to use each for optimal test data analysis and decision-making.](/docs/getting-started/get-started-with-your-project-dashboard)
+
+Getting Started
+# Using Filters & Analysis Scope
+
+Hands-on tutorial teaching you how to use filters and analysis scope to focus your Reports & Analytics data on specific time periods, releases, and test execution criteria.
+
+# Using Filters & Analysis Scope
+
+What you'll learn: How to apply basic filters and select analysis scope to focus your data
+
+Estimated Time: 15 minutes
+
+Prerequisites:
+
+- Active TestOps account with access to a project
+
+- Familiarity with basic TestOps navigation
+
+- Test execution data available in your project
+
+## Overview
+
+Filters and analysis scope are the foundation of effective data analysis in Katalon TestOps Reports & Analytics. Analysis Scope defines the universe of data you're analyzing (time period, release, or current snapshot), while Filters narrow that data to specific criteria (test status, platform, configuration, etc.).
+
+Understanding the relationship between scope and filters:
+
+- Scope: Defines WHEN the data comes from (time range, specific releases, or current state)
+
+- Filters: Define WHAT data to include within that scope (which tests, platforms, statuses, etc.)
+
+This hands-on tutorial teaches you the basics of filtering through practical steps. For deeper conceptual understanding, see the companion documents listed below.
+
+📚 Related Documentation:
+
+- [Understanding Analysis Scope Types](/docs/getting-started/analysis-scope-types) — Deep dive into when and how to use each scope type
+
+- [Build Advanced Filter Combinations](/docs/getting-started/build-advanced-filter-combinations) — Master complex filters, exclusions, performance optimization, and troubleshooting
+
+## Understanding Analysis Scope
+
+TestOps provides three types of analysis scope, each designed for different analysis needs:
+
+### Time-Based Scope
+
+Analyze data within a specific date/time range. Best for tracking trends, comparing performance over time, and monitoring continuous testing activities.
+
+### Release-Based Scope
+
+Analyze data associated with one or more specific releases. Best for assessing release readiness, comparing quality across versions, and generating release-specific reports.
+
+### Current Scope
+
+Analyze the current state of test cases and requirements regardless of execution history. Best for planning, test case management, and requirement tracking.
+
+📖 Learn More: For detailed use cases, limitations, and decision guidance on choosing the right scope type, see [Understanding Analysis Scope Types](/docs/getting-started/analysis-scope-types).
+
+## Accessing Analysis Scope and Filters
+
+All Reports & Analytics features include analysis scope selection and filtering capabilities.
+
+To Access Scope and Filters:
+
+- Navigate to any dashboard or report:
+
+Visual Dashboards > select a dashboard
+Execution Reports > select a report type
+Requirement Reports > select a report type
+
+- Locate the Analysis Scope dropdown at the top of the page
+
+Typically positioned in the header area
+Shows the currently selected scope (e.g., "Last 30 Days", "Release 2.5.0")
+
+- Locate the Filter Panel
+
+Usually displayed as a sidebar or collapsible panel
+Contains multiple filter categories (Status, Platform, Configuration, etc.)
+Filter availability varies by report/dashboard type
+
+## Applying Basic Filters
+
+Filters let you narrow your data to specific criteria within your selected analysis scope.
+
+### Method 1: Single Filter Application
+
+Steps:
+
+- Open the Filter Panel (click Filters button if collapsed)
+
+- Select a filter category (e.g., Test Status)
+
+- Choose one or more values:
+
+Click checkbox next to each value you want to include
+For single selection, click the value directly (if supported)
+
+- Apply the filter:
+
+Some filters apply automatically upon selection
+Others require clicking Apply button
+
+Expected Outcome: The dashboard/report updates to show only data matching your filter criteria. The filter panel displays active filters with a badge count.
+
+Verification: Check the filter panel header for an active filter indicator (e.g., "3 filters applied") and verify the data displayed matches your selection.
+
+### Method 2: Multiple Filter Application
+
+Steps:
+
+- Apply your first filter as described above
+
+- Select additional filter categories:
+
+Platform: Filter by operating system (Windows, macOS, Linux)
+Browser: Filter by browser type (Chrome, Firefox, Safari, Edge)
+Configuration: Filter by environment or device configuration
+Test Type: Filter by manual vs automated tests
+Tag/Label: Filter by custom labels or tags
+
+- Choose values for each additional filter
+
+- Click Apply or Apply All Filters (if available)
+
+Expected Outcome: Data is filtered by ALL selected criteria (filters are combined with AND logic by default). Only results matching every filter condition are displayed.
+
+Verification:
+
+- Check the active filter count increases with each filter added
+
+- Review the data to confirm it matches all filter conditions
+
+- Active filters are typically highlighted or badged in the filter panel
+
+### Common Filter Types
+
+Filter TypeCommon ValuesTest StatusPASSED, FAILED, ERROR, INCOMPLETE, SKIPPEDPlatformWindows, macOS, Linux, Android, iOSBrowserChrome, Firefox, Safari, EdgeTest TypeManual, AutomatedTag/LabelUser-defined tags and labels
+
+Note: Available filters vary by report/dashboard type.
+
+🚀 Next Level: Ready for advanced techniques like filter combinations, exclusions, and saved presets? See [Build Advanced Filter Combinations](/docs/getting-started/build-advanced-filter-combinations).
+
+## Selecting Analysis Scope
+
+Your choice of analysis scope determines the data universe for your analysis. Always select scope BEFORE applying filters.
+
+### Time-Based Scope
+
+To Select Time-Based Scope:
+
+- Click the Analysis Scope dropdown at the top of the page
+
+- Select Time-Based (if not already selected)
+
+- Choose a time range:
+Quick Ranges (Recommended for common scenarios):
+
+Last 7 Days: Recent week of activity
+Last 14 Days: Two-week period
+Last 30 Days: Monthly overview
+Last 90 Days: Quarterly analysis
+
+Custom Range (For specific date ranges):
+
+Click Custom Range
+Select Start Date from date picker
+Select End Date from date picker
+Click Apply
+
+- Click Apply to update the data
+
+Expected Outcome: All widgets, charts, and tables display data from test executions that occurred within the selected time range.
+
+Verification: Check timestamp ranges in data tables or hover over chart data points to confirm dates fall within your selected range.
+
+📖 Learn More: For detailed guidance on relative vs. absolute time ranges, performance considerations, and time-based scope best practices, see [Understanding Analysis Scope Types](/docs/getting-started/analysis-scope-types).
+
+### Release-Based Scope
+
+To Select Release-Based Scope:
+
+- Click the Analysis Scope dropdown
+
+- Select Release-Based
+
+- Choose one or more releases:
+Single Release:
+
+Click the release name in the dropdown
+Click Apply
+
+Multiple Releases (for comparison):
+
+Check the box next to each release you want to include
+Click Apply
+
+- The dashboard/report updates to show data from test executions linked to the selected release(s)
+
+Expected Outcome: Data displayed includes only test executions associated with the selected release(s). Test cases not linked to any release are excluded.
+
+Verification:
+
+- Check the scope indicator shows the correct release name(s)
+
+- Verify execution counts match your expectations for that release
+
+- If using multiple releases, confirm comparison views display each release separately
+
+📖 Learn More: For detailed guidance on release boundaries, linkage strategies, and release-based scope best practices, see [Understanding Analysis Scope Types](/docs/getting-started/analysis-scope-types).
+
+### Current Scope
+
+To Select Current Scope:
+
+- Click the Analysis Scope dropdown
+
+- Select Current
+
+- Click Apply (if required)
+
+Expected Outcome: The view displays the current state of test cases and requirements, independent of execution history. This is a snapshot of your test inventory and requirement status.
+
+Verification: Data shows current metadata (test case details, requirement information, current assignments) without execution-specific information like pass/fail status or execution dates.
+
+📖 Learn More: For detailed explanation of Current scope limitations, when to use it vs. other scope types, and best practices, see [Understanding Analysis Scope Types](/docs/getting-started/analysis-scope-types).
+
+## Practical Examples
+
+### Example 1: Analyze Failed Tests from Last Sprint
+
+Goal: Find all failed tests from a 2-week sprint
+
+### Navigate to Project Dashboard
+
+Navigate to Visual Dashboards > Project Dashboard.
+
+### Set Analysis Scope
+
+Click scope dropdown → Select Time-Based → Choose Last 14 Days → Click Apply.
+
+### Apply Test Status Filter
+
+Open Filter Panel → Expand Test Status → Check FAILED → Click Apply.
+
+### Review Results
+
+(Optional) Sort by failure frequency to prioritize fixes.
+
+Expected Result: You see all failed test executions from the last 14 days.
+
+Success Check: Scope shows "Last 14 Days", filter shows "Test Status = FAILED", all results show FAILED status.
+
+### Example 2: Monitor Automation Coverage for Smoke Tests
+
+Goal: Check automation coverage for smoke tests
+
+Steps:
+
+- Navigate to Visual Dashboards > Project Dashboard
+
+- Set Analysis Scope: Click scope dropdown → Select Current → Click Apply
+
+- Apply Tag filter: Open Filter Panel → Expand Tag → Check Smoke → Click Apply
+
+- Review Automation Coverage widget to identify manual tests to automate
+
+Expected Result: You see current automation coverage for smoke tests only.
+
+Success Check: Scope shows "Current", filter shows "Tag = Smoke", coverage metric displays percentage
+
+## Next Steps
+
+Congratulations! You've learned the basics of filtering and analysis scope in TestOps. To continue your learning:
+
+Deepen Your Understanding:
+
+- [Understanding Analysis Scope Types](/docs/getting-started/analysis-scope-types) — Learn when to use each scope type, understand limitations, and make informed decisions
+
+- [Build Advanced Filter Combinations](/docs/getting-started/build-advanced-filter-combinations) — Master complex filter combinations, exclusions, saved presets, and filter hierarchy
+
+- [Build Advanced Filter Combinations](/docs/getting-started/build-advanced-filter-combinations) — Troubleshoot common issues, optimize performance, and apply expert tips
+
+Apply to Specific Features:
+
+- [Project Dashboard](/docs/dashboards/project-dashboard) — Use filtering for comprehensive project-level analysis
+
+- [Release Dashboard](/docs/dashboards/release-dashboard) — Apply release-based scope and filtering
+
+- [Test Results Report](/docs/reports/test-results-report) — Advanced filtering for test execution data
+
+Foundational Guides:
+
+- [Getting Started with Reports & Analytics](/docs/getting-started/introduction) — Overview of Reports & Analytics module
+
+- [Understanding Report Types](/docs/getting-started/report-types) — Learn about different report categories
+
+[Understanding Analysis Scope TypesLearn the conceptual differences between Time-Based, Release-Based, and Current scope types in TestOps Reports & Analytics, and understand when to use each for optimal test data analysis and decision-making.](/docs/getting-started/get-started-with-your-project-dashboard)[Build Advanced Filter CombinationsMaster complex filtering techniques including multi-filter combinations, exclusion logic, filter hierarchy, performance optimization, and custom field filtering for precise data analysis in TestOps Reports & Analytics.](/docs/getting-started/build-advanced-filter-combinations)

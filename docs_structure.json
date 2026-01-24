@@ -6,11 +6,7 @@
     "children": {
       "Get Started": "docs/get-started/get-started-with-katalon-testops.md",
       "Quick Guide for Admins": "docs/get-started/quick-guide-for-admin.md",
-      "Quick Guide for Billing Managers": "docs/get-started/quick-guide-for-billing-managers.md",
-      "Quick Guide for QA Managers": "docs/get-started/quick-guide-for-qa-managers-1.md",
-      "Quick Guide for Manual Testers": "docs/get-started/quick-guide-for-manual-testers.md",
-      "Quick Guide for Automation Engineers": "docs/get-started/quick-guide-for-automation-engineers.md",
-      "Quick Guide for Product Owners": "docs/get-started/quick-guide-for-product-owners.md"
+      "Quick Guide for Billing Managers": "docs/get-started/quick-guide-for-billing-managers.md"
     }
   },
   "Administration": {
@@ -26,7 +22,68 @@
     "children": ""
   },
   "Analytics": {
-    "children":{"Configurations":{"children":{"Configure Test Failure Analysis":"docs/analytics/configurations/configure-test-failure-analysis.md","Quality Gates":"docs/analytics/configurations/quality-gates.md","Stability Metrics":"docs/analytics/configurations/stability-metrics.md"}},"Customizations":{"children":{"Advanced Filters Combinations":"docs/analytics/customizations/advanced-filters-combinations.md","Custom Dashboards":"docs/analytics/customizations/custom-dashboards.md","Custom Widgets":"docs/analytics/customizations/custom-widgets.md"}},"Defects":{"children":{"Analyze Defects Issues":"docs/analytics/defects/analyze-defects-issues.md","View Defect Trends":"docs/analytics/defects/view-defect-trends.md"}},"Monitor Projects":{"children":{"Assess Release Readiness":"docs/analytics/monitor-projects/assess-release-readiness.md","Manage Create Custom Dashboards":"docs/analytics/monitor-projects/manage-create-custom-dashboards.md","Monitor Real Time Test Execution":"docs/analytics/monitor-projects/monitor-real-time-test-execution.md","Track Historical Quality Trends":"docs/analytics/monitor-projects/track-historical-quality-trends.md"}},"Overview":"docs/analytics/overview.md","References":{"children":{"All Widgets":"docs/analytics/references/all-widgets.md","Coverage Caculations":"docs/analytics/references/coverage-caculations.md","Defect Metrics":"docs/analytics/references/defect-metrics.md","Release Metrics":"docs/analytics/references/release-metrics.md","Test Stability Metrics":"docs/analytics/references/test-stability-metrics.md"}},"Test Case Activity":{"children":{"Analyze Execution History":"docs/analytics/test-case-activity/analyze-execution-history.md","Assess Test Case Quality":"docs/analytics/test-case-activity/assess-test-case-quality.md","Index":"docs/analytics/test-case-activity/index.md","Monitor Test Case Productivity":"docs/analytics/test-case-activity/monitor-test-case-productivity.md","Track Automation Progress":"docs/analytics/test-case-activity/track-automation-progress.md","Track Test Case Stability":"docs/analytics/test-case-activity/track-test-case-stability.md"}},"Test Coverage":{"children":{"Analyze Configuration Coverage":"docs/analytics/test-coverage/analyze-configuration-coverage.md","Analyze Traceability":"docs/analytics/test-coverage/analyze-traceability.md","Index":"docs/analytics/test-coverage/index.md","Track Requirement Coverage":"docs/analytics/test-coverage/track-requirement-coverage.md"}},"Test Results Failures":{"children":{"Analyze Error Patterns":"docs/analytics/test-results-failures/analyze-error-patterns.md","Index":"docs/analytics/test-results-failures/index.md","Investigate Flaky Tests":"docs/analytics/test-results-failures/investigate-flaky-tests.md","Investigate Test Failures":"docs/analytics/test-results-failures/investigate-test-failures.md","View Test Result Details":"docs/analytics/test-results-failures/view-test-result-details.md"}}}
+    "children": {
+      "Overview":"docs/analytics/overview.md",
+      "Quick guides":"docs/analytics/quick-guides.md",
+      "Initial setups": "docs/analytics/configurations.md",
+      "Project monitoring": {
+        "children": {
+          "Assess Release Readiness":"docs/analytics/monitor-projects/assess-release-readiness.md",
+          "Manage Create Custom Dashboards":"docs/analytics/monitor-projects/manage-create-custom-dashboards.md",
+          "Monitor Real Time Test Execution":"docs/analytics/monitor-projects/monitor-real-time-test-execution.md",
+          "Track Historical Quality Trends":"docs/analytics/monitor-projects/track-historical-quality-trends.md"
+        }
+      },
+      "Results and failures": {
+        "children": {
+          "Index":"docs/analytics/test-results-failures/index.md",
+          "Analyze Error Patterns":"docs/analytics/test-results-failures/analyze-error-patterns.md",
+          "Investigate Flaky Tests":"docs/analytics/test-results-failures/investigate-flaky-tests.md",
+          "Investigate Test Failures":"docs/analytics/test-results-failures/investigate-test-failures.md",
+          "View Test Result Details":"docs/analytics/test-results-failures/view-test-result-details.md"
+        }
+      },
+      "Defects": {
+        "children": {
+          "Analyze Defects Issues":"docs/analytics/defects/analyze-defects-issues.md",
+          "View Defect Trends":"docs/analytics/defects/view-defect-trends.md"
+        }
+      },
+      "Test case activities": {
+        "children": {
+          "Index":"docs/analytics/test-case-activity/index.md",
+          "Analyze Execution History":"docs/analytics/test-case-activity/analyze-execution-history.md",
+          "Assess Test Case Quality":"docs/analytics/test-case-activity/assess-test-case-quality.md",
+          "Monitor Test Case Productivity":"docs/analytics/test-case-activity/monitor-test-case-productivity.md",
+          "Track Automation Progress":"docs/analytics/test-case-activity/track-automation-progress.md",
+          "Track Test Case Stability":"docs/analytics/test-case-activity/track-test-case-stability.md"
+        }
+      },
+      "Testing coverage": {
+        "children": {
+          "Index":"docs/analytics/test-coverage/index.md",
+          "Analyze Configuration Coverage":"docs/analytics/test-coverage/analyze-configuration-coverage.md",
+          "Analyze Traceability":"docs/analytics/test-coverage/analyze-traceability.md",
+          "Track Requirement Coverage":"docs/analytics/test-coverage/track-requirement-coverage.md"
+        }
+      },
+      "Customizations": {
+        "children": {
+          "Advanced Filters Combinations":"docs/analytics/customizations/advanced-filters-combinations.md",
+          "Custom Dashboards":"docs/analytics/customizations/custom-dashboards.md",
+          "Custom Widgets":"docs/analytics/customizations/custom-widgets.md"
+        }
+      },
+      "References": {
+        "children": {
+          "All Widgets":"docs/analytics/references/all-widgets.md",
+          "Coverage Calculations":"docs/analytics/references/coverage-calculations.md",
+          "Defect Metrics":"docs/analytics/references/defect-metrics.md",
+          "Release Metrics":"docs/analytics/references/release-metrics.md",
+          "Test Stability Metrics":"docs/analytics/references/test-stability-metrics.md"
+        }
+      }
+    }
   },
   "Visual Testing": {
     "children": ""

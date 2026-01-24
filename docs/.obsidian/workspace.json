@@ -11,10 +11,14 @@
             "id": "16f3568037ac632b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "analytics/overview.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "overview"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "analytics/overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for overview"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "analytics/overview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from overview"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "analytics/overview.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of overview"
             }
           }
         ]
@@ -178,6 +185,17 @@
   },
   "active": "16f3568037ac632b",
   "lastOpenFiles": [
+    "analytics/references/all-reports.md",
+    "analytics/quick-guides.md",
+    "analytics/configurations.md",
+    "analytics/references/coverage-calculations.md",
+    "RAW-DOCS/Getting Started/Getting Started Overview and Getting Started.md",
+    "RAW-DOCS/Getting Started/Using Filters & Analysis Scope.md",
+    "RAW-DOCS/Getting Started/Understanding Report Types.md",
+    "RAW-DOCS/Getting Started/Core Concepts - Understanding Reports & Analytics.md",
+    "RAW-DOCS/Getting Started/Understanding Analysis Scope Types.md",
+    "analytics/customizations/advanced-filters-combinations.md",
+    "RAW-DOCS/Getting Started/Build Advanced Filter Combinations.md",
     "ANALYTICS/test-case-activity/monitor-test-case-productivity.md",
     "analytics/test-results-failures/view-test-result-details.md",
     "analytics/test-results-failures/investigate-test-failures.md",
@@ -193,17 +211,6 @@
     "analytics/test-coverage/track-requirement-coverage.md",
     "analytics/test-coverage/index.md",
     "analytics/test-coverage/analyze-traceability.md",
-    "analytics/test-coverage/analyze-configuration-coverage.md",
-    "analytics/references/test-stability-metrics.md",
-    "analytics/references/release-metrics.md",
-    "analytics/references/defect-metrics.md",
-    "analytics/references/coverage-caculations.md",
-    "analytics/references/all-widgets.md",
-    "analytics/monitor-projects/track-historical-quality-trends.md",
-    "analytics/monitor-projects/monitor-real-time-test-execution.md",
-    "analytics/monitor-projects/manage-create-custom-dashboards.md",
-    "analytics/monitor-projects/assess-release-readiness.md",
-    "analytics/defects/view-defect-trends.md",
     "analytics/test-results-failures",
     "analytics/test-coverage",
     "analytics/test-case-activity",

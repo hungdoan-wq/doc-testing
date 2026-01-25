@@ -95,7 +95,95 @@ function loadFromHash() {
   if (file) loadMarkdown(file);
 }
 
+function stripIndent(text) {
+  const lines = text.replace(/^\n/, "").split("\n");
+  const indent = Math.min(
+    ...lines
+      .filter(l => l.trim())
+      .map(l => l.match(/^ */)[0].length)
+  );
+  return lines.map(l => l.slice(indent)).join("\n");
+}
+
 window.addEventListener("hashchange", loadFromHash);
+
+function preprocessDirectives(md) {
+  // 1. COLUMNS
+  md = md.replace(
+    /:::column\s*([\s\S]*?):::endcolumn/g,
+    (_, body) => {
+      const cols = [...body.matchAll(
+        /:::col\s+([^\s]+)\s*([\s\S]*?):::endcol/g
+      )];
+
+      if (!cols.length) return _;
+
+      return `
+<div class="columns">
+${cols.map(c => `
+  <div class="column" style="flex-basis:${c[1].trim()};">
+
+${marked.parse(c[2].trim())}
+
+  </div>
+`).join("")}
+</div>`;
+    }
+  );
+
+  // 2. TABS
+  md = md.replace(
+    /:::tabs\s+([^\s]+)\s*([\s\S]*?):::endtabs/g,
+    (_, group, body) => {
+      const tabs = [...body.matchAll(
+        /:::tab\s+([^\n]+)\s*([\s\S]*?):::endtab/g
+      )];
+
+      if (!tabs.length) return _;
+
+      const buttons = tabs.map((t, i) => `
+<button class="tab ${i === 0 ? "active" : ""}"
+        data-tab="${i}"
+        data-group="${group}">
+  ${marked.parse(marked.parse(t[1].trim()))}
+</button>`).join("");
+
+      const panels = tabs.map((t, i) => `
+<div class="tab-content ${i === 0 ? "active" : ""}"
+     data-tab="${i}"
+     data-group="${group}">
+
+${marked.parse(t[2].trim())}
+
+</div>`).join("");
+
+      return `
+<div class="tabs">
+  <div class="tab-buttons">
+    ${buttons}
+  </div>
+  ${panels}
+</div>`;
+    }
+  );
+
+  // 3. ADMONITIONS
+  md = md.replace(
+    /:::(note|tip|info|warning|danger)\s*([\s\S]*?):::end\1/g,
+    (_, type, content) => `
+<div class="admonition ${type}">
+  <div class="admonition-title">${type}</div>
+  <div class="admonition-content">
+
+${marked.parse(content.trim())}
+
+  </div>
+</div>`
+  );
+
+  return md;
+}
+
 
 /* ---------------------------
    Markdown loading
@@ -104,22 +192,28 @@ function loadMarkdown(file) {
   fetch(file)
     .then(r => r.text())
     .then(md => {
-      content.innerHTML = marked.parse(md);
+      const processed = preprocessDirectives(md);
+      content.innerHTML = marked.parse(processed);
+
       highlightActive(file);
       rewriteLinks();
       buildTOC();
       observeHeadings();
       renderMermaid();
+      initTabs();
     })
     .catch(() => {
       content.innerHTML = "<p>Document not found.</p>";
     });
 }
 
+
+
 /* ---------------------------
    Active highlight
 ---------------------------- */
 function highlightActive(path) {
+  
   document.querySelectorAll(".item").forEach(el => {
     const isActive = el.dataset.path === path;
     el.classList.toggle("active", isActive);
@@ -150,7 +244,11 @@ function rewriteLinks() {
   });
 }
 function buildTOC() {
+  const tocToggle = document.getElementById("toc-toggle");
   const toc = document.getElementById("toc");
+  tocToggle.onclick = () => {
+    toc.classList.toggle("hidden");
+  };
   toc.innerHTML = "";
 
   const headings = content.querySelectorAll("h2, h3");
@@ -210,22 +308,69 @@ function renderMermaid() {
 
   blocks.forEach((block, index) => {
     const parent = block.parentElement;
-    const graphDefinition = block.textContent;
-
-    const id = `mermaid-${index}-${Date.now()}`;
+    const graph = block.textContent;
 
     const container = document.createElement("div");
     container.className = "mermaid";
-    container.id = id;
-    container.textContent = graphDefinition;
+    container.textContent = graph;
 
     parent.replaceWith(container);
+  });
+
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: document.documentElement.dataset.theme === "dark"
+      ? "dark"
+      : "default"
   });
 
   mermaid.run({
     nodes: content.querySelectorAll(".mermaid")
   });
 }
+
+function initTabs() {
+  const allTabs = content.querySelectorAll(".tab");
+
+  allTabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const { tab, group } = btn.dataset;
+
+      // Activate all tabs in same group
+      content
+        .querySelectorAll(`.tab[data-group="${group}"]`)
+        .forEach(b =>
+          b.classList.toggle("active", b.dataset.tab === tab)
+        );
+
+      // Activate matching panels
+      content
+        .querySelectorAll(`.tab-content[data-group="${group}"]`)
+        .forEach(p =>
+          p.classList.toggle("active", p.dataset.tab === tab)
+        );
+
+      // Persist selection
+      if (group) {
+        localStorage.setItem(`tabs:${group}`, tab);
+      }
+    });
+  });
+
+  // Restore saved state on load
+  content.querySelectorAll(".tabs").forEach(tabs => {
+    const firstTab = tabs.querySelector(".tab");
+    if (!firstTab) return;
+
+    const group = firstTab.dataset.group;
+    const saved = localStorage.getItem(`tabs:${group}`);
+    if (!saved) return;
+
+    tabs.querySelector(`.tab[data-tab="${saved}"]`)?.click();
+  });
+}
+
+
 
 /* ======================================================
    Mobile sidebar toggle

@@ -1,11 +1,16 @@
 :root {
-  --bg: white;
-  --border: #e5e7eb;
-  --text: #111827;
   --muted: #6b7280;
-  --primary: #6366f1;
   --success-bg: #e8f5e9;
   --success-border: #2e7d32;
+  --bg: #ffffff;
+  --panel-bg: #f9fafb;
+  --border: #e5e7eb;
+  --text: #111827;
+  --text-muted: #6b7280;
+  --primary: #6366f1;
+  --primary-soft: #eef2ff;
+  --hover-bg: #f3f4f6;
+  --active-bg: #eef2ff;
 }
 
 * {
@@ -70,7 +75,7 @@ body {
     color: var(--primary);
   }
   .item.nested {
-    padding: 12px 0px;
+    padding: 12px 16px;
     margin-left: 0px;
   }
 
@@ -90,6 +95,7 @@ body {
   .section {
     cursor: pointer;
     user-select: none;
+    padding-left: 16px;
   }
 
   .section::after {
@@ -222,6 +228,31 @@ body {
     margin-right: 240px; /* space for TOC */
   }
 
+  .app {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr) 240px;
+    height: calc(100vh - 56px);
+  }
+
+  #sidebar {
+    overflow-y: auto;
+  }
+
+  #content {
+    padding: 32px 48px;
+    overflow-y: auto;
+  }
+
+  #content > * {
+    max-width: 860px;
+  }
+
+  #toc {
+    position: sticky;
+    top: 56px;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+  }
 }
 
 /* ======================================================
@@ -230,9 +261,14 @@ body {
 
 @media (max-width: 767px) {
 
+  .app {
+    display: block;
+  }
   .topbar {
     justify-content: space-between;
     position: sticky;
+    width: 100%;
+    top: 0;
     padding: 0 16px;
   }
   #sidebar {
@@ -274,8 +310,6 @@ body {
     color: var(--text);
     padding: 12px 16px;
     margin: 8px 0 4px;
-    background: #f9fafb;
-    border-radius: 8px;
   }
 
   /* Remove chevron rotation confusion */

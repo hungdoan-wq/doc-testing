@@ -3,11 +3,7 @@
     "children": ""
   },
   "Getting started": {
-    "children": {
-      "Get Started": "docs/get-started/get-started-with-katalon-testops.md",
-      "Quick Guide for Admins": "docs/get-started/quick-guide-for-admin.md",
-      "Quick Guide for Billing Managers": "docs/get-started/quick-guide-for-billing-managers.md"
-    }
+    "children": ""
   },
   "Administration": {
     "children": ""

@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 283.5
+    "width": 283.5,
+    "collapsed": true
   },
   "right": {
     "id": "b47b5d0c7aafac3d",
@@ -95,7 +96,7 @@
               "type": "backlink",
               "state": {
                 "file": "analytics/overview.md",
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -165,12 +166,12 @@
               "title": "Outline of overview"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 246.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,7 +184,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "16f3568037ac632b",
+  "active": "15a2c43357fe034d",
   "lastOpenFiles": [
     "analytics/references/all-reports.md",
     "analytics/quick-guides.md",

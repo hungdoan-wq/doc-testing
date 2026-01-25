@@ -54,6 +54,13 @@ function renderNode(node, container, depth) {
       const collapsed = childrenWrap.classList.toggle("collapsed");
       section.classList.toggle("collapsed", collapsed);
     };
+    if (window.innerWidth < 768) {
+      document.querySelectorAll(".section").forEach(section => {
+        section.onclick = () => {
+          section.classList.toggle("collapsed");
+        };
+      });
+    }
 
     // No children or empty placeholder
     if (!value.children || value.children === "") {
@@ -219,3 +226,26 @@ function renderMermaid() {
     nodes: content.querySelectorAll(".mermaid")
   });
 }
+
+/* ======================================================
+   Mobile sidebar toggle
+   ====================================================== */
+const menuBtn = document.getElementById("menu-btn");
+const sidebarEl = document.getElementById("sidebar");
+
+menuBtn?.addEventListener("click", () => {
+  sidebarEl.classList.toggle("open");
+});
+
+/* Close sidebar on navigation */
+sidebarEl?.addEventListener("click", e => {
+  if (e.target.classList.contains("item")) {
+    sidebarEl.classList.remove("open");
+  }
+});
+
+/* ======================================================
+   Dark mode toggle (optional auto)
+   ====================================================== */
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+document.documentElement.dataset.theme = prefersDark ? "dark" : "light";

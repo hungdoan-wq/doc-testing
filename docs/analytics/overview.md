@@ -1,385 +1,5 @@
 # Overview
 
-AI-Powered Features
-
-Dashboards
-# Get Started with Dashboards
-
-Learn how to navigate and interpret Katalon TestOps dashboards through hands-on practice. Understand the three dashboard types, read key widgets, use time range filters, and apply the "dashboard first, report second" principle to daily quality monitoring.
-
-# Get Started with Dashboards
-
-Reading time: 12-15 minutes
-What you'll build: Confidence navigating and interpreting TestOps dashboards for daily quality monitoring
-
-## What You'll Learn
-
-Dashboards are your operational command center in Katalon TestOps—think of them as the cockpit of an airplane, showing the most critical metrics at a glance so you can make fast, informed decisions about your testing quality.
-
-After completing this tutorial, you will:
-
-- Understand what dashboards are and how they differ from reports
-
-- Navigate the three pre-configured dashboard types (Project, Live Monitor, Release Health)
-
-- Read and interpret common widgets to understand project health
-
-- Use time range filters to focus your analysis on different time periods
-
-- Apply the "dashboard first, report second" principle in your daily workflow
-
-- Feel confident exploring dashboards independently
-
-Prerequisites:
-
-- You've completed [Get Started with Your Project Dashboard](/docs/getting-started/get-started-with-your-project-dashboard)
-
-- You have access to a Katalon TestOps project with test execution data
-
-## Understanding Dashboards: Your Quality Command Center
-
-Before diving into hands-on practice, let's clarify what dashboards are and when to use them.
-
-### Dashboard vs Report: Two Tools, Different Jobs
-
-Think of the difference like this:
-
-Dashboard = Your car's dashboard while driving
-Shows speed, fuel level, engine temperature—critical metrics you need right now to make immediate decisions. Quick checks, at-a-glance status, actionable insights.
-
-Report = Your car's maintenance log
-Detailed records for investigation: Why did the engine overheat last week? What's the fuel consumption pattern over the past month? Deep analysis, root cause investigation, comprehensive data.
-
-The "Dashboard First, Report Second" Principle:
-
-#_r_c9_{margin:1.5rem auto 0;}#_r_c9_{font-family:inherit;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#_r_c9_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#_r_c9_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#_r_c9_ .error-icon{fill:#552222;}#_r_c9_ .error-text{fill:#552222;stroke:#552222;}#_r_c9_ .edge-thickness-normal{stroke-width:1px;}#_r_c9_ .edge-thickness-thick{stroke-width:3.5px;}#_r_c9_ .edge-pattern-solid{stroke-dasharray:0;}#_r_c9_ .edge-thickness-invisible{stroke-width:0;fill:none;}#_r_c9_ .edge-pattern-dashed{stroke-dasharray:3;}#_r_c9_ .edge-pattern-dotted{stroke-dasharray:2;}#_r_c9_ .marker{fill:#333333;stroke:#333333;}#_r_c9_ .marker.cross{stroke:#333333;}#_r_c9_ svg{font-family:inherit;font-size:16px;}#_r_c9_ p{margin:0;}#_r_c9_ .label{font-family:inherit;color:#333;}#_r_c9_ .cluster-label text{fill:#333;}#_r_c9_ .cluster-label span{color:#333;}#_r_c9_ .cluster-label span p{background-color:transparent;}#_r_c9_ .label text,#_r_c9_ span{fill:#333;color:#333;}#_r_c9_ .node rect,#_r_c9_ .node circle,#_r_c9_ .node ellipse,#_r_c9_ .node polygon,#_r_c9_ .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#_r_c9_ .rough-node .label text,#_r_c9_ .node .label text,#_r_c9_ .image-shape .label,#_r_c9_ .icon-shape .label{text-anchor:middle;}#_r_c9_ .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#_r_c9_ .rough-node .label,#_r_c9_ .node .label,#_r_c9_ .image-shape .label,#_r_c9_ .icon-shape .label{text-align:center;}#_r_c9_ .node.clickable{cursor:pointer;}#_r_c9_ .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#_r_c9_ .arrowheadPath{fill:#333333;}#_r_c9_ .edgePath .path{stroke:#333333;stroke-width:2.0px;}#_r_c9_ .flowchart-link{stroke:#333333;fill:none;}#_r_c9_ .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_c9_ .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#_r_c9_ .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_c9_ .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#_r_c9_ .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#_r_c9_ .cluster text{fill:#333;}#_r_c9_ .cluster span{color:#333;}#_r_c9_ div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:inherit;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#_r_c9_ .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#_r_c9_ rect.text{fill:none;stroke-width:0;}#_r_c9_ .icon-shape,#_r_c9_ .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_c9_ .icon-shape p,#_r_c9_ .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#_r_c9_ .icon-shape rect,#_r_c9_ .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_c9_ .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#_r_c9_ .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#_r_c9_ :root{--mermaid-font-family:inherit;}
-YesPass Rate >90%No Critical Issues
-
-NoPass Rate DroppedDefects Increased
-
-Start Your Day
-
-Open Dashboard
-
-Quick Health Check
-
-EverythingGreen?
-
-ContinueMonitoring
-
-Click Widget toDrill into Report
-
-Root CauseAnalysis
-
-Take CorrectiveAction
-
-Use dashboards for quick checks; drill into reports when investigation is needed
-
-### Three Dashboard Types: When to Use Each
-
-TestOps provides three pre-configured dashboards, each designed for specific scenarios:
-
-Dashboard TypeBest ForAnalysis ScopeTypical Use CaseProject DashboardDaily monitoring, team standups, weekly reviewsTime-based (Last 7 days, Last 30 days, etc.)"How did testing go this week?"Live Monitor DashboardReal-time execution tracking during active testingCurrent state (ignores time range)"What's happening right now?"Release Health DashboardRelease readiness, go/no-go decisions, sprint retrospectivesRelease-based (specific release/sprint)"Is Release 3.0 ready to ship?"
-#_r_cb_{margin:1.5rem auto 0;}#_r_cb_{font-family:inherit;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#_r_cb_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#_r_cb_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#_r_cb_ .error-icon{fill:#552222;}#_r_cb_ .error-text{fill:#552222;stroke:#552222;}#_r_cb_ .edge-thickness-normal{stroke-width:1px;}#_r_cb_ .edge-thickness-thick{stroke-width:3.5px;}#_r_cb_ .edge-pattern-solid{stroke-dasharray:0;}#_r_cb_ .edge-thickness-invisible{stroke-width:0;fill:none;}#_r_cb_ .edge-pattern-dashed{stroke-dasharray:3;}#_r_cb_ .edge-pattern-dotted{stroke-dasharray:2;}#_r_cb_ .marker{fill:#333333;stroke:#333333;}#_r_cb_ .marker.cross{stroke:#333333;}#_r_cb_ svg{font-family:inherit;font-size:16px;}#_r_cb_ p{margin:0;}#_r_cb_ .label{font-family:inherit;color:#333;}#_r_cb_ .cluster-label text{fill:#333;}#_r_cb_ .cluster-label span{color:#333;}#_r_cb_ .cluster-label span p{background-color:transparent;}#_r_cb_ .label text,#_r_cb_ span{fill:#333;color:#333;}#_r_cb_ .node rect,#_r_cb_ .node circle,#_r_cb_ .node ellipse,#_r_cb_ .node polygon,#_r_cb_ .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#_r_cb_ .rough-node .label text,#_r_cb_ .node .label text,#_r_cb_ .image-shape .label,#_r_cb_ .icon-shape .label{text-anchor:middle;}#_r_cb_ .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#_r_cb_ .rough-node .label,#_r_cb_ .node .label,#_r_cb_ .image-shape .label,#_r_cb_ .icon-shape .label{text-align:center;}#_r_cb_ .node.clickable{cursor:pointer;}#_r_cb_ .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#_r_cb_ .arrowheadPath{fill:#333333;}#_r_cb_ .edgePath .path{stroke:#333333;stroke-width:2.0px;}#_r_cb_ .flowchart-link{stroke:#333333;fill:none;}#_r_cb_ .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_cb_ .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#_r_cb_ .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_cb_ .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#_r_cb_ .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#_r_cb_ .cluster text{fill:#333;}#_r_cb_ .cluster span{color:#333;}#_r_cb_ div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:inherit;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#_r_cb_ .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#_r_cb_ rect.text{fill:none;stroke-width:0;}#_r_cb_ .icon-shape,#_r_cb_ .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_cb_ .icon-shape p,#_r_cb_ .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#_r_cb_ .icon-shape rect,#_r_cb_ .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_cb_ .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#_r_cb_ .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#_r_cb_ :root{--mermaid-font-family:inherit;}
-Check dailyproject health
-
-Monitor activetest runs
-
-Assess releasereadiness
-
-Investigatespecific issue
-
-What do youneed to do?
-
-Project DashboardTime-based Analysis
-
-Live Monitor DashboardCurrent State
-
-Release Health DashboardRelease-based Analysis
-
-Navigate toDetailed Reports
-
-Use for: Daily standups,weekly team reviews,trend monitoring
-
-Use for: During deployments,real-time test execution,immediate status checks
-
-Use for: Release meetings,sprint retrospectives,stakeholder reporting
-
-Decision tree: Choosing the right dashboard for your task
-
-Now let's practice using each dashboard type through hands-on workflows.
-
-## Workflow 1: Morning Dashboard Check (Project Dashboard)
-
-Scenario: You're a QA Manager starting your day. Before the daily standup, you need a quick overview of project health. Let's use the Project Dashboard to understand testing status from the past week.
-
-### Open Your Project Dashboard
-
-- Log into Katalon TestOps and navigate to your project
-
-- You'll land on the Project Dashboard by default—this is your daily command center
-
-- Notice the dashboard shows multiple widgets (boxes) displaying different metrics
-
-What you're seeing: The Project Dashboard uses time-based analysis, meaning it shows data from a specific time period (default: last 7 days).
-
-### Interpret the Test Results Summary Widget
-
-Look at the Test Results Summary widget (typically in the top-left area).
-
-What it shows:
-
-- Green "Passed" count: Number of test executions that passed in the selected time range
-
-- Red "Failed" count: Number of test executions that failed—these need attention
-
-- Pass Rate %: Overall health indicator calculated as: (Passed / (Passed + Failed)) × 100
-
-How to interpret the numbers:
-Pass RateWhat It MeansAction NeededAbove 90%Healthy—strong quality, minimal issuesContinue monitoring80-90%Acceptable—some failures expected, watch trendsMonitor for patternsBelow 80%Warning—quality degrading, investigate nowDrill into reports to find root causes
-Example: If you see "85% pass rate (340 Passed, 60 Failed)"—this is acceptable but approaching warning level. Check if the trend is improving or degrading.
-
-### Check Open Defects
-
-Look at the Total Current Open Defects widget.
-
-What it shows:
-Count of defects currently unresolved in your project. This widget uses Current scope (ignores time range) to show defects open right now.
-
-Why it matters:
-Open defects represent known issues requiring resolution. High-priority defects may block release.
-
-Action: If you see defects, note the priority breakdown. Critical/High priority defects need immediate attention.
-
-### Review the Trend Chart
-
-Find the Test Results Trend Daily chart (bar chart showing daily results).
-
-What it shows:
-Daily test execution results over your selected time range. Each bar is divided by status (Passed = green, Failed = red, Error = orange, etc.).
-
-What to look for:
-
-- Is the trend improving? Green bars getting taller = good
-
-- Is the trend degrading? Red bars getting taller = investigate
-
-- Are there gaps? Days with no bars = no testing occurred (maybe weekends)
-
-Example interpretation: If you see mostly green bars for the past 5 days but today's bar is 50% red—something changed recently. This warrants investigation.
-
-### Adjust Time Range to Focus Analysis
-
-- Look for the Time Range selector (typically top-right of dashboard)
-
-- Click to open the dropdown
-
-- Try changing from "Last 7 days" to "Last 24 hours"
-
-- Watch how all widgets update to show only yesterday's data
-
-What you've learned:
-Time range is like adjusting your telescope's focus. "Last 24 hours" shows yesterday's activity (great for daily standups). "Last 7 days" shows weekly trends (great for weekly reviews). "Last 30 days" shows monthly patterns (great for monthly reporting).
-
-Common time ranges and when to use them:
-
-- Last 24 hours: Daily standup, yesterday's testing summary
-
-- Last 7 days: Weekly team review, recent quality trends
-
-- Last 30 days: Monthly reporting, longer-term patterns
-
-### Make Your Decision
-
-After reviewing these widgets, you can now answer in your standup:
-
-✅ If pass rate above 90%, no critical defects, stable trends:
-"Testing is in good shape. Pass rate is 92%, no blockers, quality is stable."
-
-⚠️ If pass rate below 80%, or increasing defects, or degrading trends:
-"We have some issues to address. Pass rate dropped to 78% yesterday, and we have 5 new high-priority defects. I'll investigate after standup." (Then drill into reports for root cause analysis.)
-
-Expected Outcome: You understand project health in 2-5 minutes, can identify if urgent action is needed, and know what "pass rate" and "open defects" mean in context.
-
-## Workflow 2: Monitor Live Test Execution (Live Monitor Dashboard)
-
-Scenario: Your team is deploying a new release. Automated tests are running right now, and you need to monitor the execution in real-time to catch failures as they happen.
-
-### Navigate to Live Monitor Dashboard
-
-- Click the Dashboards menu in the navigation
-
-- Select Live Monitor Dashboard from the list
-
-- The dashboard loads with a different set of widgets
-
-Key difference: Live Monitor shows current state data, not time-based data. It displays the latest execution status per test case, regardless of when tests ran.
-
-### Understand "Current" Data Behavior
-
-Notice that the Time Range selector is disabled or has no effect on this dashboard.
-
-Why? Live Monitor answers "What's the status right now?" not "What happened in the last 7 days?"
-
-What "Current" means:
-
-- Shows the latest result for each test case
-
-- If a test last ran 5 minutes ago → shows that result
-
-- If a test last ran 2 weeks ago and hasn't run since → shows the 2-week-old result (it's still the "current" status)
-
-Important distinction:
-Dashboard TypeQuestion It AnswersData ScopeProject Dashboard"What happened in the past week?"Time-based (all executions in time range)Live Monitor Dashboard"What's the current status?"Current (latest execution per test case)
-### Monitor Real-Time Execution
-
-During active test runs:
-
-- The Test Results Summary widget updates automatically (refreshes every 30 seconds)
-
-- Watch for new failures appearing in red
-
-- The Total Current Open Defects widgets show defects open right now (not historical)
-
-Use case example:
-During deployment, keep Live Monitor open in a browser tab. If new test failures emerge (status changes from green to red), you'll see them appear within 30 seconds.
-
-### Know When to Use Live Monitor vs Project Dashboard
-
-Use Live Monitor when:
-
-- ✅ Monitoring active test runs during deployment
-
-- ✅ Checking immediate status ("Are all tests currently passing?")
-
-- ✅ Real-time quality checks during release deployment
-
-Use Project Dashboard when:
-
-- ✅ Analyzing trends over time ("How did testing perform this week?")
-
-- ✅ Comparing today vs yesterday ("Did quality improve?")
-
-- ✅ Daily standups requiring time-based summaries
-
-Expected Outcome: You understand Live Monitor shows "current state" vs Project Dashboard's "time-based analysis," and you know when to use each dashboard type.
-
-## Workflow 3: Assess Release Quality (Release Health Dashboard)
-
-Scenario: Your team has a release readiness meeting tomorrow. You need to check if Release 3.0 has met quality gates: above 90% pass rate, all critical features tested, no high-priority defects.
-
-### Navigate to Release Health Dashboard
-
-- Click the Dashboards menu
-
-- Select Release Health Dashboard
-
-- You'll see a Release Picker (dropdown) at the top
-
-### Select Your Release
-
-Note: The dashboard automatically loads with the current/latest release selected by default. You can switch to view other releases using the Release Picker.
-
-- Click the Release Picker dropdown
-
-- Select "Release 3.0" (or your current release)
-
-- Watch all widgets update to show data only for Release 3.0
-
-Key behavior: Release Health Dashboard uses release-based scope, not time-based scope. It shows all data associated with Release 3.0, regardless of when tests ran.
-
-Example:
-If testing started 4 weeks ago and continued until yesterday, the dashboard shows all 4 weeks of Release 3.0 testing—not just the last 7 days.
-
-### Check Requirement Coverage
-
-Look at the Requirement Coverage Summary widget.
-
-What it shows:
-
-- Percentage of requirements with linked test cases
-
-- Shows how much of the release is actually tested
-
-How to interpret:
-
-- Above 90% coverage: Excellent—most features have test coverage
-
-- 70-90% coverage: Acceptable—some gaps exist
-
-- Below 70% coverage: Warning—significant untested functionality
-
-Why it matters: If only 50% of requirements are covered, you don't have enough testing to make a confident go/no-go decision.
-
-### Review Testing Progress Trend
-
-Find the Test Results Trend Daily chart.
-
-What it shows:
-Daily test execution results over the entire release cycle (from release start date to today).
-
-What to look for:
-
-- Early in release: Expect higher failure rates (features incomplete, tests stabilizing)
-
-- Late in release: Expect high pass rates (features stabilized, tests mature)
-
-- Upward green trend: Good—quality improving over release cycle
-
-- Recent red spike: Concern—quality degrading as release approaches
-
-### Assess Defect Activity
-
-Look at the Defects Activity Trend widget (combined line and bar chart).
-
-What it shows:
-
-- Bars: Defects created (blue) and closed (green) each day
-
-- Line: Cumulative open defects over time
-
-Ideal pattern:
-
-- Early release: High defect creation (bugs being found)
-
-- Late release: High defect closure rate, declining open defects
-
-- At release date: Very few open defects
-
-Warning signs:
-
-- Open defects line trending upward near release date = defect backlog growing
-
-- More defects created than closed = team can't keep up with fixes
-
-### Check Overall Pass Rate
-
-Find the Test Pass Rates Summary widget.
-
-What it shows:
-Overall pass rate for Release 3.0 (all testing for this release).
-
-Release readiness benchmarks:
-
-- Above 95%: Excellent—release ready
-
-- 90-95%: Good—release likely ready (review open defects)
-
-- 85-90%: Acceptable—may need fixes before release
-
-- Below 85%: At risk—significant quality concerns, likely delay release
-
-### Make Your Go/No-Go Assessment
-
-After reviewing these widgets, you can now answer in the release meeting:
-
-✅ GO Decision Example:
-"Release 3.0 quality metrics: 94% pass rate, 92% requirement coverage, 2 open defects (both low priority), defect backlog declining. Quality gates met. Recommend GO for release."
-
-⚠️ NO-GO Decision Example:
-"Release 3.0 quality metrics: 82% pass rate, 15 high-priority defects still open, only 75% requirement coverage. Quality gates not met. Recommend 1-week delay to address critical issues."
-
-Expected Outcome: You understand Release Health Dashboard uses "release scope" not "time scope," and you know how to assess release readiness using multiple quality indicators.
 
 ## Understanding Widget Interpretation: A Transferable Pattern
 
@@ -2812,58 +2432,35 @@ Best practice for large distributions:
 
 [Configuration & Sharing OverviewLearn how to share TestOps dashboards and reports with external stakeholders, export data for analysis, and configure access control for collaboration without license barriers.](/docs/configuration-sharing/configuration-and-sharing-overview)[Export Reports and DashboardsExport report data as CSV for analysis in Excel or BI tools, and export individual test run results in Excel, HTML, or PDF formats for documentation and compliance records.](/docs/configuration-sharing/export-reports-and-dashboards)
 
+# Start Here
 
-Getting Started
-# Getting Started: Overview and Getting Started
+This document explains all features and entry points to help you get started with **TestOps Analytics**.
 
-Navigate Reports & Analytics confidently with task-to-tool mapping, basic filtering, and dashboard exploration for all testing roles.
+## Introduction
 
-# Getting Started: Overview and Getting Started
+Managing a software testing operation without visibility into what's happening can prevent you from making the go/no-go decision to ship. This is exactly what **Katalon TestOps Analytics** aims to solve - we transform testing data into insightful visualizations so you can make an informed decision.
 
-Reading time: 8 minutes
+An overview of our features:
 
-Reports & Analytics offers dozens of dashboards, reports, and analysis tools. Without a map, it's easy to get lost or miss critical capabilities. This guide gives you that map—showing you where to start, which tool to use for each task, and how to navigate confidently from day one.
+- Built-in dashboards/reports for monitoring and investigation purposes
+- Integrations for direct ADO requirement-linking to testing entities (test cases, test runs, failures, errors,...)
+- Time filters by release/sprint for Agile teams
+- AI-powered tools for quick analysis and briefings
+- Exports and sharing options for your team and stakeholders outside the team
+- Customizations of widgets and dashboards to tailor to your needs
 
-## What This Section Covers
+**TestOps Analytics** benefits all:
 
-This section provides capabilities to:
-
-- Navigate the Reports & Analytics module structure (dashboards vs. reports, navigation patterns, core interface elements)
-
-- Access and explore the Project Dashboard to understand real-time quality metrics and test execution status
-
-- Apply basic filtering with the time range selector to focus analysis on specific time periods
-
-- Map common testing tasks to the right tools (task-to-tool reference covering daily monitoring, failure investigation, coverage tracking, release readiness)
-
-## What You'll Achieve
-
-By completing this section, you will:
-
-- Navigate confidently between Reports & Analytics dashboards and reports using the left navigation menu
-
-- Distinguish between dashboards (real-time monitoring) and reports (historical analysis) and know when to use each
-
-- Access the Project Dashboard and interpret key metrics (total executions, pass rate, failed tests, execution trends)
-
-- Apply basic time range filtering to adjust dashboard and report scope for day-to-day analysis
-
-- Identify which tool to use for common testing tasks using the task-to-tool mapping reference (monitoring live tests, investigating failures, checking coverage, assessing release readiness)
-
-- Understand navigation patterns and next learning steps based on your role (QA Engineer, QA Manager, Automation Engineer, Product Owner)
-
-## Prerequisites
-
-Before you begin: You need an active TestOps account with access to at least one project containing test execution data. If you don't have access yet, contact your TestOps administrator.
-
-## Visual Journey Map
-
-The diagram below shows your navigation journey from arriving at TestOps to finding the insights you need:
-
+- **QA Managers**: Strategic oversight, release readiness, quality trends. Quick start ->
+- **Manual Testers**: Execution tracking, failure investigation. Quick start ->
+- **Automation Engineers**: Flaky test detection, test optimization. Quick start ->
+- **DevOps Engineers**: Pipeline integration, quality gates. Quick start ->
+- **Product Managers**: Feature quality, requirement traceability. Quick start ->
 
 ## Task-to-Tool Mapping: Finding the Right Tool Fast
 
 The table below maps common testing tasks to the specific dashboard or report that answers your question:
+
 
 | I Need To...                               | Use This Tool                                                                                                                                                                                                                          | Why?                                                                                                           |
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -2877,7 +2474,15 @@ The table below maps common testing tasks to the specific dashboard or report th
 | See automated vs. manual test distribution | [Automation Progress Report](https://ktl-docs-ra.vercel.app/docs/coverage/automation-progress)                                                                                                                                         | Automation coverage tracking with breakdown by test type and execution method                                  |
 | Verify testing across browsers/devices     | [Configuration Coverage Report](https://ktl-docs-ra.vercel.app/docs/coverage/configuration-coverage)                                                                                                                                   | Platform and environment coverage showing which configurations have been tested                                |
 | Generate compliance audit report           | [Requirement Traceability Report](https://ktl-docs-ra.vercel.app/docs/coverage/requirement-traceability)                                                                                                                               | Full traceability chain (requirements → tests → results → defects) in audit-ready format with PDF/Excel export |
-## Understanding Dashboards vs. Reports
+### Dashboard vs Report: Two Tools, Different Jobs
+
+Think of the difference like this:
+
+Dashboard = Your car's dashboard while driving
+Shows speed, fuel level, engine temperature—critical metrics you need right now to make immediate decisions. Quick checks, at-a-glance status, actionable insights.
+
+Report = Your car's maintenance log
+Detailed records for investigation: Why did the engine overheat last week? What's the fuel consumption pattern over the past month? Deep analysis, root cause investigation, comprehensive data.
 
 Before diving into specific tools, understand the key distinction that shapes how you'll navigate Reports & Analytics:
 
@@ -2915,200 +2520,287 @@ When to use each:
 
 - Use reports for reactive analysis (detailed, predefined, single-question focus)
 
-## Section Contents Overview
+Use dashboards for quick checks; drill into reports when investigation is needed
 
-This section includes 2 tutorials, 1 how-to guide, 1 explanation, and 1 reference document to build your navigation foundation:
+### Three Dashboard Types: When to Use Each
 
-Tutorials:
+TestOps provides three pre-configured dashboards, each designed for specific scenarios. Check out our workflow examples, to quickly understand when you'll need which.
 
-- [Exploring the Project Dashboard](/docs/getting-started/project-dashboard) - Learn core metrics, widgets, and quality indicators on the universal quality dashboard all users access daily
+## Workflow 1: Morning Dashboard Check (Project Dashboard)
 
-- [Quick Start: Your First 5 Minutes](/docs/getting-started/quick-start) - Hands-on walkthrough from login to finding your first insight in under 5 minutes
+Scenario: You're a QA Manager starting your day. Before the daily standup, you need a quick overview of project health. Let's use the Project Dashboard to understand testing status from the past week.
 
-How-To Guides:
+### Open Your Project Dashboard
 
-- [Using Filters & Analysis Scope](/docs/getting-started/filters-analysis-scope) - Master time range, release scope, and current filters to focus analysis efficiently
+- Log into Katalon TestOps and navigate to your project
 
-Explanations:
+- You'll land on the Project Dashboard by default—this is your daily command center
 
-- [Core Concepts: Understanding Reports & Analytics](/docs/getting-started/core-concepts) - Deep dive into module architecture, data flow, and terminology standards
+- Notice the dashboard shows multiple widgets (boxes) displaying different metrics
 
-Reference:
+What you're seeing: The Project Dashboard uses time-based analysis, meaning it shows data from a specific time period (default: last 7 days).
 
-- [All Reports & Dashboards Quick Reference](/docs/reference/all-reports) - Complete catalog with descriptions, use cases, and links for every tool in Reports & Analytics
+### Interpret the Test Results Summary Widget
 
-## Recommended Learning Path
+Look at the Test Results Summary widget (typically in the top-left area).
 
-[### For QA Engineers
-Start: Investigating Test Failures - Learn systematic failure investigation workflow for daily debugging tasks, including AI-powered root cause analysisThen: Using Filters & Analysis Scope - Master filtering system to focus analysis efficiently on relevant time periods, releases, and configurationsFinally: Identifying Flaky Tests - Distinguish flaky tests from real failures to prioritize work and improve test reliability](/docs/test-failures/introduction)[### For QA Managers
-Start: Dashboards & Monitoring - Understand Live Monitor, Analytics & Trends, and Release Health dashboards for team oversight and quality trackingThen: Assessing Release Readiness - Set up quality gates and release readiness workflows to make objective go/no-go decisionsFinally: Tracking Requirement Coverage - Monitor test coverage for completeness and compliance with audit-ready traceability](/docs/dashboards/introduction)
+What it shows:
 
-## Common Questions
+- Green "Passed" count: Number of test executions that passed in the selected time range
 
-### What's the difference between dashboards and reports in TestOps?
+- Red "Failed" count: Number of test executions that failed—these need attention
 
-### I don't see any data in my dashboard. What should I check?
+- Pass Rate %: Overall health indicator calculated as: (Passed / (Passed + Failed)) × 100
 
-### Can I customize the Project Dashboard or other built-in dashboards?
+How to interpret the numbers:
+Pass RateWhat It MeansAction NeededAbove 90%Healthy—strong quality, minimal issuesContinue monitoring80-90%Acceptable—some failures expected, watch trendsMonitor for patternsBelow 80%Warning—quality degrading, investigate nowDrill into reports to find root causes
+Example: If you see "85% pass rate (340 Passed, 60 Failed)"—this is acceptable but approaching warning level. Check if the trend is improving or degrading.
 
-Yes. TestOps allows dashboard customization including adding/removing widgets, resizing, and configuring widget settings. You can also create completely custom dashboards from scratch. Admin permissions required for organization-wide customizations.
+### Check Open Defects
 
-Learn more: [Dashboard Configuration Guide](/docs/customization/dashboard-configuration)
+Look at the Total Current Open Defects widget.
 
-### How do I know which report to use for compliance audits?
+What it shows:
+Count of defects currently unresolved in your project. This widget uses Current scope (ignores time range) to show defects open right now.
 
-### What if I can't find a specific dashboard or report in my navigation?
+Why it matters:
+Open defects represent known issues requiring resolution. High-priority defects may block release.
 
-## See Also
+Action: If you see defects, note the priority breakdown. Critical/High priority defects need immediate attention.
 
-Foundation Concepts:
+### Review the Trend Chart
 
-- [Core Concepts: Understanding Reports & Analytics](/docs/getting-started/core-concepts) - Deep dive into module architecture, data flow, and terminology standards
+Find the Test Results Trend Daily chart (bar chart showing daily results).
 
-Next Sections:
+What it shows:
+Daily test execution results over your selected time range. Each bar is divided by status (Passed = green, Failed = red, Error = orange, etc.).
 
-- [Dashboards & Monitoring](/docs/dashboards/introduction) - Apply navigation knowledge to real-time monitoring with Live Monitor and Analytics & Trends
+What to look for:
 
-- [Test Failures](/docs/test-failures/introduction) - When dashboards show quality issues, learn systematic investigation workflows
+- Is the trend improving? Green bars getting taller = good
 
-Advanced Topics:
+- Is the trend degrading? Red bars getting taller = investigate
 
-- [Customization & External Sharing](/docs/customization/introduction) - Customize dashboards and reports to match your team's workflow after mastering navigation
+- Are there gaps? Days with no bars = no testing occurred (maybe weekends)
 
-## 📍 Where to Go Next
+Example interpretation: If you see mostly green bars for the past 5 days but today's bar is 50% red—something changed recently. This warrants investigation.
 
-Common next steps after Getting Started:
+### Adjust Time Range to Focus Analysis
 
-- [Exploring the Project Dashboard](/docs/getting-started/project-dashboard) - Start hands-on by exploring the universal quality dashboard all users access daily
+- Look for the Time Range selector (typically top-right of dashboard)
 
-- [Dashboards & Monitoring](/docs/dashboards/introduction) - Understand Live Monitor, Analytics & Trends, and Release Health for team oversight
+- Click to open the dropdown
 
-- [Workflow Guide: Role-Based Pathways](/docs/workflows/overview) - Not sure which section to explore next? Find your role's recommended learning path
+- Try changing from "Last 7 days" to "Last 24 hours"
 
-Need help deciding? See [Workflow Guide: Role-Based Pathways](/docs/workflows/overview)
-[Core Concepts - Understanding Reports & AnalyticsBuild a mental model of TestOps Reports & Analytics—understand dashboards vs reports, role-based use cases, data models, and how R&A fits into your testing workflow.](/docs/getting-started/why-testops-for-test-analytics)
+- Watch how all widgets update to show only yesterday's data
 
-Getting Started
-# Core Concepts - Understanding Reports & Analytics
+What you've learned:
+Time range is like adjusting your telescope's focus. "Last 24 hours" shows yesterday's activity (great for daily standups). "Last 7 days" shows weekly trends (great for weekly reviews). "Last 30 days" shows monthly patterns (great for monthly reporting).
 
-Build a mental model of TestOps Reports & Analytics—understand dashboards vs reports, role-based use cases, data models, and how R&A fits into your testing workflow.
+Common time ranges and when to use them:
 
-# Core Concepts: Understanding Reports & Analytics
+- Last 24 hours: Daily standup, yesterday's testing summary
 
-Reading time: 12 minutes
+- Last 7 days: Weekly team review, recent quality trends
 
-Looking for hands-on practice? If you prefer learning by doing, start with [Getting Started with Reports & Analytics](/docs/getting-started/introduction) for a step-by-step tutorial. This document provides conceptual understanding that complements the hands-on guide.
+- Last 30 days: Monthly reporting, longer-term patterns
 
-## Introduction
+### Make Your Decision
 
-Imagine managing a software testing operation without visibility into what's happening. You don't know which tests are passing or failing, which builds are stable, or whether your team is ready to release. You're flying blind.
+After reviewing these widgets, you can now answer in your standup:
 
-This is the problem Katalon TestOps Reports & Analytics solves. It transforms raw test execution data into actionable insights, giving you the visibility and intelligence you need to make confident quality decisions.
+✅ If pass rate above 90%, no critical defects, stable trends:
+"Testing is in good shape. Pass rate is 92%, no blockers, quality is stable."
 
-This guide helps you build a mental model of Reports & Analytics: what it does, how it works, and when to use each feature. Whether you're a QA Manager planning adoption, a Tester learning the platform, or an Engineer integrating automation, understanding these core concepts will help you use TestOps more effectively.
+⚠️ If pass rate below 80%, or increasing defects, or degrading trends:
+"We have some issues to address. Pass rate dropped to 78% yesterday, and we have 5 new high-priority defects. I'll investigate after standup." (Then drill into reports for root cause analysis.)
 
-## What is Reports & Analytics?
+Expected Outcome: You understand project health in 2-5 minutes, can identify if urgent action is needed, and know what "pass rate" and "open defects" mean in context.
 
-### The Testing Visibility Challenge
+## Workflow 2: Monitor Live Test Execution (Live Monitor Dashboard)
 
-Modern software teams face a common challenge: testing generates massive amounts of data, but data alone doesn't tell you what to do.
+Scenario: Your team is deploying a new release. Automated tests are running right now, and you need to monitor the execution in real-time to catch failures as they happen.
 
-Consider a typical scenario:
+### Navigate to Live Monitor Dashboard
 
-- Your CI/CD pipeline runs 2,000 automated tests every night
+- Click the Dashboards menu in the navigation
 
-- Manual testers execute 150 test cases daily
+- Select Live Monitor Dashboard from the list
 
-- Multiple teams work on different features simultaneously
+- The dashboard loads with a different set of widgets
 
-- Tests run across different environments, browsers, and devices
+Key difference: Live Monitor shows current state data, not time-based data. It displays the latest execution status per test case, regardless of when tests ran.
 
-Without Reports & Analytics, you'd need to manually sift through logs, spreadsheets, and CI/CD outputs to answer basic questions like "Are we ready to release?" or "Why did yesterday's build fail?"
+### Understand "Current" Data Behavior
 
-### What Reports & Analytics Provides
+Notice that the Time Range selector is disabled or has no effect on this dashboard.
 
-Reports & Analytics (R&A) is TestOps's intelligence layer—it collects test execution data from all sources and transforms it into four key capabilities:
+Why? Live Monitor answers "What's the status right now?" not "What happened in the last 7 days?"
 
-- Real-time monitoring: See what's happening right now with live dashboards
+What "Current" means:
 
-- Historical analysis: Understand trends, patterns, and changes over time
+- Shows the latest result for each test case
 
-- Quality insights: Identify flaky tests, coverage gaps, and risk areas
+- If a test last ran 5 minutes ago → shows that result
 
-- Compliance traceability: Link tests to requirements for regulatory reporting
+- If a test last ran 2 weeks ago and hasn't run since → shows the 2-week-old result (it's still the "current" status)
 
-#_r_8e_{margin:1.5rem auto 0;}#_r_8e_{font-family:inherit;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#_r_8e_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#_r_8e_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#_r_8e_ .error-icon{fill:#552222;}#_r_8e_ .error-text{fill:#552222;stroke:#552222;}#_r_8e_ .edge-thickness-normal{stroke-width:1px;}#_r_8e_ .edge-thickness-thick{stroke-width:3.5px;}#_r_8e_ .edge-pattern-solid{stroke-dasharray:0;}#_r_8e_ .edge-thickness-invisible{stroke-width:0;fill:none;}#_r_8e_ .edge-pattern-dashed{stroke-dasharray:3;}#_r_8e_ .edge-pattern-dotted{stroke-dasharray:2;}#_r_8e_ .marker{fill:#333333;stroke:#333333;}#_r_8e_ .marker.cross{stroke:#333333;}#_r_8e_ svg{font-family:inherit;font-size:16px;}#_r_8e_ p{margin:0;}#_r_8e_ .label{font-family:inherit;color:#333;}#_r_8e_ .cluster-label text{fill:#333;}#_r_8e_ .cluster-label span{color:#333;}#_r_8e_ .cluster-label span p{background-color:transparent;}#_r_8e_ .label text,#_r_8e_ span{fill:#333;color:#333;}#_r_8e_ .node rect,#_r_8e_ .node circle,#_r_8e_ .node ellipse,#_r_8e_ .node polygon,#_r_8e_ .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#_r_8e_ .rough-node .label text,#_r_8e_ .node .label text,#_r_8e_ .image-shape .label,#_r_8e_ .icon-shape .label{text-anchor:middle;}#_r_8e_ .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#_r_8e_ .rough-node .label,#_r_8e_ .node .label,#_r_8e_ .image-shape .label,#_r_8e_ .icon-shape .label{text-align:center;}#_r_8e_ .node.clickable{cursor:pointer;}#_r_8e_ .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#_r_8e_ .arrowheadPath{fill:#333333;}#_r_8e_ .edgePath .path{stroke:#333333;stroke-width:2.0px;}#_r_8e_ .flowchart-link{stroke:#333333;fill:none;}#_r_8e_ .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_8e_ .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#_r_8e_ .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_8e_ .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#_r_8e_ .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#_r_8e_ .cluster text{fill:#333;}#_r_8e_ .cluster span{color:#333;}#_r_8e_ div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:inherit;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#_r_8e_ .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#_r_8e_ rect.text{fill:none;stroke-width:0;}#_r_8e_ .icon-shape,#_r_8e_ .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_8e_ .icon-shape p,#_r_8e_ .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#_r_8e_ .icon-shape rect,#_r_8e_ .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_8e_ .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#_r_8e_ .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#_r_8e_ :root{--mermaid-font-family:inherit;}
-Insights & Actions
+Important distinction:
+Dashboard TypeQuestion It AnswersData ScopeProject Dashboard"What happened in the past week?"Time-based (all executions in time range)Live Monitor Dashboard"What's the current status?"Current (latest execution per test case)
+### Monitor Real-Time Execution
 
-Reports & Analytics
+During active test runs:
 
-Test Data Sources
+- The Test Results Summary widget updates automatically (refreshes every 30 seconds)
 
-Katalon Studio
+- Watch for new failures appearing in red
 
-Playwright/Other Tools
+- The Total Current Open Defects widgets show defects open right now (not historical)
 
-Manual Tests
+Use case example:
+During deployment, keep Live Monitor open in a browser tab. If new test failures emerge (status changes from green to red), you'll see them appear within 30 seconds.
 
-CI/CD Pipelines
+### Know When to Use Live Monitor vs Project Dashboard
 
-Data Collection
+Use Live Monitor when:
 
-Processing & Calculation
+- ✅ Monitoring active test runs during deployment
 
-Metrics Engine
+- ✅ Checking immediate status ("Are all tests currently passing?")
 
-Real-time Dashboards
+- ✅ Real-time quality checks during release deployment
 
-Historical Reports
+Use Project Dashboard when:
 
-Quality Insights
+- ✅ Analyzing trends over time ("How did testing perform this week?")
 
-Compliance Traceability
+- ✅ Comparing today vs yesterday ("Did quality improve?")
 
-Figure 1: How Reports & Analytics transforms test data into actionable insights
+- ✅ Daily standups requiring time-based summaries
 
-### How R&A Fits in the TestOps Ecosystem
+Expected Outcome: You understand Live Monitor shows "current state" vs Project Dashboard's "time-based analysis," and you know when to use each dashboard type.
 
-Reports & Analytics doesn't work in isolation—it's deeply integrated with other TestOps modules:
+## Workflow 3: Assess Release Quality (Release Health Dashboard)
 
-- Test Management → R&A: Test case execution results feed into quality reports
+Scenario: Your team has a release readiness meeting tomorrow. You need to check if Release 3.0 has met quality gates: above 90% pass rate, all critical features tested, no high-priority defects.
 
-- Requirements → R&A: Traceability reports link test coverage to requirements
+### Navigate to Release Health Dashboard
 
-- Visual Testing → R&A: Visual comparison results appear in quality dashboards
+- Click the Dashboards menu
 
-- Integrations → R&A: Jira issues, GitHub PRs, and CI/CD data enrich analytics
+- Select Release Health Dashboard
 
-- Test Environments → R&A: Environment-specific analysis helps isolate issues
+- You'll see a Release Picker (dropdown) at the top
 
-Think of R&A as the "brain" that makes sense of all the testing activity happening across your organization.
+### Select Your Release
 
-## Who Uses Reports & Analytics?
+Note: The dashboard automatically loads with the current/latest release selected by default. You can switch to view other releases using the Release Picker.
 
-Reports & Analytics serves different roles with different needs. Understanding these perspectives helps you choose the right features for your situation.
+- Click the Release Picker dropdown
 
-Five key roles:
+- Select "Release 3.0" (or your current release)
 
-- QA Managers: Strategic oversight, release readiness, quality trends
+- Watch all widgets update to show data only for Release 3.0
 
-- Manual Testers: Execution tracking, failure investigation
+Key behavior: Release Health Dashboard uses release-based scope, not time-based scope. It shows all data associated with Release 3.0, regardless of when tests ran.
 
-- Automation Engineers: Flaky test detection, test optimization
+Example:
+If testing started 4 weeks ago and continued until yesterday, the dashboard shows all 4 weeks of Release 3.0 testing—not just the last 7 days.
 
-- DevOps Engineers: Pipeline integration, quality gates
+### Check Requirement Coverage
 
-- Product Managers: Feature quality, requirement traceability
+Look at the Requirement Coverage Summary widget.
 
-### QA Managers: Strategic Oversight
+What it shows:
 
-### Manual Testers: Execution and Investigation
+- Percentage of requirements with linked test cases
 
-### Automation Engineers: Maintenance and Optimization
+- Shows how much of the release is actually tested
 
-### DevOps Engineers: Pipeline Integration
+How to interpret:
 
-### Product Managers: Feature Quality
+- Above 90% coverage: Excellent—most features have test coverage
+
+- 70-90% coverage: Acceptable—some gaps exist
+
+- Below 70% coverage: Warning—significant untested functionality
+
+Why it matters: If only 50% of requirements are covered, you don't have enough testing to make a confident go/no-go decision.
+
+### Review Testing Progress Trend
+
+Find the Test Results Trend Daily chart.
+
+What it shows:
+Daily test execution results over the entire release cycle (from release start date to today).
+
+What to look for:
+
+- Early in release: Expect higher failure rates (features incomplete, tests stabilizing)
+
+- Late in release: Expect high pass rates (features stabilized, tests mature)
+
+- Upward green trend: Good—quality improving over release cycle
+
+- Recent red spike: Concern—quality degrading as release approaches
+
+### Assess Defect Activity
+
+Look at the Defects Activity Trend widget (combined line and bar chart).
+
+What it shows:
+
+- Bars: Defects created (blue) and closed (green) each day
+
+- Line: Cumulative open defects over time
+
+Ideal pattern:
+
+- Early release: High defect creation (bugs being found)
+
+- Late release: High defect closure rate, declining open defects
+
+- At release date: Very few open defects
+
+Warning signs:
+
+- Open defects line trending upward near release date = defect backlog growing
+
+- More defects created than closed = team can't keep up with fixes
+
+### Check Overall Pass Rate
+
+Find the Test Pass Rates Summary widget.
+
+What it shows:
+Overall pass rate for Release 3.0 (all testing for this release).
+
+Release readiness benchmarks:
+
+- Above 95%: Excellent—release ready
+
+- 90-95%: Good—release likely ready (review open defects)
+
+- 85-90%: Acceptable—may need fixes before release
+
+- Below 85%: At risk—significant quality concerns, likely delay release
+
+### Make Your Go/No-Go Assessment
+
+After reviewing these widgets, you can now answer in the release meeting:
+
+✅ GO Decision Example:
+"Release 3.0 quality metrics: 94% pass rate, 92% requirement coverage, 2 open defects (both low priority), defect backlog declining. Quality gates met. Recommend GO for release."
+
+⚠️ NO-GO Decision Example:
+"Release 3.0 quality metrics: 82% pass rate, 15 high-priority defects still open, only 75% requirement coverage. Quality gates not met. Recommend 1-week delay to address critical issues."
+
+Expected Outcome: You understand Release Health Dashboard uses "release scope" not "time scope," and you know how to assess release readiness using multiple quality indicators.
+## Understanding Dashboards vs. Reports
+
+
+
 
 ## Dashboards vs Reports: When to Use What
 

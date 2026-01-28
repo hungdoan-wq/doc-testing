@@ -26,17 +26,15 @@
         "children": {
           "Assess Release Readiness":"docs/analytics/monitor-projects/assess-release-readiness.md",
           "Monitor Live Test Execution":"docs/analytics/monitor-projects/monitor-real-time-test-execution.md",
-          "Track Quality Trends":"docs/analytics/monitor-projects/track-historical-quality-trends.md",
-          "Manage & Create Dashboards":"docs/analytics/monitor-projects/manage-create-custom-dashboards.md"
+          "Track Quality Trends":"docs/analytics/monitor-projects/track-historical-quality-trends.md"
         }
       },
       "Results and failures": {
         "children": {
-          "Index":"docs/analytics/test-results-failures/index.md",
+          "View Test Result Details":"docs/analytics/test-results-failures/view-test-result-details.md",
           "Analyze Error Patterns":"docs/analytics/test-results-failures/analyze-error-patterns.md",
           "Investigate Flaky Tests":"docs/analytics/test-results-failures/investigate-flaky-tests.md",
-          "Investigate Test Failures":"docs/analytics/test-results-failures/investigate-test-failures.md",
-          "View Test Result Details":"docs/analytics/test-results-failures/view-test-result-details.md"
+          "Investigate Test Failures":"docs/analytics/test-results-failures/investigate-test-failures.md"
         }
       },
       "Defects": {
@@ -47,7 +45,6 @@
       },
       "Test case activities": {
         "children": {
-          "Index":"docs/analytics/test-case-activity/index.md",
           "Analyze Execution History":"docs/analytics/test-case-activity/analyze-execution-history.md",
           "Assess Test Case Quality":"docs/analytics/test-case-activity/assess-test-case-quality.md",
           "Monitor Test Case Productivity":"docs/analytics/test-case-activity/monitor-test-case-productivity.md",
@@ -57,7 +54,6 @@
       },
       "Testing coverage": {
         "children": {
-          "Index":"docs/analytics/test-coverage/index.md",
           "Analyze Configuration Coverage":"docs/analytics/test-coverage/analyze-configuration-coverage.md",
           "Analyze Traceability":"docs/analytics/test-coverage/analyze-traceability.md",
           "Track Requirement Coverage":"docs/analytics/test-coverage/track-requirement-coverage.md"

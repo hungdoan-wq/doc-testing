@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "analytics/overview.md",
+                "file": "Untitled 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "overview"
+              "title": "Untitled 1"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 283.5,
-    "collapsed": true
+    "width": 283.5
   },
   "right": {
     "id": "b47b5d0c7aafac3d",
@@ -95,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "analytics/overview.md",
+                "file": "Docs proposal.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for overview"
+              "title": "Backlinks for Docs proposal"
             }
           },
           {
@@ -114,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "analytics/overview.md",
+                "file": "Docs proposal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from overview"
+              "title": "Outgoing links from Docs proposal"
             }
           },
           {
@@ -157,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "analytics/overview.md",
+                "file": "Docs proposal.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of overview"
+              "title": "Outline of Docs proposal"
             }
           }
         ],
@@ -171,7 +170,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 246.5
+    "width": 246.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,8 +184,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "15a2c43357fe034d",
+  "active": "16f3568037ac632b",
   "lastOpenFiles": [
+    "analytics/defects/track-automation-errors.md",
+    "analytics/defects/track-automation-error.md",
+    "Untitled.md",
+    "Untitled 1.md",
+    "Docs proposal.md",
+    "security-and-privacy-faq.md",
+    "table persona.md",
+    "analytics/overview.md",
     "analytics/references/all-reports.md",
     "analytics/quick-guides.md",
     "analytics/configurations.md",
@@ -204,14 +212,6 @@
     "analytics/test-results-failures/index.md",
     "analytics/test-results-failures/analyze-error-patterns.md",
     "analytics/test-case-activity/track-test-case-stability.md",
-    "analytics/test-case-activity/track-automation-progress.md",
-    "analytics/test-case-activity/monitor-test-case-productivity.md",
-    "analytics/test-case-activity/index.md",
-    "analytics/test-case-activity/assess-test-case-quality.md",
-    "analytics/test-case-activity/analyze-execution-history.md",
-    "analytics/test-coverage/track-requirement-coverage.md",
-    "analytics/test-coverage/index.md",
-    "analytics/test-coverage/analyze-traceability.md",
     "analytics/test-results-failures",
     "analytics/test-coverage",
     "analytics/test-case-activity",

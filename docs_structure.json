@@ -20,8 +20,7 @@
   "Analytics": {
     "children": {
       "Overview":"docs/analytics/overview.md",
-      "Quick guides":"docs/analytics/quick-guides.md",
-      "Initial setups": "docs/analytics/configurations.md",
+      "Configurations": "docs/analytics/configurations.md",
       "Project monitoring": {
         "children": {
           "Assess Release Readiness":"docs/analytics/monitor-projects/assess-release-readiness.md",

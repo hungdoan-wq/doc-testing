@@ -1,5 +1,56 @@
+
 # Analyze Error Patterns
 
+This document explains how to identify recurring failure patterns across automated test runs with the **Common Automation Errors Report**.
+
+Instead of analyzing each failed test in isolation, the report automatically **groups similar error messages**, providing a consolidated view of your most frequent and impactful issues. This report aims to assist you make a large-scale analysis on automation failure much clearer and more actionable.
+
+<img src="https://tw-cdn.katalon.com/katalon-platform/Analyze/Reports/common-automation-error-report.png" alt="common automation error report" width="700px" />
+
+Report widgets:
+- **Error Distribution by Failure Category**: break down failure types (Environment, AUT Issue, Test Script, etc.) across all test results.
+- **Common Errors**: number of automation issues.
+- **Impacted Test Cases**: number of test cases affected by these **Common Errors**.
+- **Common Error Data Table**: error details with occurrence counts, number of affected test cases, sample messages, and [failure categories](#failure-categories).
+
+## Explore the Report
+
+The report has two view modes for different purposes:
+
+### Latest Error Only (Default)
+
+This view focuses on the most recent occurrence of each error. It helps teams quickly understand what is actively failing at the moment:
+  - Shows **one latest instance** per grouped error.
+  - Charts reflect **only latest occurrences**. 
+  - The **“Impacted Test Cases”** count accounts for tests affected by the latest instance only.
+  - Selecting an error opens **the most recent failed run** and its details.
+
+<iframe src="https://demo.arcade.software/3Mjx4dq5E0HSX565iuqU?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Common Automation Errors Report
+" frameborder="0" loading="lazy" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true" allow="clipboard-write" style=" width: 100%; height: 400px"> </iframe>
+
+### All Errors
+
+This view displays all occurances of each error in test cases/runs, across the selected date range or sprint/release. It's ideal to understand recurring issues, their scope of impact, or just to assess stability of the project's automation progress.
+
+- Shows both **current and historical** occurrences per grouped error.
+- Charts reflect all occurences.
+- **“Impacted Test Cases”** count accounts for all affected tests.
+- Selecting an error opens **Test Result Analysis report** filtered by the error itself. This report provides a high-level view of all impacted test cases, and a data table with link to each test case/run if you want to investigate further (learn more about this report at [Test Result Analysis report](/katalon-platform/analyze/reports/test-results-analysis-report)).
+
+<iframe src="https://demo.arcade.software/3Mjx4dq5E0HSX565iuqU?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Common Automation Errors Report
+" frameborder="0" loading="lazy" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true" allow="clipboard-write" style=" width: 100%; height: 400px"> </iframe>
+
+## Failure Categories
+
+- **Application Under Test (AUT) Issue** - Functional or UI issues in the application under testing (AUT).
+- **Test Script Issue** - Errors in the test script such as runtime errors, element not found, wait issues, or assertion failures.
+- **Test Data Issue** - Incorrect, missing, outdated, or invalid data used during execution.
+- **Automation Issue** - Problems in the automation framework, libraries, or tooling.
+- **Integration Issue** - Failures caused by components or systems not working together correctly.
+- **Configuration Issue** - Incorrect setup of tools, browser versions, or execution parameters.
+- **Environment Issue** - Instability or unavailability of test environments, servers, networks, databases, or third-party services.
+- **Others** - Unspecified issues, to be investigated further.
+<!--
 Content coming soon.
 Test Failures
 # How to Analyze Error Patterns Across Test Failures
@@ -625,3 +676,5 @@ See how Automation Engineers use error pattern analysis to identify systemic iss
 - [Best Practices for Test Maintenance](/docs/test-failures/test-maintenance-best-practices) - Proactive strategies to prevent common failure patterns
 
 [Identifying Flaky Tests with Stability IntelligenceLearn how to systematically find and analyze flaky tests using Test Stability Intelligence features including PFS scores, Smart Tags, and trend visualization in Katalon TestOps.](/docs/test-failures/identify-flaky-tests)[Configure Failure Analysis SettingsCustomize stability detection settings and Smart Tag thresholds—configure time windows, minimum executions, and tag sensitivity to match your team's testing patterns and quality standards.](/docs/test-failures/configure-failure-analysis-settings)
+
+-->

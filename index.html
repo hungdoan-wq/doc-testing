@@ -17,6 +17,9 @@
 <body>
   <header class="topbar">
     <button id="menu-btn" aria-label="Toggle menu">☰</button>
+    <div id="product-tabs" class="product-tabs">
+      <!-- injected dynamically -->
+    </div>
     <div class="logo">Katalon TestOps</div>
     <button id="toc-toggle">TOC</button>
   </header>
@@ -33,7 +36,9 @@
       theme: "default"
     });
   </script>
-  <!-- App logic -->
-  <script src="script.js"></script>
+  <script src="scripts/markdownloader.js"></script>
+  <script src="scripts/sidebaritems.js"></script>
+  <script src="scripts/tocloader.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>

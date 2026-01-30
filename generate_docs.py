@@ -3,7 +3,7 @@ import json
 import re
 
 BASE_DIR = "docs"
-OUTPUT_JSON = "docs_structure.json"
+OUTPUT_JSON = "testops.json"
 
 def slugify(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")

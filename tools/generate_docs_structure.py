@@ -3,8 +3,8 @@ import json
 import streamlit as st
 from pathlib import Path
 
-DOCS_DIR = Path("docs")
-OUTPUT_FILE = Path("docs_structure.json")
+DOCS_DIR = Path("docs/katalon-studio")
+OUTPUT_FILE = Path("studio.json")
 
 st.markdown("""
 <style>
@@ -102,7 +102,7 @@ def prune_empty(node):
 st.set_page_config(page_title="Docs Structure Generator", layout="wide")
 
 st.title("📚 Docs Structure Generator")
-st.caption("Select which docs to include and generate docs_structure.json")
+st.caption("Select which docs to include and generate testops.json")
 
 if not DOCS_DIR.exists():
     st.error("❌ docs/ folder not found")
@@ -118,7 +118,7 @@ final_tree = prune_empty(selected_tree)
 st.subheader("Generated JSON Preview")
 st.json(final_tree)
 
-if st.button("💾 Write docs_structure.json"):
+if st.button("💾 Write testops.json"):
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(final_tree, f, indent=2)
 

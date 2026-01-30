@@ -1,0 +1,110 @@
+{
+  "Release notes": {
+    "children": ""
+  },
+  "Getting started": {
+    "children": ""
+  },
+  "Administration": {
+    "children": ""
+  },
+  "Plans": {
+    "children": ""
+  },
+  "Tests": {
+    "children": ""
+  },
+  "Executions": {
+    "children": ""
+  },
+  "Analytics": {
+    "children": {
+      "Overview":"docs/katalon-testops/analytics/overview.md",
+      "Configurations": "docs/katalon-testops/analytics/configurations.md",
+      "Project monitoring": {
+        "children": {
+          "Assess Release Readiness":"docs/katalon-testops/analytics/monitor-projects/assess-release-readiness.md",
+          "Monitor Live Test Execution":"docs/katalon-testops/analytics/monitor-projects/monitor-real-time-test-execution.md",
+          "Track Quality Trends":"docs/katalon-testops/analytics/monitor-projects/track-historical-quality-trends.md"
+        }
+      },
+      "Results and failures": {
+        "children": {
+          "View Test Result Details":"docs/katalon-testops/analytics/test-results-failures/view-test-result-details.md",
+          "Analyze Error Patterns":"docs/katalon-testops/analytics/test-results-failures/analyze-error-patterns.md",
+          "Investigate Flaky Tests":"docs/katalon-testops/analytics/test-results-failures/investigate-flaky-tests.md",
+          "Investigate Test Failures":"docs/katalon-testops/analytics/test-results-failures/investigate-test-failures.md"
+        }
+      },
+      "Defects": {
+        "children": {
+          "Analyze Defects Issues":"docs/katalon-testops/analytics/defects/analyze-defects-issues.md",
+          "View Defect Trends":"docs/katalon-testops/analytics/defects/view-defect-trends.md"
+        }
+      },
+      "Test case activities": {
+        "children": {
+          "Analyze Execution History":"docs/katalon-testops/analytics/test-case-activity/analyze-execution-history.md",
+          "Assess Test Case Quality":"docs/katalon-testops/analytics/test-case-activity/assess-test-case-quality.md",
+          "Monitor Test Case Productivity":"docs/katalon-testops/analytics/test-case-activity/monitor-test-case-productivity.md",
+          "Track Automation Progress":"docs/katalon-testops/analytics/test-case-activity/track-automation-progress.md",
+          "Track Test Case Stability":"docs/katalon-testops/analytics/test-case-activity/track-test-case-stability.md"
+        }
+      },
+      "Testing coverage": {
+        "children": {
+          "Analyze Configuration Coverage":"docs/katalon-testops/analytics/test-coverage/analyze-configuration-coverage.md",
+          "Analyze Traceability":"docs/katalon-testops/analytics/test-coverage/analyze-traceability.md",
+          "Track Requirement Coverage":"docs/katalon-testops/analytics/test-coverage/track-requirement-coverage.md"
+        }
+      },
+      "Customizations": {
+        "children": {
+          "Advanced Filters Combinations":"docs/katalon-testops/analytics/customizations/advanced-filters-combinations.md",
+          "Custom Dashboards":"docs/katalon-testops/analytics/customizations/custom-dashboards.md",
+          "Custom Widgets":"docs/katalon-testops/analytics/customizations/custom-widgets.md"
+        }
+      },
+      "References": {
+        "children": {
+          "All Widgets":"docs/katalon-testops/analytics/references/all-widgets.md",
+          "Coverage Calculations":"docs/katalon-testops/analytics/references/coverage-calculations.md",
+          "Defect Metrics":"docs/katalon-testops/analytics/references/defect-metrics.md",
+          "Release Metrics":"docs/katalon-testops/analytics/references/release-metrics.md",
+          "Test Stability Metrics":"docs/katalon-testops/analytics/references/test-stability-metrics.md"
+        }
+      }
+    }
+  },
+  "Visual Testing": {
+    "children": ""
+  },
+  "Project Settings": {
+    "children": ""
+  },
+  "Integrations": {
+    "children": ""
+  },
+  "Katalon TestOps MCP Server": {
+    "children": ""
+  },
+  "Plugins and add-ons": {
+    "children": ""
+  },
+  "Proof of concept": {
+    "children": ""
+  },
+  "Troubleshooting": {
+    "children": ""
+  },
+  "User Profile Settings": {
+    "children": ""
+  },
+  "Security and Privacy FAQ": {
+    "children": ""
+  },
+  "Customer Support FAQs": {
+    "children": ""
+  }
+  
+}

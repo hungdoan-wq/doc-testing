@@ -6,7 +6,7 @@ function buildTOC() {
   tocToggle.onclick = () => {
     toc.classList.toggle("hidden");
   };
-  toc.innerHTML = "";
+  toc.innerHTML = " ";
 
   const headings = content.querySelectorAll("h2, h3");
   if (!headings.length) return;

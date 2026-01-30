@@ -294,11 +294,14 @@ details[open] {
 .product-tabs {
   display: flex;
   gap: 8px;
+  height: 56px;
 }
 
 .product-tab {
   background: none;
   border: none;
+  font-size: 16px;
+  font-family: inherit;
   padding: 6px 10px;
   cursor: pointer;
   opacity: 0.7;
@@ -342,8 +345,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
   font-weight: 600;
+}
+
+.logo {
+  font-size: 18px;
+  color: var(--primary);
+  position: absolute;
+  left: 16px;
+  top: auto;
+}
+#product-tabs {
+  position: absolute;
+  left: 20%;
+  top: auto;
 }
 
 /* ======================================================
@@ -375,6 +390,8 @@ body {
     border-radius: 6px;
     cursor: pointer;
     color: var(--muted);
+    margin: 8px 8px;
+    font-size: 14px;
   }
 
   .item:hover {
@@ -485,8 +502,8 @@ body {
   }
   /* TOC */
   #toc {
-    width: 240px;
     position: absolute;
+    width: 240px;
     right: 0;
     top: 56px;
     bottom: 0;
@@ -509,8 +526,8 @@ body {
     display: none;
   }
   #toc-toggle {
-    right: 250px;
-    top: 70px;
+    position: absolute;
+    left: calc(100% - 240px);
     z-index: 1100;
     padding: 8px 12px;
     font-size: 12px;

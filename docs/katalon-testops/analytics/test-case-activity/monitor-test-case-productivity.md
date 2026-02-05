@@ -2,6 +2,8 @@
 
 This document is about the Test Case Publishing Activity Analysis Report.
 
+<!--
+
 Content coming soon.
 Test Case ActivityPublishing & Lifecycle
 # Test Case Activity & Productivity Metrics
@@ -218,3 +220,5 @@ See how QA Managers track team productivity metrics, monitor test case creation 
 - [All Reports Reference](/docs/getting-started/all-reports-reference) - Complete catalog of available reports
 
 [Test Case Quality & Reliability TrackingMonitor test case execution health, identify problematic test cases, and assess automation effectiveness through pass rate analysis in Katalon TestOps.](/docs/test-case-reports/health-stability/track-test-case-status)[Automation Progress TrackingTrack manual-to-automation migration progress, measure automation adoption rates, and assess automation ROI in Katalon TestOps.](/docs/test-case-reports/automation-progress/track-automation-progress)
+
+-->

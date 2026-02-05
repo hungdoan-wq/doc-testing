@@ -2,7 +2,7 @@
 
 This document is about the Defects Activity Analysis Report.
 
-<!-- Linked to defect metrics -->
+<!-- 
 
 Content coming soon.
 Defects & Quality
@@ -846,3 +846,4 @@ Practice this analysis process with your own projects and sprints to build confi
 - [Building Traceability Matrices](/docs/metrics/building-traceability-matrices) - Link defects to requirements for comprehensive traceability
 
 [Defects & Issues Analysis: Overview and Getting StartedTrack defect lifecycle stages, analyze priority distribution, measure resolution velocity, and identify quality trends to improve team efficiency and prevent defect backlogs.](/docs/defects/defects-and-quality-overview)[Defect Trend AnalysisTask-focused guide for identifying patterns in defect creation and resolution trends, assessing release health, and tracking long-term quality improvements in Katalon TestOps.](/docs/defects/track-defect-trends)
+Linked to defect metrics -->

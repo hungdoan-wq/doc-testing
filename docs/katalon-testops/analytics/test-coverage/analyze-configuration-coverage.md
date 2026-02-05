@@ -2,6 +2,8 @@
 
 This document is about the Configuration Coverage Report.
 
+<!--
+
 Content coming soon.
 Coverage & Traceability
 # How to Analyze Configuration Coverage
@@ -391,3 +393,5 @@ Related Foundational Documentation:
 - [Analysis Scope Types](/docs/getting-started/analysis-scope-types) - Understand time-based and build-based scope options
 
 [Building Traceability MatricesLearn how to create comprehensive traceability matrices in Katalon TestOps that map requirements to test cases, executions, and defects for compliance audits, gap analysis, and regulatory documentation (FDA 21 CFR Part 11, ISO 13485).](/docs/coverage/build-traceability-matrices)[Understanding Coverage CalculationsConceptual explanation of how Katalon TestOps calculates test coverage, execution, pass rate, and configuration coverage metrics, including formulas, eligible data definitions, and status determination logic.](/docs/coverage/understanding-coverage-calculations)
+
+-->

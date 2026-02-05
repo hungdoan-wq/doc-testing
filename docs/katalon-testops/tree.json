@@ -3,7 +3,11 @@
     "children": ""
   },
   "Getting started": {
-    "children": ""
+    "children": {
+      "Quick Guides for Administrator": "",
+      "Quick Guides for Billing Managers": "",
+      "Quick Guides for Users": ""
+    }
   },
   "Administration": {
     "children": ""

@@ -180,8 +180,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "16f3568037ac632b",
+  "active": "1dd14a013c3ac087",
   "lastOpenFiles": [
+    "katalon-testops/get-started/quick-guide-for-users.md",
+    "katalon-testops/get-started/quick-guide-for-users.d",
     "Untitled 5.md",
     "Untitled 4.md",
     "Personas, Feature, and Purpose.md",
@@ -208,7 +210,6 @@
     "katalon-studio/troubleshooting/troubleshoot-web-automated-testing/troubleshoot-web-test-execution-exceptions-overview.md",
     "katalon-studio/troubleshooting/troubleshoot-web-automated-testing/timed-out-waiting-for-the-driver-server-to-start.md",
     "katalon-studio/troubleshooting/troubleshoot-web-automated-testing/invalid-session-error-in-the-execution-log.md",
-    "katalon-studio/troubleshooting/troubleshoot-web-automated-testing/invalid-element-state-exception.md",
     "katalon-studio/troubleshooting/troubleshoot-windows-automated-testing",
     "katalon-studio/troubleshooting/troubleshoot-web-automated-testing",
     "katalon-studio/troubleshooting/troubleshoot-studioassist-issues",
@@ -216,7 +217,6 @@
     "katalon-studio/troubleshooting/troubleshoot-common-exceptions",
     "katalon-studio/troubleshooting",
     "katalon-studio/test-reports/view-test-reports",
-    "katalon-studio/test-reports/generate-test-reports",
-    "katalon-studio/test-reports"
+    "katalon-studio/test-reports/generate-test-reports"
   ]
 }

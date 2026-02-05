@@ -1,3 +1,13 @@
+# Configurations
+
+This doc instructs user to:
+
+- connect alm to get release data
+- quality gates (for release)
+- smart tags
+
+
+<!--
 # Configure Failure Analysis Settings
 
 Customize stability detection settings and Smart Tag thresholds—configure time windows, minimum executions, and tag sensitivity to match your team's testing patterns and quality standards.
@@ -1231,8 +1241,6 @@ See how QA Managers configure quality gates with defect thresholds, coverage cri
 
 # Configure Smart Tags
 
-<!-- Details & instructions -->
-
 Test FailuresReference
 # Test Stability Metrics Reference
 
@@ -1400,3 +1408,5 @@ Common next steps after Investigating Test Failures:
 
 Need help deciding? See [Workflow Guide: Role-Based Pathways](/docs/workflows/overview)
 [Failure Investigation Best PracticesUnderstand efficient debugging strategies, triage approaches, and how to balance speed with thoroughness in test failure investigation using AI-assisted analysis and stability indicators.](/docs/test-failures/understanding-smart-tags)[Coverage & Traceability: Overview and Getting StartedTrack requirement coverage across releases, analyze configuration testing gaps, and generate audit-ready traceability matrices for regulatory compliance—comprehensive visibility into testing completeness from requirements to configurations to audit trails.](/docs/coverage/coverage-and-traceability-overview)
+
+-->

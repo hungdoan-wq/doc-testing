@@ -1,5 +1,7 @@
 # Analyze Configuration Coverage
 
+This document is about the Configuration Coverage Report.
+
 Content coming soon.
 Coverage & Traceability
 # How to Analyze Configuration Coverage

@@ -1,7 +1,9 @@
 
 # Analyze Error Patterns
 
-This document explains how to identify recurring failure patterns across automated test runs with the **Common Automation Errors Report**.
+This document is about the Common Automation Errors Report.
+
+<!--
 
 Instead of analyzing each failed test in isolation, the report automatically **groups similar error messages**, providing a consolidated view of your most frequent and impactful issues. This report aims to assist you make a large-scale analysis on automation failure much clearer and more actionable.
 

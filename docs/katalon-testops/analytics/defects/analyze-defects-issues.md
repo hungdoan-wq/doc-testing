@@ -1,6 +1,8 @@
 # Analyze Defects & Issues
 
-This document explains how to use the **Defect Status Analysis Report** to:
+This document is about the Defect Status Analysis Report.
+
+<!--
 
 - **View and assess defect distribution instantly** across severity, priority, and resolution categories.
 - **Identify critical bottlenecks** through high-level analytics visualizations.
@@ -67,3 +69,5 @@ Provides a **comprehensive list view** of all defects that match your filters:
 <img src="https://tw-cdn.katalon.com/katalon-platform/Analyze/Reports/defect-status-analysis-report-drill-down-table.png" alt="defect status analysis report drill down table" style="width: 100%" />
 <br/>
 
+
+-->

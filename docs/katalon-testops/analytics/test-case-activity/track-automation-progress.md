@@ -1,5 +1,9 @@
 # Track Automation Progress
 
+This document is about the Automation Progress Analysis Report.
+
+<!--
+
 Content coming soon.
 
 Test Case ActivityAutomation Progress
@@ -288,3 +292,5 @@ See how Automation Engineers track automation progress to measure manual-to-auto
 - [Understanding Core Concepts](/docs/getting-started/core-concepts) - Learn TestOps terminology and data model
 
 [Test Case Activity & Productivity MetricsTrack team productivity through test case publishing activity, monitor test case creation velocity, and identify productivity patterns in Katalon TestOps.](/docs/test-case-reports/publishing-lifecycle/analyze-team-productivity)[Configuration & Sharing OverviewLearn how to share TestOps dashboards and reports with external stakeholders, export data for analysis, and configure access control for collaboration without license barriers.](/docs/configuration-sharing/configuration-and-sharing-overview)
+
+-->

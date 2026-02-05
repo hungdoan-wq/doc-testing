@@ -1,5 +1,9 @@
 # Analyze Traceability
 
+This document is about the Requirement Traceability Report.
+
+<!--
+
 Content coming soon.
 Coverage & Traceability
 # Building Traceability Matrices
@@ -571,3 +575,5 @@ Related Workflows:
 - [Analyzing Defects & Issues](/docs/advanced/analyzing-defects-issues) - Defect analysis techniques
 
 [Tracking Requirement CoverageMonitor which requirements are tested by analyzing Test Coverage %, Execution %, and Pass % across sprints and releases in Katalon TestOps.](/docs/coverage/track-requirement-coverage)[How to Analyze Configuration CoverageLearn how to track and analyze test execution across different operating systems, browsers, and platform configurations using the Configuration Coverage report in Katalon TestOps.](/docs/coverage/analyze-configuration-coverage)
+
+-->

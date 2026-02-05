@@ -45,7 +45,7 @@
         "children": {
           "Analyze Defects Issues":"docs/katalon-testops/analytics/defects/analyze-defects-issues.md",
           "View Defect Trends":"docs/katalon-testops/analytics/defects/view-defect-trends.md",
-          "Analyze Error Patterns":"docs/katalon-testops/analytics/test-results-failures/analyze-error-patterns.md"
+          "Analyze Error Patterns":"docs/katalon-testops/analytics/defects/analyze-error-patterns.md"
         }
       },
       "Activities monitoring": {

@@ -1,5 +1,7 @@
 # View Defect Trends
 
+This document is about the Defects Activity Analysis Report.
+
 <!-- Linked to defect metrics -->
 
 Content coming soon.

@@ -1,5 +1,7 @@
 # Monitor Test Case Productivity
 
+This document is about the Test Case Publishing Activity Analysis Report.
+
 Content coming soon.
 Test Case ActivityPublishing & Lifecycle
 # Test Case Activity & Productivity Metrics

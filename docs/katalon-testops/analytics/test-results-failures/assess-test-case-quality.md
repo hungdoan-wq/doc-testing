@@ -1,7 +1,8 @@
 # Assess Test Case Quality
 
-<!-- Linked to flakiness -->
+This document is about Test Case Health Analysis Report. Another use is [Investigate Flakiness](docs/katalon-testops/analytics/test-results-failures/investigate-flaky-tests.md)
 
+<!-- 
 Content coming soon.
 Test Case ActivityHealth & Stability
 # Test Case Quality & Reliability Tracking
@@ -331,3 +332,4 @@ For defect linking guidance, see [Analyzing Defects](/docs/defects/analyzing-def
 [### Automation Engineer Workflow
 See how Automation Engineers track test case quality and reliability metrics, monitor automated test pass rates, and identify unstable tests requiring stabilization work.](/docs/workflows/automation-engineer)[### QA Manager Workflow
 Learn how QA Managers use test case quality tracking to assess automation effectiveness, monitor team testing health, and make data-driven decisions about test maintenance priorities.](/docs/workflows/qa-manager)[Analyze Test Execution HistoryTrack test stability trends over sprints, compare release quality objectively, and identify degrading tests using the Test Results Analysis Report.](/docs/test-case-reports/health-stability/analyze-test-execution-history)[Test Case Activity & Productivity MetricsTrack team productivity through test case publishing activity, monitor test case creation velocity, and identify productivity patterns in Katalon TestOps.](/docs/test-case-reports/publishing-lifecycle/analyze-team-productivity)
+-->

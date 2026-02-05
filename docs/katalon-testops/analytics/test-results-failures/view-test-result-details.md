@@ -1,5 +1,7 @@
-# View Test Result Details
+# View Test Results
 
+This doc is about Test Result/Test Run Details page, not a report.
+<!--
 Content coming soon.
 Test Failures
 # Using Test Result Details
@@ -693,3 +695,5 @@ See how Manual Testers navigate Test Result Details to investigate failures syst
 - Audience: Manual Testers and Automation Engineers
 
 [Investigating Test FailuresA hands-on tutorial guiding you through the complete workflow of discovering test failures, analyzing root causes with AI-powered analysis, and taking resolution actions in Katalon TestOps.](/docs/test-failures/investigate-your-first-failure)[Identifying Flaky Tests with Stability IntelligenceLearn how to systematically find and analyze flaky tests using Test Stability Intelligence features including PFS scores, Smart Tags, and trend visualization in Katalon TestOps.](/docs/test-failures/identify-flaky-tests)
+
+-->

@@ -1,4 +1,8 @@
-# Analyze Execution History
+# Analyze Testing Activities
+
+This doc is about Test Results Analysis Report. Another use case is [Analyze Test Results](docs/katalon-testops/analytics/test-results-failures/analyze-test-results.md)
+
+<!--
 
 Content coming soon.
 Test Case ActivityHealth & Stability
@@ -366,3 +370,5 @@ Learn how QA Managers analyze execution history for sprint retrospectives, compa
 
 ### When to use Test Case Health Analysis vs Test Results Analysis
 [Get Started with Test Case Health AnalysisLearn to identify flaky tests, prioritize failures, and plan test maintenance using the Test Case Health Analysis Report with Smart Tags and PFS scoring.](/docs/test-case-reports/health-stability/get-started-with-test-case-health)[Test Case Quality & Reliability TrackingMonitor test case execution health, identify problematic test cases, and assess automation effectiveness through pass rate analysis in Katalon TestOps.](/docs/test-case-reports/health-stability/track-test-case-status)
+
+-->

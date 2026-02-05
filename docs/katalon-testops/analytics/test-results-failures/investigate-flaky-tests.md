@@ -1,6 +1,7 @@
-# Investigate Flaky Tests
+# Assess Test Case Quality
 
-<!-- Flakiness definition, smart tags, PFS calculations -->
+This document is about Test Case Health Analysis Report. Another use is [Assess Test Case Quality](docs/katalon-testops/analytics/test-results-failures/assess-test-case-quality.md)
+<!--
 Test Failures
 # Identifying Flaky Tests with Stability Intelligence
 
@@ -537,3 +538,5 @@ See how Automation Engineers identify and fix flaky tests using PFS scores, Smar
 - [Using AI-Powered Failure Analysis](/docs/test-failures/ai-powered-failure-analysis) - Automated categorization and recommendations
 
 [Using Test Result DetailsComprehensive guide to navigating and using the Test Result Details page in Katalon TestOps, including logs, screenshots, videos, and AI-powered failure analysis.](/docs/test-failures/use-test-result-details)[How to Analyze Error Patterns Across Test FailuresGroup similar failures, identify common error patterns, and discover systemic issues across multiple test results—find root causes affecting multiple tests and prioritize high-impact fixes.](/docs/test-failures/analyze-error-patterns)
+
+-->

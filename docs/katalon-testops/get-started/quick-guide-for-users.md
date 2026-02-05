@@ -23,13 +23,14 @@ Docs you should care about:
   - Execute & schedule manual tests
   - View test results
   - Reports n dashboards to care about:
+    - configurations (quality gates, ALM sync...)
     - 3 dashboards
     - Test Results Analysis Report
     - Test Failures Analysis Report
     - Defects Status Analysis Report
     - Test Case Health Analysis Report (Flakiness part)
     - Test Case Publishing Activity Analysis Report 
-    - flakiness doc
+    - metrics docs
 
 - Automation Specialists:
   - view requirements, releases and assignments from QA

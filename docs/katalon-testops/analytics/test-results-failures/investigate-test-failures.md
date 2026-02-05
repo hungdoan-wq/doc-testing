@@ -1,4 +1,4 @@
-# Investigate Test Failures
+# Investigate Failures
 
 This document is about Test Failures Analysis Report.
 

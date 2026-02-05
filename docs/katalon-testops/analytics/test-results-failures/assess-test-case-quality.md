@@ -1,4 +1,4 @@
-# Assess Test Case Quality
+# Assess Test Quality
 
 This document is about Test Case Health Analysis Report. Another use is [Investigate Flakiness](docs/katalon-testops/analytics/test-results-failures/investigate-flaky-tests.md)
 

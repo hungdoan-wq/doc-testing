@@ -6,7 +6,7 @@
     "children": {
       "Quick Guides for Administrator": "",
       "Quick Guides for Billing Managers": "",
-      "Quick Guides for Users": ""
+      "Quick Guides for Users": "docs/katalon-testops/get-started/quick-guide-for-users.md"
     }
   },
   "Administration": {

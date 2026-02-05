@@ -2,7 +2,7 @@ The core purpose of this new dashboard is to provide **real-time operational awa
 
 **Key User Questions it Answers:**
 
-- What's happening _right now_ in our test executions?
+- What's happening _right no w_ in our test executions?
     
 - Are there any critical test failures occurring _at this moment_ that need immediate attention?
     

@@ -1,175 +1,45 @@
 # Investigate Failures
 
-This document is about Test Failures Analysis Report.
+This document epxlains how to investigate failed tests root cause using the Test Failures Analysis Report.
 
-<!--
-
-Content coming soon.
-Test Failures
-Test Failures
-# Investigating Test Failures
-
-A hands-on tutorial guiding you through the complete workflow of discovering test failures, analyzing root causes with AI-powered analysis, and taking resolution actions in Katalon TestOps.
-
-# Investigating Test Failures
-
-Estimated time: 25 minutes
-What you'll learn: How to discover test failures, analyze them with AI-powered analysis, investigate root causes manually, and take appropriate resolution actions
-
-## Introduction
-
-When tests fail, quick and accurate investigation is essential to maintaining quality and velocity. This tutorial guides you through the complete failure investigation workflow in Katalon TestOps—from discovering which tests failed to determining the root cause and taking resolution action.
-
-What you'll accomplish:
-
-- Discover failures using Test Results pages and dashboards
-
-- Leverage AI-powered analysis to quickly categorize failures
-
-- Examine logs and stack traces to validate findings
-
-- Review execution context (environment, screenshots, test data)
-
-- Determine root cause and take appropriate action
-
-This tutorial demonstrates the recommended investigation workflow combining AI speed with human expertise.
-
-Prerequisites:
-
-- Access to Katalon TestOps with Viewer role or higher
-
+:::requirements
+- Access to Katalon TestOps with Viewer role or higher. See [Roles in TestOps] for more information.
 - At least one test run with a failed test result
+:::
 
-- Basic familiarity with TestOps navigation
+To assist with investigating test failures throughout your project, TestOps provides the following features:
 
-Before You Start
+- Dashboards/Reports: for easy navigation through test failures.
+- AI-powered analysis: our agent reads execution logs, scripts, screenshots, and provides a deep analysis/solution on failure root cause in plain, non-technical language.
+- AI-powered error grouping: Auto-categorize failures into predefined categories (Environment Issue, Timing Issue, Broken Selector, etc.)
 
-For maximum effectiveness, you should be familiar with:
-
-- [Getting Started basics](/docs/getting-started/introduction) - Understanding TestOps navigation and core concepts
-
-- [Dashboards & Monitoring](/docs/dashboards) - Using dashboards to identify trends
-
-Why? This section helps you investigate individual failures. Dashboards show you which failures to prioritize based on trends and impact.
-
-Let's begin by discovering which tests have failed.
-
-## Before You Start: Understanding AI-Powered Analysis
-
-TestOps includes AI-powered test failure analysis that can significantly speed up your investigation process. Before diving into manual log analysis and stack trace interpretation, the AI can:
-
-- Auto-categorize failures into predefined categories (Environment Issue, Timing Issue, Broken Selector, etc.)
-
-- Generate plain-English summaries that explain what went wrong in non-technical language
-
-- Suggest specific next steps for resolution based on the failure pattern
-
-Why use AI analysis first?
-
-Traditional failure investigation requires manual log parsing and technical expertise, consuming 40% of debugging time just to understand the problem. AI analysis reduces this Mean Time to Identify (MTTI) by 60%, making it especially valuable for:
+While traditional investigation requires technical expertise and manual log parsing, our features reduce this Mean Time to Identify (MTTI) by 60%, making it especially valuable for:
 
 - Manual testers unfamiliar with stack traces and error logs
-
 - Automation engineers triaging multiple failures quickly
-
 - Team members investigating unfamiliar error messages
-
 - Quick triage before deeper investigation
 
-When to use AI vs. manual investigation:
+## Get Started:
 
-Use AI AnalysisUse Manual Investigation✅ Every failure as first stepComplex application-specific logic✅ Unfamiliar error messagesKnown flaky test patterns requiring context✅ Quick triage of multiple failuresFailures in custom frameworks✅ Training new team membersDeep debugging of race conditions
+### Step 1: Detect and prioritize failures
 
-💡 Learn More: For complete guidance on AI-powered analysis features, see [How to Use AI-Powered Test Failure Analysis](/docs/customization/ai-test-failure-analysis).
+When a test fails, it appears on multiple locations:
+- **Test Runs List**: **Executions → Test Runs → Test Run Overview**. The widget should display failures if any. Navigate to the **Test Results** tab to view the particular failure details.
+- **Dashboards**: Live Monitor Dashboard or Quality Trends Dashboard show failure summaries with clickable links to results. Use the Live Monitor Dashboard to identify patterns—failures from one test suite, environment, or build.
+- **Test Case Health Analysis Report/Test Case Failure Analysis Report**: Navigate from test case failure to specific execution results, and investigate root cause.
 
-Throughout this tutorial, we'll use AI analysis as Step 3 to quickly categorize the failure before proceeding with detailed investigation. You can always skip to manual investigation if you prefer.
+:::tips
+- The Test Run Overview tab provides context for failures, with the error auto-categorized by AI to help you identify if this is an isolated issue, or a systemic problem.
+- Use filters such as test run, build, date range, and test suite to quickly narrow down data.
+- Prioritize:
+  - Failures/Error in the same group => there might be underlying systemic issue that once solved, resolves multiple failures at once.
+  - New failures for previously passed tests (tests with `new failure` smart tag)
+  - Failures blocking critical user flows (login, checkout, payments)
+  - Consistent failures across multiple test runs
+:::
 
-## Step 1: Discover Test Failures
-
-The first step in any investigation is identifying which tests failed and prioritizing which failures to investigate first.
-
-### 1.1. Navigate to Test Results Page
-
-You can access test results from multiple entry points depending on your investigation starting point:
-
-From Test Runs List (Recommended for New Investigations):
-
-- Navigate to Executions → Test Runs in the sidebar
-
-- Click a test run to view the Test Run Overview
-
-- Review the Common Errors widget to see if multiple tests share the same error pattern (AI-categorized)
-
-- Click the TEST RESULTS tab to see individual test results
-
-Pro tip: The Test Run Overview provides valuable context before investigating individual failures. The Common Errors widget uses AI to automatically categorize failures, helping you identify if this is an isolated issue or a systemic problem affecting multiple tests. If 5 tests failed with "Element not found" errors, you can prioritize fixing the root cause once instead of investigating each failure separately.
-
-Direct Navigation to Test Results:
-
-From the TestOps sidebar, click Test Results under the Execution section. This page shows all test executions across your project, including their status (Passed, Failed, Error, Incomplete).
-
-Other Entry Points:
-
-- Dashboards: Live Monitor Dashboard or Quality Trends Dashboard show failure summaries with clickable links to results
-
-- Test Case Reports: Navigate from test case health analysis to specific execution results
-
-### 1.2. Filter for Failed Tests
-
-Apply filters to focus on failures:
-
-- Click the Status filter dropdown
-
-- Select Failed and Error (both represent test failures)
-
-- Optionally add filters for:
-
-Test Run: Specific execution batch
-Build: Particular CI/CD build
-Date Range: Recent failures only
-Test Suite: Specific feature area
-
-The table now displays only failed test results, showing:
-
-- Test case name
-
-- Status (Failed/Error)
-
-- Execution time
-
-- Test run name
-
-- Execution date
-
-### 1.3. Prioritize Which Failures to Investigate
-
-Use this prioritization framework:
-
-Investigate First:
-
-- New failures in previously passing tests
-
-- Failures blocking critical user flows (login, checkout, payments)
-
-- Consistent failures across multiple test runs
-
-Investigate Later:
-
-- Known flaky tests (already documented)
-
-- Failures in experimental tests
-
-- Environment-specific failures with known causes
-
-Tip: Use the Live Monitor Dashboard to identify patterns—failures from one test suite, environment, or build.
-
-### 1.4. Select a Failure to Investigate
-
-Choose a failed test result from your filtered list. Click the test case name or status badge to open Test Result Details.
-
-💡 Pro Tip: If you're new to investigation, start with simple failures (single assertion error) rather than complex multi-error failures.
-
-You've identified a failed test. Let's examine the details.
+Once you've selected a failed test to investigate, let's examine the details.
 
 ## Step 2: Open Test Result Details
 
@@ -178,40 +48,6 @@ The Test Result Details page is your investigation workspace, providing all info
 ### 2.1. Navigate to Test Result Details
 
 After clicking a failed test result in Step 1, the Test Result Details page loads. This page contains:
-
-Header Section:
-
-- Test case name
-
-- Status badge (Failed/Error with color coding)
-
-- Execution duration
-
-- Execution date/time
-
-- "Analyze with AI" button (we'll use this in Step 3)
-
-Navigation Tabs:
-
-- Overview: Summary, execution info, failure message
-
-- Execution Logs: Full log output and stack traces
-
-- Screenshots/Videos: Visual evidence of failure (if captured)
-
-- Test Steps: Detailed step-by-step execution (for Katalon Studio tests)
-
-- History: Previous executions of this test case
-
-Key Information Panel:
-
-- Test run name (which batch this execution belonged to)
-
-- Environment details (browser, OS, device)
-
-- Execution profile (configuration used)
-
-- Assigned tags and labels
 
 ### 2.2. Review Overview Tab
 
@@ -238,8 +74,6 @@ Take a moment to read the failure message—this is your first clue about what w
 Now that you have context, let's use AI to quickly categorize this failure.
 
 ## Step 3: Analyze the Failure with AI (Recommended)
-
-Before diving into logs and stack traces, use AI-powered analysis to get a quick summary and suggested starting points for your investigation.
 
 ### 3.1. Click "Analyze with AI" Button
 
@@ -550,51 +384,29 @@ Continue learning TestOps:
 - [Test Execution Monitoring with Dashboards](/docs/dashboards/live-monitor) - Real-time failure detection (Tutorial)
 
 [Test Failures: Overview and Getting StartedInvestigate test failures systematically with AI-powered triage and Test Stability Intelligence to distinguish flaky tests from real defects and reduce debugging time from hours to minutes.](/docs/test-failures/test-failures-overview)[Using Test Result DetailsComprehensive guide to navigating and using the Test Result Details page in Katalon TestOps, including logs, screenshots, videos, and AI-powered failure analysis.](/docs/test-failures/use-test-result-details)
-# Failure Investigation Best Practices
 
-Understand efficient debugging strategies, triage approaches, and how to balance speed with thoroughness in test failure investigation using AI-assisted analysis and stability indicators.
+## Best Practices
 
-# Failure Investigation Best Practices
+### Triage-first approach
 
-Reading time: 12 minutes
+- Triage-first: categorize the failure to work out a prioritization strategy, before deciding an appropriate response level. Not all failures require the same investigation depth.
 
-Test failures are inevitable in software development, but how quickly and effectively you investigate them determines your team's productivity and product quality. Mean Time to Investigate (MTTI)—the time between detecting a failure and understanding its root cause—directly impacts release velocity, team morale, and customer satisfaction.
+- Use AI-powered rapid triage: AI agent's analysis helps reduce triage time by up to 60%. AI analysis examines thousands of similar failure patterns across your organization and suggests likely categories with confidence scores:
 
-Traditional manual investigation approaches often lead to bottlenecks: engineers spend hours examining logs, comparing execution history, and reproducing failures locally. Modern test operations platforms have evolved to address these challenges through AI-assisted analysis and automated stability detection, reducing MTTI by up to 60% while improving investigation accuracy.
+    - Product Defect: The application behaves incorrectly due to a code bug. These require thorough investigation, reproduction, and defect reporting. Priority should be highest for regressions (new failures after code changes).
 
-This guide explores efficient failure investigation strategies, helping you understand when to use different approaches, how to prioritize investigations, and how to balance speed with thoroughness. The focus is on conceptual understanding—the "why" and "when" of investigation decisions—rather than step-by-step procedures.
+    - Test Issue: The test itself has problems—incorrect assertions, outdated locators, race conditions, or logic errors. These require test maintenance, not defect reports. Fixing test issues prevents false alarms and builds team confidence in automation.
 
-## The Triage-First Approach
+    - Environment Problem: Infrastructure instability, network issues, service timeouts, or resource constraints cause transient failures. These often resolve with retries and may need infrastructure team escalation rather than test investigation.
 
-The most common mistake in failure investigation is diving immediately into deep debugging without understanding the failure's nature. Effective investigation begins with triage: quickly categorizing the failure to determine the appropriate response level.
+    - Flaky Behavior: The test intermittently passes and fails without code changes. Flaky tests erode trust in automation and require specialized analysis focused on stability patterns rather than individual failure instances.
 
-Why triage matters: Not all failures require the same investigation depth. A product defect needs detailed analysis and a bug report. A test environment timeout might just need a retry. A flaky test requires stability analysis, not repeated debugging. Spending equal time on all failures wastes engineering resources and delays critical issue resolution.
+- After triage, decide whether to:
 
-The four primary failure categories:
-
-- Product Defect: The application behaves incorrectly due to a code bug. These require thorough investigation, reproduction, and defect reporting. Priority should be highest for regressions (new failures after code changes).
-
-- Test Issue: The test itself has problems—incorrect assertions, outdated locators, race conditions, or logic errors. These require test maintenance, not defect reports. Fixing test issues prevents false alarms and builds team confidence in automation.
-
-- Environment Problem: Infrastructure instability, network issues, service timeouts, or resource constraints cause transient failures. These often resolve with retries and may need infrastructure team escalation rather than test investigation.
-
-- Flaky Behavior: The test intermittently passes and fails without code changes. Flaky tests erode trust in automation and require specialized analysis focused on stability patterns rather than individual failure instances.
-
-AI-powered rapid triage: Modern platforms use AI analysis to automatically categorize failures based on error messages, stack traces, execution patterns, and historical data. This reduces triage time from 15-30 minutes per failure to under 5 minutes. AI analysis examines thousands of similar failure patterns across your organization and suggests likely categories with confidence scores.
-
-The key advantage of AI triage is consistency: human engineers may categorize the same error differently based on fatigue, experience, or context. AI applies consistent logic, reducing misclassification that leads to wasted investigation effort.
-
-Escalation decision framework: After triage, decide whether to:
-
-- Investigate immediately: High-priority product defects, especially regressions in critical features
-
-- Schedule for maintenance: Test issues and known flaky tests during dedicated maintenance windows
-
-- Monitor and retry: Environment problems that may self-resolve
-
-- Defer investigation: Low-impact flaky tests in non-critical suites until patterns emerge
-
-The triage-first approach ensures high-value failures receive immediate attention while preventing investigation bottlenecks on low-priority issues.
+  - Investigate immediately: High-priority product defects, especially regressions in critical features
+  - Schedule for maintenance: Test issues and known flaky tests during dedicated maintenance windows
+  - Monitor and retry: Environment problems that may self-resolve
+  - Defer investigation: Low-impact flaky tests in non-critical suites until patterns emerge
 
 ## Using Stability Indicators to Prioritize Investigations
 

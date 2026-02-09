@@ -1,5 +1,27 @@
 # Investigate Failures
 
+Outline:
+
+This document explains how to investigate failed tests.
+  
+- When QA detects failed tests in any entry point: Executions, dashboards, or reports, they can go to test runs details to investigate
+- Switch the tabs to see:
+  - overview: see common error. if this is a common error => can go through common error report for a thorough resolution
+  - unstable (flaky): save for later, as this might need stabilized
+  - this failure doesn't share anything: can be prioritized
+- To investigate/understand failures:
+  - AI-analysis: root cause & actions
+  - logs, traces, context
+- Determine error type and take action:
+  - **Product Defect**: Application behaves incorrectly → Create defect, attach evidence
+  - **Test Issue**: Faulty assertions, locators, or logic → Fix test and re-run
+  - **Environment Issue**: Infrastructure, configuration, or network failures → Escalate to DevOps / infra team
+  - **Flaky Test**: Intermittent failures without code changes → Switch to detect flakiness workflow before fixing. View more details at [Detect Flakiness](/katalon-testops/analytics/test-results-failures/investigate-flaky-tests.md).
+    
+Document findings directly in TestOps for future reference.
+
+<!--
+
 This document epxlains how to investigate failed tests root cause using the Test Failures Analysis Report.
 
 :::requirements
@@ -7,19 +29,168 @@ This document epxlains how to investigate failed tests root cause using the Test
 - At least one test run with a failed test result
 :::
 
-To assist with investigating test failures throughout your project, TestOps provides the following features:
+## Overview
 
-- Dashboards/Reports: for easy navigation through test failures.
-- AI-powered analysis: our agent reads execution logs, scripts, screenshots, and provides a deep analysis/solution on failure root cause in plain, non-technical language.
-- AI-powered error grouping: Auto-categorize failures into predefined categories (Environment Issue, Timing Issue, Broken Selector, etc.)
+Investigating test failures is often time-consuming and repetitive. TestOps accelerates this process by reducing **Mean Time to Identify (MTTI) by up to 60%** through:
 
-While traditional investigation requires technical expertise and manual log parsing, our features reduce this Mean Time to Identify (MTTI) by 60%, making it especially valuable for:
+- **Dashboards & Reports** — Quickly locate and navigate failures
+    
+- **AI-Powered Failure Analysis** — Automatically analyze logs, scripts, and screenshots with plain-English explanations
+    
+- **AI Error Grouping** — Categorize failures into common root-cause types (environment, timing, selectors, etc.)
+    
+- **Stability Intelligence** — Distinguish real defects from flaky or unreliable tests
+    
 
-- Manual testers unfamiliar with stack traces and error logs
-- Automation engineers triaging multiple failures quickly
-- Team members investigating unfamiliar error messages
-- Quick triage before deeper investigation
+This workflow is especially useful for:
 
+- Manual testers unfamiliar with logs or stack traces
+    
+- Automation engineers triaging large failure volumes
+    
+- Teams investigating unfamiliar or intermittent failures
+    
+- Rapid triage before deep debugging
+    
+## Failure Investigation Workflow
+
+### Step 1: Detect and Prioritize Failures
+
+Failures can be discovered from multiple entry points:
+
+- **Test Runs List**  
+    Executions → Test Runs
+    
+- **Dashboards**  
+    Live Monitor Dashboard, Quality Trends Dashboard
+    
+- **Reports**  
+    Test Case Health Analysis, Test Case Failure Analysis, Test Runs Analysis
+    
+
+Use filters (test run, build, date range, suite) to narrow results.
+
+:::tips
+Prioritize failures that are:
+- Grouped under the same error category (systemic issues)
+- Newly failing tests that previously passed
+- Blocking critical user flows (login, checkout, payments)
+- Reproducing consistently across multiple runs  
+:::
+    
+
+Once prioritized, open a failed test result to start investigating.
+
+### Step 2: Review Test Result Details
+
+The **Test Result Details** page is the central investigation workspace.
+
+**Overview tab highlights:**
+
+- Failure message
+- Stack trace preview
+- Execution timing and metadata
+- Linked test run, build, and release
+
+<img/>
+
+Read the failure message carefully — it provides the first root-cause signal.
+
+### Step 3: Analyze with AI (Recommended First)
+
+Click **Analyze with AI** in the **Test Result Details page**.
+
+AI automatically reviews:
+
+- Execution logs and stack traces
+- Screenshots and scripts
+- Historical failure patterns
+
+<img/>
+
+:::note
+AI analysis is a starting point, not the final verdict. Always validate with evidence.
+:::
+
+### Step 4: Validate with Logs and Stack Traces
+
+Use AI guidance to focus your manual review.
+
+- Open the **Execution Logs** tab
+- Locate the **first error** (often the root cause)
+- Review the full stack trace to identify:
+    - Exception type
+    - File name and line number
+    - Failing test step
+
+Confirm whether logs align with AI categorization and adjust if necessary.
+
+### Step 5: Review Execution Context
+
+Context often reveals environment- or configuration-related issues.
+
+Check:
+
+- **Environment details** (browser, OS, execution profile)
+- **Screenshots / Videos** for UI state at failure
+- **Test data and configuration**
+- **Build or release metadata**, if linked
+
+Visual evidence frequently exposes issues logs cannot.
+
+### Step 6: Determine Root Cause and Take Action
+
+Classify the failure before acting:
+
+- **Product Defect**: Application behaves incorrectly → Create defect, attach evidence
+- **Test Issue**: Faulty assertions, locators, or logic → Fix test and re-run
+- **Environment Issue**: Infrastructure, configuration, or network failures → Escalate to DevOps / infra team
+- **Flaky Test**: Intermittent failures without code changes → Switch to detect flakiness workflow before fixing. View more details at [Detect Flakiness](/katalon-testops/analytics/test-results-failures/investigate-flaky-tests.md).
+    
+Document findings directly in TestOps for future reference.
+
+## Best Practices
+
+### Triage-First Investigation
+
+Always triage before deep investigation:
+
+- Use **AI analysis** to eliminate obvious causes
+- Check **stability indicators** before assuming product defects
+- Avoid deep debugging of flaky or unreliable tests
+
+### Use stability indicators to set priority
+
+Not all failures deserve equal effort.
+
+**High priority**
+
+- Stable tests with new failures
+- Tests with high historical pass rates
+
+**Medium priority**
+
+- Moderately reliable tests (confirm patterns first)
+    
+**Low priority**
+
+- Flaky or always-failing tests  
+    → Fix reliability before investigating application behavior
+    
+### Balance AI and Manual Investigation
+
+**Trust AI when:**
+
+- Confidence scores are high
+- Errors match common patterns
+    
+**Use manual investigation when:**
+
+- Business logic is involved
+- AI confidence is low
+- Failures are critical or production-impacting
+
+<!--
 ## Get Started:
 
 ### Step 1: Detect and prioritize failures

@@ -1587,7 +1587,7 @@ What exports:
 
 Row limits by report type:
 
-Report TypeRow LimitNotesTest Results Analysis10,000 rowsMost common for trend analysisTest Run Analysis5,000 rowsExecution-level detailTest Case Status Analysis10,000 rowsTest inventory trackingAutomation Progress10,000 rowsCoverage metricsCoverage Reports10,000 rowsRequirement traceability
+Report TypeRow LimitNotesTest Results Analysis10,000 rowsMost common for trend analysisTest Run Analysis5,000 rowsExecution-level detailTest Case Health Analysis10,000 rowsTest inventory trackingAutomation Progress10,000 rowsCoverage metricsCoverage Reports10,000 rowsRequirement traceability
 
 If you exceed row limits: A warning message appears. Narrow your filters or analysis scope to reduce dataset size.
 
@@ -3575,7 +3575,7 @@ Test Execution Analysis
 
 - Focus on execution metrics, pass/fail rates, test run status, and execution patterns
 
-- Examples: Test Runs Analysis, Test Results Analysis, Test Case Status Analysis
+- Examples: Test Runs Analysis, Test Results Analysis, Test Case Health Analysis
 
 Coverage & Traceability
 

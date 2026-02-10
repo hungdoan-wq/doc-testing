@@ -1,10 +1,10 @@
 ---
-title: Test Case Status Analysis Report
+title: Test Case Health Analysis Report
 sidebar_custom_props:
     image: https://tw-cdn.katalon.com/katalon-platform/ra/reports/Thumbnail-Test-Case-Status-Analysis.svg
 ---
 
-This document explains how to use the **Test Case Status Analysis Report** to assess test execution health and identify problematic test cases within a given time frame.
+This document explains how to use the **Test Case Health Analysis Report** to assess test execution health and identify problematic test cases within a given time frame.
 
 <img src="https://tw-cdn.katalon.com/katalon-platform/Analyze/Reports/test-cases-status-analysis-report.png" alt="test cases status analysis report" width="500px" />
 <br/>
@@ -21,7 +21,7 @@ With this dashboard, you can simply select a date range and filter criteria to v
 
 ## Explore the Report
 
-1. Navigate to **Home > All Reports > Test Case Status Analysis** section from the main dashboard.
+1. Navigate to **Home > All Reports > Test Case Health Analysis** section from the main dashboard.
 2. **Set the Analysis Scope** - Set the time frame, release, or sprint for test case executions you want to analyze.
 3. Examine the **Pie Chart** showing the distribution of test case statuses — Passed (green), Failed (red), Error (yellow), Skipped (blue). Hover over segments to view percentages and counts.
 4. Observe the **Pass Rate by Test Type** chart to understand the success ratio between automated and manual executions.

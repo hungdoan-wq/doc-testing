@@ -30,7 +30,7 @@ allow="clipboard-write"
 style={{ width: "100%", height: "400px", border: "none" }}>
 </iframe>
 
-1. Navigate to **Home > All Reports > Test Case Status Analysis** from the main dashboard.
+1. Navigate to **Home > All Reports > Test Case Health Analysis** from the main dashboard.
 2. **Choose a View**
     - **Automated Test Cases Only** – Focuses analysis on automated executions, including flakiness and stability metrics.
     - **All Test Cases (Automated & Manual)** – Provides a holistic view of test execution status across both automated and manual test cases.
@@ -48,7 +48,7 @@ style={{ width: "100%", height: "400px", border: "none" }}>
 
 ## Report Features
 
-The **Test Case Status Analysis Report** consolidates multiple dimensions of test result data into an interactive view with these key components:
+The **Test Case Health Analysis Report** consolidates multiple dimensions of test result data into an interactive view with these key components:
 
 - **Stability Counts** - four big numbers that count test cases with stability tags: flaky/new failure/always fail/slow.
 - **Test Case Breakdown by Execution Status** – a pie chart summarizing pass/fail/error/skip ratios

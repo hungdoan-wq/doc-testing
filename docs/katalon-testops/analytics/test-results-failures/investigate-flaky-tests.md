@@ -1,6 +1,153 @@
 # Investigate Flakiness
 
 This document is about Test Case Health Analysis Report. Another use is [Assess Test Case Quality](docs/katalon-testops/analytics/test-results-failures/assess-test-case-quality.md)
+
+This document is about the test case health analysis report. Use it to quickly identify flaky test.
+
+how to use:
+- use big numbers to detect "possibly" flaky tests
+- filter out these tests, and see trend line to understand history context
+- follow failure analyzing workflow to understand flakiness and troubleshoot.
+
+<!--
+
+<concise>
+
+# Identifying Flaky Tests with Stability Intelligence
+
+Use Stability Intelligence to quickly surface flaky tests, confirm instability patterns, and prioritize stabilization work—without manually inspecting execution history.
+
+---
+
+## Overview
+
+Flaky tests fail intermittently without code changes. They waste engineering time, obscure real regressions, and erode trust in automation.
+
+**Stability Intelligence** helps teams detect and manage flakiness at scale by:
+
+- Flagging unstable tests automatically
+    
+- Highlighting failure patterns over time
+    
+- Supporting fast triage and prioritization
+    
+
+This guide focuses on _how to use_ Stability Intelligence in daily workflows. Details about PFS calculation and scoring logic are covered in a separate reference.
+
+---
+
+## Access Stability Intelligence
+
+1. Open **Test Results** or **Test Cases**.
+    
+2. Select the project, release, or scope you want to analyze.
+    
+3. Enable **Stability Indicators** from the toolbar.
+    
+
+Stability signals appear directly in the test list for fast scanning.
+
+---
+
+## Identify Flaky Tests
+
+### Filter by Stability Tags
+
+1. Open **Filters**.
+    
+2. Select **Stability Tags → Flaky**.
+    
+3. Review the filtered test list.
+    
+
+Use additional tags to distinguish patterns:
+
+- **Always Failing** → likely real defects or broken tests
+    
+- **New Failure** → recent regressions or environment changes
+    
+- **Stable** → reliable baseline tests
+    
+
+### Prioritize Within the List
+
+- Sort tests by **stability severity** (highest first).
+    
+- Focus on:
+    
+    - Frequently executed tests
+        
+    - Critical user paths (login, checkout, payments)
+        
+
+---
+
+## Confirm Flakiness with Trends
+
+1. Click a test flagged as **Flaky**.
+    
+2. Open the **Stability / Trend** section in test details.
+    
+3. Review execution history visually.
+    
+
+What to look for:
+
+- Alternating pass/fail patterns → flaky behavior
+    
+- Continuous failures after a deployment → likely regression
+    
+- Time- or environment-clustered failures → infrastructure-related instability
+    
+
+---
+
+## Investigate Root Causes
+
+Once flakiness is confirmed, inspect failures to identify likely causes:
+
+- Timing and synchronization issues
+    
+- Fragile or dynamic selectors
+    
+- Shared or unstable test data
+    
+- Environment or resource contention
+    
+
+Use execution logs and failure summaries to validate hypotheses.  
+(Deep root-cause techniques are covered in failure investigation guides.)
+
+---
+
+## Prioritize Fixes
+
+Use a simple decision lens:
+
+- **High instability + critical test** → fix or quarantine immediately
+    
+- **High instability + low-impact test** → schedule or consider disabling
+    
+- **Moderate instability** → monitor and reassess over time
+    
+
+Track progress by observing stability trends after fixes rather than relying on single successful runs.
+
+---
+
+## Best Practices
+
+- Review newly flagged flaky tests regularly (weekly or per sprint).
+    
+- Stabilize shared utilities and patterns that affect many tests.
+    
+- Prevent new flakiness with clear automation standards (waits, selectors, data isolation).
+    
+- Treat stability as a measurable quality signal, not a one-time cleanup task.
+</concise>
+
+
+
 <!--
 Test Failures
 # Identifying Flaky Tests with Stability Intelligence

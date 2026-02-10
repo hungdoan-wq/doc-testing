@@ -143,7 +143,7 @@ Best for: Testers investigating which specific test cases are failing, Automatio
 
 Link to Detailed Guide: See [Investigating Test Failures](/docs/investigating-failures/investigating-test-failures)
 
-#### Test Case Status Analysis
+#### Test Case Health Analysis
 
 Purpose: Analyze the current status of test cases based on their latest execution results
 
@@ -531,7 +531,7 @@ Link to Detailed Guide: See [Automation Progress Tracking](/docs/test-case-activ
 
 ## Quick Reference Comparison Table
 
-Report NameCategoryPrimary EntityPrimary Use CaseKey FiltersTest Runs AnalysisTest Execution AnalysisTest RunMonitor test execution performance and success ratesScope, Test Run Type, Status, Executor, ProfileTest Results AnalysisTest Execution AnalysisTest ResultIdentify test cases with high failure ratesScope, Test Run Type, Status, Executor, ProfileTest Case Status AnalysisTest Execution AnalysisTest CaseReview current test case health and statusScope, Author, Test Case Type, Latest StatusConfiguration Coverage AnalysisCoverage & TraceabilityTest ConfigurationEnsure cross-platform testing adequacyScope, Platform, Browser, DeviceRequirements Coverage AnalysisCoverage & TraceabilityRequirementTrack requirement testing coverageScope, Assignee, Issue Type, Coverage StatusRequirement Traceability AnalysisCoverage & TraceabilityRequirementGenerate audit-ready traceability matricesScope, Assignee, Issue Type, StatusTest Failures AnalysisFailure & Quality AnalysisTest CasePrioritize failing tests and identify patternsScope, Test Case Type, Author, ProfileCommon Automation ErrorsFailure & Quality AnalysisCommon ErrorGroup similar errors to find root causesView By, Scope, Profile, Test SuiteDefects Activity AnalysisFailure & Quality AnalysisDefectTrack defect creation and resolution velocityScope, Reporter, Severity, PriorityDefect Status AnalysisFailure & Quality AnalysisDefectUnderstand current defect landscapeStatus, Priority, Severity, AssigneeDefect Trend AnalysisFailure & Quality AnalysisDefectMonitor long-term quality trendsScope, Time Interval, Severity, PriorityTest Cases Publishing ActivityTest Case ManagementTest CaseMonitor test authoring and publishing progressScope, Author, Test Case Type, StatusAutomation Progress AnalysisTest Case ManagementTest CaseTrack manual-to-automation migrationScope, Author, Test Case Type, Status
+Report NameCategoryPrimary EntityPrimary Use CaseKey FiltersTest Runs AnalysisTest Execution AnalysisTest RunMonitor test execution performance and success ratesScope, Test Run Type, Status, Executor, ProfileTest Results AnalysisTest Execution AnalysisTest ResultIdentify test cases with high failure ratesScope, Test Run Type, Status, Executor, ProfileTest Case Health AnalysisTest Execution AnalysisTest CaseReview current test case health and statusScope, Author, Test Case Type, Latest StatusConfiguration Coverage AnalysisCoverage & TraceabilityTest ConfigurationEnsure cross-platform testing adequacyScope, Platform, Browser, DeviceRequirements Coverage AnalysisCoverage & TraceabilityRequirementTrack requirement testing coverageScope, Assignee, Issue Type, Coverage StatusRequirement Traceability AnalysisCoverage & TraceabilityRequirementGenerate audit-ready traceability matricesScope, Assignee, Issue Type, StatusTest Failures AnalysisFailure & Quality AnalysisTest CasePrioritize failing tests and identify patternsScope, Test Case Type, Author, ProfileCommon Automation ErrorsFailure & Quality AnalysisCommon ErrorGroup similar errors to find root causesView By, Scope, Profile, Test SuiteDefects Activity AnalysisFailure & Quality AnalysisDefectTrack defect creation and resolution velocityScope, Reporter, Severity, PriorityDefect Status AnalysisFailure & Quality AnalysisDefectUnderstand current defect landscapeStatus, Priority, Severity, AssigneeDefect Trend AnalysisFailure & Quality AnalysisDefectMonitor long-term quality trendsScope, Time Interval, Severity, PriorityTest Cases Publishing ActivityTest Case ManagementTest CaseMonitor test authoring and publishing progressScope, Author, Test Case Type, StatusAutomation Progress AnalysisTest Case ManagementTest CaseTrack manual-to-automation migrationScope, Author, Test Case Type, Status
 
 ## Finding the Right Report
 
@@ -549,7 +549,7 @@ Use this decision guide to quickly identify which report meets your needs:
 
 → Current test case health:
 
-- Use Test Case Status Analysis to see which test cases need attention now
+- Use Test Case Health Analysis to see which test cases need attention now
 
 ### "I need to measure test coverage..."
 
@@ -595,7 +595,7 @@ Many analysis tasks require using multiple reports together. Here are common wor
 
 Release Readiness Assessment:
 
-- Test Case Status Analysis - Verify all critical test cases passing
+- Test Case Health Analysis - Verify all critical test cases passing
 
 - Requirements Coverage Analysis - Ensure all requirements adequately tested
 

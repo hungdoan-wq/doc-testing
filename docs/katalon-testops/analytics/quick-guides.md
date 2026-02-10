@@ -246,7 +246,7 @@ Features You'll Use:
 
 - Requirement Coverage report for automated test linkage
 
-- Test Case Status Analysis for automation progress tracking
+- Test Case Health Analysis for automation progress tracking
 
 - Automation Progress report for automation rate trends
 
@@ -705,7 +705,7 @@ Features You'll Use:
 
 - Coverage Reports with Requirement Coverage report
 
-- Test Case Status Analysis for coverage by requirement
+- Test Case Health Analysis for coverage by requirement
 
 - Requirement Traceability for test linkage view
 
@@ -814,12 +814,12 @@ Identify untested requirements
 Understand coverage gaps
 Link: [Analyzing Test Coverage](/docs/coverage/analyzing-test-coverage)
 
-- Test Case Status Analysis
+- Test Case Health Analysis
 
 Review test case inventory
 Understand test case status (active, obsolete, draft)
 Track test case maintenance needs
-Link: Test Case Status Analysis report spec
+Link: Test Case Health Analysis report spec
 
 - Advanced Filtering for Test Results
 
@@ -871,7 +871,7 @@ Phase 3 Outcome: Awareness of quality trends and real-time execution status (pri
 
 Use this quick reference for your daily Manual Tester tasks:
 
-TaskLocationTime RequiredView today's test resultsTest Results → Filter by "Last 24 hours"2 minFind failed tests in my suiteTest Results → Filter by Suite + Status:Failed2 minInvestigate test failureTest Failures → Select failure → AI Analysis5-10 minView failure screenshotsTest Result details → Screenshots tab1 minReview failure logsTest Result details → Logs tab2-5 minCheck failure historyTest Result details → Execution History2 minCreate defect from failureTest Failure → Create Defect button5 minLink defect to requirementDefect creation form → Requirement field1 minTrack defect statusDefects section → Defect tracking dashboard2 minView requirement coverageCoverage Reports → Requirement Coverage5 minFind untested requirementsRequirement Coverage → Filter by "Not Covered"3 minCheck test case statusTest Case Status Analysis report5 minView my test execution historyTest Run Analysis → Filter by User3 minMonitor active test runsLive Monitor Dashboard → Active Test Runs2 minIdentify flaky testsTest Stability Intelligence → Sort by PFS5 minExport test resultsTest Results → Export button2 minSave common filterTest Results → Apply filters → Save Preset2 minView test-to-requirement mappingRequirement Traceability report5 min
+TaskLocationTime RequiredView today's test resultsTest Results → Filter by "Last 24 hours"2 minFind failed tests in my suiteTest Results → Filter by Suite + Status:Failed2 minInvestigate test failureTest Failures → Select failure → AI Analysis5-10 minView failure screenshotsTest Result details → Screenshots tab1 minReview failure logsTest Result details → Logs tab2-5 minCheck failure historyTest Result details → Execution History2 minCreate defect from failureTest Failure → Create Defect button5 minLink defect to requirementDefect creation form → Requirement field1 minTrack defect statusDefects section → Defect tracking dashboard2 minView requirement coverageCoverage Reports → Requirement Coverage5 minFind untested requirementsRequirement Coverage → Filter by "Not Covered"3 minCheck test case statusTest Case Health Analysis report5 minView my test execution historyTest Run Analysis → Filter by User3 minMonitor active test runsLive Monitor Dashboard → Active Test Runs2 minIdentify flaky testsTest Stability Intelligence → Sort by PFS5 minExport test resultsTest Results → Export button2 minSave common filterTest Results → Apply filters → Save Preset2 minView test-to-requirement mappingRequirement Traceability report5 min
 
 ## Your Workflow Journey
 

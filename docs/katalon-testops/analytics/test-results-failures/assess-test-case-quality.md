@@ -2,6 +2,156 @@
 
 This document is about Test Case Health Analysis Report. Another use is [Investigate Flakiness](docs/katalon-testops/analytics/test-results-failures/investigate-flaky-tests.md)
 
+You can use this report to understand how reliable your test cases are, to grade automation quality, and help you shift focus.
+
+mention:
+- where to access
+- what widgets, filters
+- use cases:
+
+### Sprint Health Check
+
+- Scope: _Last 7 days_
+- Filter: _Failed + Error_
+- Outcome: Daily prioritized fix list
+    
+### Automation Effectiveness Review
+
+- Scope: _Last 30 days_
+- Compare automated vs manual pass rates
+- Outcome: Identify flaky or low-ROI automation
+
+### Team or Executor Review
+
+- Filter by _Author_ or _Last Executed By_
+- Outcome: Detect training gaps or environment issues
+    
+### Release Readiness Signal
+
+- Scope: Release window
+- Review overall pass rate and unresolved failures
+- Outcome: Go / no-go input for release decisions
+
+<!--
+<concise>
+Assess test case health, surface unreliable tests, and compare automation versus manual reliability using execution pass rates in TestOps.
+
+---
+
+## Overview
+
+The **Test Case Health Analysis** report provides a consolidated view of test case reliability across manual and automated testing. It helps teams quickly identify failing or error-prone tests, evaluate automation quality, and focus QA improvement efforts where they matter most.
+
+Use this report to answer:
+
+- Which test cases are consistently unhealthy?
+    
+- Is automation as reliable as manual testing?
+    
+- Where should test maintenance or process improvements focus?
+    
+
+---
+
+## Access
+
+1. Go to **Reports**.
+    
+2. Select **Test Case Health Analysis**.
+    
+3. The report opens with a default 30-day view.
+    
+
+---
+
+## Core Capabilities
+
+- Pass rate comparison between **Automated** and **Manual** tests
+    
+- Status distribution (Passed / Failed / Error / Skipped)
+    
+- Filterable test case list with latest execution status
+    
+- Drill-down into individual test case history
+    
+- Export for reporting and review
+    
+
+---
+
+## Key Filters (Commonly Used)
+
+- **Analysis Scope**: Adjust time window (7 / 30 / 90 days or custom)
+    
+- **Type**: Automated or Manual
+    
+- **Latest Status**: Focus on Failed or Error for fix prioritization
+    
+- **Author / Last Executed By**: Identify ownership, environment, or training issues
+    
+
+---
+
+## Interpreting the Data
+
+- **High Failed rate** → Product risk or test instability
+    
+- **High Error rate** → Infrastructure or brittle automation
+    
+- **Automation pass rate significantly lower than manual** → Automation reliability issue
+    
+- **Large Not Executed count** → Gaps in coverage or inactive tests
+    
+
+A healthy suite typically maintains:
+
+- 85–95%+ overall pass rate
+    
+- Low error and skipped percentages
+    
+
+---
+
+## Common Workflows
+
+### Sprint Health Check
+
+- Scope: _Last 7 days_
+    
+- Filter: _Failed + Error_
+    
+- Outcome: Daily prioritized fix list
+    
+
+### Automation Effectiveness Review
+
+- Scope: _Last 30 days_
+    
+- Compare automated vs manual pass rates
+    
+- Outcome: Identify flaky or low-ROI automation
+    
+
+### Team or Executor Review
+
+- Filter by _Author_ or _Last Executed By_
+    
+- Outcome: Detect training gaps or environment issues
+    
+
+### Release Readiness Signal
+
+- Scope: Release window
+    
+- Review overall pass rate and unresolved failures
+    
+- Outcome: Go / no-go input for release decisions
+    
+
+---
+</concise>
+
+
 <!-- 
 Content coming soon.
 Test Case ActivityHealth & Stability
@@ -30,17 +180,17 @@ Related guides:
 
 ## Overview
 
-The Test Case Status Analysis report provides a comprehensive view of your test case execution health across automated and manual tests. Monitor test case performance, identify problematic tests, and assess automation effectiveness through pass rate analysis.
+The Test Case Health Analysis report provides a comprehensive view of your test case execution health across automated and manual tests. Monitor test case performance, identify problematic tests, and assess automation effectiveness through pass rate analysis.
 
 Use this report to answer: Which test cases are consistently failing? How does your automation compare to manual testing in reliability? Where should you focus QA improvement efforts?
 
 ## How to Access the Test Case Status Report
 
-Navigate to the Test Case Status Analysis report:
+Navigate to the Test Case Health Analysis report:
 
 - From the main navigation menu, select Reports
 
-- Locate and click Test Case Status Analysis
+- Locate and click Test Case Health Analysis
 
 - The report opens with default settings (last 30 days)
 

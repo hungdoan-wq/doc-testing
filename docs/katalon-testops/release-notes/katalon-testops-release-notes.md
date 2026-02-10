@@ -46,7 +46,7 @@ Redesigned **Analytics and Trends dashboard** to include **flaky**, **always fai
 
 ### Enhancement
 
-Included test stability metrics and charts in **Test Case Status Analysis Report** (now **Test Case Health Analysis Report**) for a better understanding into test case health.
+Included test stability metrics and charts in **Test Case Health Analysis Report** (now **Test Case Health Analysis Report**) for a better understanding into test case health.
 
 <img src="https://tw-cdn.katalon.com/katalon-platform/Analyze/Reports/testops-test-case-health-analytics-report.png" alt="testops test case health analytics report" width="500px" />
 <br/>
@@ -124,8 +124,8 @@ The **Common Automation Errors report** now groups automation errors by their [*
     <source src="https://tw-cdn.katalon.com/katalon-platform/ra/save-filter.mov" type="video/mp4" />
     </video>
 ### Enhancement
-**Enhanced Test Case Status Analysis**: The Test Case Status Analysis data table now includes the Source column, giving you complete context about where each test case originates and enabling better traceability across your test automation framework.
-  <img src="https://tw-cdn.katalon.com/katalon-platform/ra/test-case-status-analysis.png" alt="Enhanced Test Case Status Analysis" width="600"/> 
+**Enhanced Test Case Health Analysis**: The Test Case Health Analysis data table now includes the Source column, giving you complete context about where each test case originates and enabling better traceability across your test automation framework.
+  <img src="https://tw-cdn.katalon.com/katalon-platform/ra/test-case-status-analysis.png" alt="Enhanced Test Case Health Analysis" width="600"/> 
 
 ## Nov 13, 2025
 ### Enhancement

@@ -1,5 +1,3 @@
-<Outline>
-
 # Analyze Failure Patterns
 
 This document explains how to analyze failure patterns to identify deep root causes behind test failures. Instead of investigating each failed test in isolation, TestOps helps you detect patterns across failures, enabling faster, higher-impact troubleshooting.
@@ -113,8 +111,6 @@ This approach helps you:
 - Reduce Mean Time to Repair (MTTR)
     
 - Prioritize fixes that resolve the largest number of failures
-- 
-<Outline/>
 
 <!--
 <content>

@@ -28,20 +28,23 @@
     "children": {
       "Overview":"docs/katalon-testops/analytics/overview.md",
       "Configurations": "docs/katalon-testops/analytics/configurations.md",
-      "Project monitoring": {
+      "Dashboards": {
         "children": {
           "Assess Release Readiness":"docs/katalon-testops/analytics/monitor-projects/assess-release-readiness.md",
           "Monitor Live Test Execution":"docs/katalon-testops/analytics/monitor-projects/monitor-real-time-test-execution.md",
-          "Track Quality Trends":"docs/katalon-testops/analytics/monitor-projects/track-historical-quality-trends.md"
+          "Track Quality Trends":"docs/katalon-testops/analytics/monitor-projects/track-historical-quality-trends.md",
+          "Custom Dashboards":"docs/katalon-testops/analytics/customizations/custom-dashboards.md",
+          "Cross-project Dashboards": ""
         }
       },
-      "Results and failures": {
+      "Failures": {
         "children": {
           "View Test Results":"docs/katalon-testops/analytics/test-results-failures/view-test-result-details.md",
-          "Analyze Test Results": "docs/katalon-testops/analytics/test-results-failures/analyze-test-results.md",
-          "Analyze Test Run Pattern": "docs/katalon-testops/analytics/test-results-failures/review-test-runs.md",
+          "Analyze Test Results Trends": "docs/katalon-testops/analytics/test-results-failures/analyze-test-results-trends.md",
           "Assess Test Quality":"docs/katalon-testops/analytics/test-results-failures/assess-test-case-quality.md",
           "Investigate Failures":"docs/katalon-testops/analytics/test-results-failures/investigate-test-failures.md",
+          "Analyze Test Run Pattern": "docs/katalon-testops/analytics/test-results-failures/review-test-runs.md",
+          "View Common Automation Errors":"",
           "Analyze Failure Patterns":"docs/katalon-testops/analytics/test-results-failures/analyze-failure-patterns.md",
           "Investigate Flakiness":"docs/katalon-testops/analytics/test-results-failures/investigate-flaky-tests.md"
         }

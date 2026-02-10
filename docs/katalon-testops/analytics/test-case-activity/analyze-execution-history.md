@@ -1,11 +1,95 @@
 # Analyze Testing Activities
 
-This doc is about Test Results Analysis Report. Another use case is [Analyze Test Results](docs/katalon-testops/analytics/test-results-failures/analyze-test-results.md)
+This report is for viewing execution history to rate stability, release quality, and long-term degradation.
+Main points:
+- get started - what widgets on this report, using filters to pinpoint the problem quickly
+- key workflows/use cases + suggested steps:
+  - to rate test stability
+  - to compare quality between 2 releases
+  - to identify degrading tests
+
+<!--
+<concise>
+Test execution data is only useful if it reveals trends—not just outcomes. The **Test Results Analysis Report** turns raw execution history into clear signals about test stability, release quality, and long-term degradation, helping teams distinguish real regressions from test noise and make evidence-based quality decisions.
+
+This report is designed for trend analysis: tracking how tests behave over time, comparing releases objectively, and identifying tests that quietly erode confidence before they become blockers.
+
+## When to Use This Report
+
+Use the Test Results Analysis Report when you need **historical perspective**, not a point-in-time snapshot:
+
+- Evaluate test stability across sprints or longer time windows
+- Compare quality between releases using consistent metrics
+- Detect degrading or flaky tests early
+- Support retrospectives, release reviews, and executive reporting
+    
+Another use case for this report is [Analyze Test Results](docs/katalon-testops/analytics/test-results-failures/analyze-test-results.md)
+
+## What the Report Provides
+
+At a glance, the report offers:
+
+- Execution outcome trends over time (day / week / month)
+    
+- Summary rates for pass, fail, and error
+    
+- Flexible filtering across execution context (executor, platform, profile, test type)
+    
+- Drill-down access to individual execution records
+    
+- Exportable data for external analysis and reporting
+    
+
+---
+
+## Interpreting Execution Patterns
+
+Execution trends matter more than individual failures:
+
+- **Sudden, consistent failures** typically indicate a new regression or environment change and should be investigated immediately.
+    
+- **Alternating pass/fail patterns** usually point to flaky automation and should be addressed as test stability work, not product defects.
+    
+
+A simple rule of thumb: consistency signals product risk; inconsistency signals test risk.
+
+---
+
+## Key Workflows
+
+### Track Test Stability Over a Sprint
+
+- Set Analysis Scope to Time-Based and select Last 30 days.
+- Review the stacked bar chart for days with abnormal failure spikes.
+- Filter the data table by Status = Failed and sort by Test Case Name.
+- Flag test cases that fail repeatedly across different days as unstable.
+
+### Compare Release Quality
+
+- Set Analysis Scope to a particular release, save it as a view.
+- Set Analysis Scope for another release.
+- Switch between two scopes, compare pass, fail, and error rates from the summary metrics to assess quality improvement or regression.
+
+### Identify Degrading Tests
+
+- Set Analysis Scope to past 60-day, Time Interval to Week to rid of daily noise.
+- Scan the chart for weeks with a rising failure trend.
+- Filter Status = Failed and Execution Type = Automated.
+- Identify test cases failing across multiple weeks as degrading candidates.
+
+## Using Filters for Root-Cause Isolation
+
+Filtering by execution context helps pinpoint failure sources quickly:
+
+- **Execution Profile / Platform** → detect environment-specific issues
+- **Executor** → separate tooling or setup problems from test logic issues
+- **Manual vs. Automated** → assess automation reliability versus functional coverage
+
+Concentrated failures in a single dimension usually reveal the fastest path to resolution.
+</concise>
 
 <!--
 
-Content coming soon.
-Test Case ActivityHealth & Stability
 # Analyze Test Execution History
 
 Track test stability trends over sprints, compare release quality objectively, and identify degrading tests using the Test Results Analysis Report.
@@ -37,25 +121,6 @@ When to use this report:
 - Quality degradation detection: Identify tests with declining pass rates over 60-90 days
 
 - Stakeholder reporting: Export trend data for executive presentations
-
-#_r_103_{margin:1.5rem auto 0;}#_r_103_{font-family:inherit;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#_r_103_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#_r_103_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#_r_103_ .error-icon{fill:#552222;}#_r_103_ .error-text{fill:#552222;stroke:#552222;}#_r_103_ .edge-thickness-normal{stroke-width:1px;}#_r_103_ .edge-thickness-thick{stroke-width:3.5px;}#_r_103_ .edge-pattern-solid{stroke-dasharray:0;}#_r_103_ .edge-thickness-invisible{stroke-width:0;fill:none;}#_r_103_ .edge-pattern-dashed{stroke-dasharray:3;}#_r_103_ .edge-pattern-dotted{stroke-dasharray:2;}#_r_103_ .marker{fill:#333333;stroke:#333333;}#_r_103_ .marker.cross{stroke:#333333;}#_r_103_ svg{font-family:inherit;font-size:16px;}#_r_103_ p{margin:0;}#_r_103_ .label{font-family:inherit;color:#333;}#_r_103_ .cluster-label text{fill:#333;}#_r_103_ .cluster-label span{color:#333;}#_r_103_ .cluster-label span p{background-color:transparent;}#_r_103_ .label text,#_r_103_ span{fill:#333;color:#333;}#_r_103_ .node rect,#_r_103_ .node circle,#_r_103_ .node ellipse,#_r_103_ .node polygon,#_r_103_ .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#_r_103_ .rough-node .label text,#_r_103_ .node .label text,#_r_103_ .image-shape .label,#_r_103_ .icon-shape .label{text-anchor:middle;}#_r_103_ .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#_r_103_ .rough-node .label,#_r_103_ .node .label,#_r_103_ .image-shape .label,#_r_103_ .icon-shape .label{text-align:center;}#_r_103_ .node.clickable{cursor:pointer;}#_r_103_ .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#_r_103_ .arrowheadPath{fill:#333333;}#_r_103_ .edgePath .path{stroke:#333333;stroke-width:2.0px;}#_r_103_ .flowchart-link{stroke:#333333;fill:none;}#_r_103_ .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_103_ .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#_r_103_ .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_103_ .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#_r_103_ .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#_r_103_ .cluster text{fill:#333;}#_r_103_ .cluster span{color:#333;}#_r_103_ div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:inherit;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#_r_103_ .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#_r_103_ rect.text{fill:none;stroke-width:0;}#_r_103_ .icon-shape,#_r_103_ .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_103_ .icon-shape p,#_r_103_ .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#_r_103_ .icon-shape rect,#_r_103_ .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_103_ .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#_r_103_ .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#_r_103_ :root{--mermaid-font-family:inherit;}
-Yes
-
-Yes
-
-What's Your Goal?
-
-Triage Today's Failures?
-
-Track Quality Trends?
-
-Use Test Case Health Analysis Report
-
-Use Test Results Analysis Report
-
-Latest status snapshotPFS scores, Smart TagsMorning triage workflow
-
-Historical trends over timePass/fail patternsSprint retrospectives
 
 Key capabilities:
 
@@ -117,30 +182,6 @@ From the main navigation, go to Reports > Test Results Analysis Report.
 ### Configure Time-Based Scope
 
 Set Analysis Scope to Time-Based and select Date Range: Last 30 days. This scope captures all test executions within your sprint window.
-
-Set Time Interval to Day to show daily granularity, revealing day-to-day failure patterns.
-#_r_105_{margin:1.5rem auto 0;}#_r_105_{font-family:inherit;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#_r_105_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#_r_105_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#_r_105_ .error-icon{fill:#552222;}#_r_105_ .error-text{fill:#552222;stroke:#552222;}#_r_105_ .edge-thickness-normal{stroke-width:1px;}#_r_105_ .edge-thickness-thick{stroke-width:3.5px;}#_r_105_ .edge-pattern-solid{stroke-dasharray:0;}#_r_105_ .edge-thickness-invisible{stroke-width:0;fill:none;}#_r_105_ .edge-pattern-dashed{stroke-dasharray:3;}#_r_105_ .edge-pattern-dotted{stroke-dasharray:2;}#_r_105_ .marker{fill:#333333;stroke:#333333;}#_r_105_ .marker.cross{stroke:#333333;}#_r_105_ svg{font-family:inherit;font-size:16px;}#_r_105_ p{margin:0;}#_r_105_ .label{font-family:inherit;color:#333;}#_r_105_ .cluster-label text{fill:#333;}#_r_105_ .cluster-label span{color:#333;}#_r_105_ .cluster-label span p{background-color:transparent;}#_r_105_ .label text,#_r_105_ span{fill:#333;color:#333;}#_r_105_ .node rect,#_r_105_ .node circle,#_r_105_ .node ellipse,#_r_105_ .node polygon,#_r_105_ .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#_r_105_ .rough-node .label text,#_r_105_ .node .label text,#_r_105_ .image-shape .label,#_r_105_ .icon-shape .label{text-anchor:middle;}#_r_105_ .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#_r_105_ .rough-node .label,#_r_105_ .node .label,#_r_105_ .image-shape .label,#_r_105_ .icon-shape .label{text-align:center;}#_r_105_ .node.clickable{cursor:pointer;}#_r_105_ .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#_r_105_ .arrowheadPath{fill:#333333;}#_r_105_ .edgePath .path{stroke:#333333;stroke-width:2.0px;}#_r_105_ .flowchart-link{stroke:#333333;fill:none;}#_r_105_ .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_105_ .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#_r_105_ .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_105_ .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#_r_105_ .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#_r_105_ .cluster text{fill:#333;}#_r_105_ .cluster span{color:#333;}#_r_105_ div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:inherit;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#_r_105_ .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#_r_105_ rect.text{fill:none;stroke-width:0;}#_r_105_ .icon-shape,#_r_105_ .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_105_ .icon-shape p,#_r_105_ .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#_r_105_ .icon-shape rect,#_r_105_ .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_105_ .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#_r_105_ .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#_r_105_ :root{--mermaid-font-family:inherit;}
-Less than 14 days
-
-14-90 days
-
-More than 90 days
-
-Select Date Range
-
-Range Duration?
-
-Use Daily Interval
-
-Use Weekly Interval
-
-Use Monthly Interval
-
-Best for: Sprint analysisReveals day-to-day patterns
-
-Best for: 30-90 day trendsSmooths daily noise
-
-Best for: Quarterly reviewStrategic overview
 
 Note: Time intervals are auto-selected based on date range but can be manually overridden. The above recommendations optimize data granularity vs. noise for different analysis periods.
 
@@ -251,34 +292,6 @@ Apply the Execution Type filter and select Automated to focus on automated test 
 ### Group by Test Case Name and Identify Repeating Failures
 
 In the data table, sort by Test Case Name (click column header) to group multiple executions alphabetically. Identify test cases appearing multiple times in Failed status across different weeks.
-#_r_108_{margin:1.5rem auto 0;}#_r_108_{font-family:inherit;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#_r_108_ .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#_r_108_ .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#_r_108_ .error-icon{fill:#552222;}#_r_108_ .error-text{fill:#552222;stroke:#552222;}#_r_108_ .edge-thickness-normal{stroke-width:1px;}#_r_108_ .edge-thickness-thick{stroke-width:3.5px;}#_r_108_ .edge-pattern-solid{stroke-dasharray:0;}#_r_108_ .edge-thickness-invisible{stroke-width:0;fill:none;}#_r_108_ .edge-pattern-dashed{stroke-dasharray:3;}#_r_108_ .edge-pattern-dotted{stroke-dasharray:2;}#_r_108_ .marker{fill:#333333;stroke:#333333;}#_r_108_ .marker.cross{stroke:#333333;}#_r_108_ svg{font-family:inherit;font-size:16px;}#_r_108_ p{margin:0;}#_r_108_ .label{font-family:inherit;color:#333;}#_r_108_ .cluster-label text{fill:#333;}#_r_108_ .cluster-label span{color:#333;}#_r_108_ .cluster-label span p{background-color:transparent;}#_r_108_ .label text,#_r_108_ span{fill:#333;color:#333;}#_r_108_ .node rect,#_r_108_ .node circle,#_r_108_ .node ellipse,#_r_108_ .node polygon,#_r_108_ .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#_r_108_ .rough-node .label text,#_r_108_ .node .label text,#_r_108_ .image-shape .label,#_r_108_ .icon-shape .label{text-anchor:middle;}#_r_108_ .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#_r_108_ .rough-node .label,#_r_108_ .node .label,#_r_108_ .image-shape .label,#_r_108_ .icon-shape .label{text-align:center;}#_r_108_ .node.clickable{cursor:pointer;}#_r_108_ .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#_r_108_ .arrowheadPath{fill:#333333;}#_r_108_ .edgePath .path{stroke:#333333;stroke-width:2.0px;}#_r_108_ .flowchart-link{stroke:#333333;fill:none;}#_r_108_ .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_108_ .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#_r_108_ .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_108_ .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#_r_108_ .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#_r_108_ .cluster text{fill:#333;}#_r_108_ .cluster span{color:#333;}#_r_108_ div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:inherit;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#_r_108_ .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#_r_108_ rect.text{fill:none;stroke-width:0;}#_r_108_ .icon-shape,#_r_108_ .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#_r_108_ .icon-shape p,#_r_108_ .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#_r_108_ .icon-shape rect,#_r_108_ .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#_r_108_ .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#_r_108_ .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#_r_108_ :root{--mermaid-font-family:inherit;}
-1 time in 30 days
-
-5+ times in 30 days
-
-PFS ≥ 0.7
-
-PFS 0.3-0.7
-
-PFS < 0.3
-
-Review Failed Test in Data Table
-
-How Many TimesDid It Fail?
-
-One-Time Failure
-
-Degrading Test
-
-Environment flukeMonitor, don't prioritize
-
-Check PFS Score
-
-Highly FlakyHigh Priority Fix
-
-Potentially FlakyMedium Priority
-
-Legitimate RegressionInvestigate Code Change
 
 Degrading test criteria:
 
@@ -346,29 +359,5 @@ Use case: Assess automation effectiveness.
 
 Apply the Test Type filter and compare Manual vs Automated pass rates. Automated tests typically have 10-15% lower pass rates than manual tests due to flakiness. If the difference exceeds 20%, you have an automation quality issue requiring framework stabilization.
 
-## Role-Based Workflows
-
-[### Automation Engineer Workflow
-See how Automation Engineers use test execution history to track automated test stability trends, identify degrading tests, and validate framework improvements over time.](/docs/workflows/automation-engineer)[### QA Manager Workflow
-Learn how QA Managers analyze execution history for sprint retrospectives, compare release quality objectively, and track team testing progress with data-driven metrics.](/docs/workflows/qa-manager)
-
-## See Also
-
-- [Get Started with Test Case Health Analysis](/docs/test-case-reports/get-started-with-test-case-health) - View current test status, PFS scores, and Smart Tags for morning triage
-
-- [Core Concepts](/docs/getting-started/core-concepts) - Understand Analysis Scope (Time-Based vs Release-Based) in depth
-
-- [Identify Flaky Tests](/docs/test-failures/identify-flaky-tests) - Learn workflows for remediating flaky tests identified through historical trend analysis
-
-### Edge Case: Sparse Data Periods (Weekends with No Executions)
-
-### Edge Case: Time Interval Mismatch (Week Spans Two Sprints)
-
-### Edge Case: Test Case Deleted After Execution
-
-### Troubleshooting: Automated vs Manual Pass Rate Comparison
-
-### When to use Test Case Health Analysis vs Test Results Analysis
-[Get Started with Test Case Health AnalysisLearn to identify flaky tests, prioritize failures, and plan test maintenance using the Test Case Health Analysis Report with Smart Tags and PFS scoring.](/docs/test-case-reports/health-stability/get-started-with-test-case-health)[Test Case Quality & Reliability TrackingMonitor test case execution health, identify problematic test cases, and assess automation effectiveness through pass rate analysis in Katalon TestOps.](/docs/test-case-reports/health-stability/track-test-case-status)
 
 -->

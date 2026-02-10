@@ -5,6 +5,11 @@ Outline:
 This document explains how to investigate failed tests.
   
 - When QA detects failed tests in any entry point: Executions, dashboards, or reports, they can go to test runs details to investigate
+  - Executions: quickly see a list of all executions
+  - Live monitor: see today's executions
+  - Trends & analytics + test results: see failure distribution
+  - Test run analysis: see test run statuses by day, a way to prioritize investigating
+  - Test failure analysis: see fail % distribution, to learn which is flaky, which failed the most, which has low fail % which is likely recently failed.
 - Switch the tabs to see:
   - overview: see common error. if this is a common error => can go through common error report for a thorough resolution
   - unstable (flaky): save for later, as this might need stabilized

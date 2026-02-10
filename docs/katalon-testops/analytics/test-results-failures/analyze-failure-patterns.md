@@ -1,10 +1,123 @@
+<Outline>
 
-# Analyze Error Patterns
+# Analyze Failure Patterns
 
-This document is about the Common Automation Errors Report.
+This document explains how to analyze failure patterns to identify deep root causes behind test failures. Instead of investigating each failed test in isolation, TestOps helps you detect patterns across failures, enabling faster, higher-impact troubleshooting.
+
+By grouping failures with similar characteristics—such as shared error messages, execution status, or failure rates—you can focus on systemic issues that affect many tests at once and prioritize fixes more effectively.
+
+---
+
+## Use reports to detect patterns
+
+TestOps provides multiple reports that help you detect recurring failure patterns from different angles.
+
+### Common Automation Error Report
+
+Use this report to analyze automation failures caused by tooling, scripts, environments, or infrastructure.
+
+Rather than listing failures one by one, the report **automatically groups similar error messages**, giving you a consolidated view of the most frequent and impactful automation issues. This makes large-scale automation failure analysis clearer and more actionable.
+
+**Key insights provided:**
+
+- **Error Distribution by Failure Category** – Breakdown of automation failures by category (Environment, AUT Issue, Test Script, etc.).
+    
+- **Common Errors** – Number of distinct automation error groups.
+    
+- **Impacted Test Cases** – Number of test cases affected by each error group.
+    
+- **Common Error Data Table** – Error details including occurrence count, affected test cases, sample messages, and failure categories.
+    
+
+#### Report view modes
+
+The report offers two view modes depending on your analysis goal:
+
+**Latest Error Only (Default)**  
+Use this view to understand what is currently failing:
+
+- Shows only the most recent occurrence of each grouped error.
+    
+- Charts reflect latest failures only.
+    
+- Impacted test cases are calculated from the latest occurrences.
+    
+- Selecting an error opens the most recent failed run.
+    
+
+**All Errors**  
+Use this view to assess recurring or historical issues:
+
+- Shows all occurrences of each error across the selected timeframe.
+    
+- Charts reflect both current and historical failures.
+    
+- Impacted test cases include all affected tests.
+    
+- Selecting an error opens the **Test Result Analysis report** filtered by that error, allowing deeper investigation across runs and test cases.
+    
+
+---
+
+### Test Failure Analysis Report
+
+Use this report to understand **failure distribution by rate**, helping you identify which failures require the most attention.
+
+This report is especially useful when:
+
+- A large number of tests fail in a single run
+    
+- You want to prioritize failures that occur most frequently
+    
+- You want to assess test stability over time
+    
+
+By analyzing failure rates rather than individual results, you can quickly spot high-impact problem areas.
+
+---
+
+### Test Results Analysis Report
+
+Use this report to review **all execution statuses** across test results, including Passed, Failed, Error, Blocked, and Skipped.
+
+This report helps you:
+
+- Identify which execution statuses are increasing or trending
+    
+- Detect patterns such as rising Error or Blocked rates
+    
+- Compare failure behavior across runs, test cases, or environments
+    
+
+It is often used as a drill-down destination from other reports (such as Common Automation Error Report) for deeper analysis.
+
+---
+
+## Investigate root cause
+
+Once failure patterns are identified, use the grouped insights to guide root cause investigation.
+
+Instead of debugging each test separately:
+
+- Focus on **high-frequency error groups**
+    
+- Examine **shared characteristics** such as environment, configuration, or timing
+    
+- Investigate representative samples from each pattern
+    
+
+This approach helps you:
+
+- Identify systemic issues affecting multiple tests
+    
+- Reduce Mean Time to Repair (MTTR)
+    
+- Prioritize fixes that resolve the largest number of failures
+- 
+<Outline/>
 
 <!--
-
+<content>
 Instead of analyzing each failed test in isolation, the report automatically **groups similar error messages**, providing a consolidated view of your most frequent and impactful issues. This report aims to assist you make a large-scale analysis on automation failure much clearer and more actionable.
 
 <img src="https://tw-cdn.katalon.com/katalon-platform/Analyze/Reports/common-automation-error-report.png" alt="common automation error report" width="700px" />
@@ -52,7 +165,7 @@ This view displays all occurances of each error in test cases/runs, across the s
 - **Configuration Issue** - Incorrect setup of tools, browser versions, or execution parameters.
 - **Environment Issue** - Instability or unavailability of test environments, servers, networks, databases, or third-party services.
 - **Others** - Unspecified issues, to be investigated further.
-<!--
+- 
 Content coming soon.
 Test Failures
 # How to Analyze Error Patterns Across Test Failures
@@ -302,7 +415,9 @@ To analyze correlations:
 
 - If error is evenly distributed, root cause likely systemic (framework, shared utility, or application-wide issue)
 
-## Step 4: Investigate Root Causes
+Once analyzed, you can move to investigating root cause.
+
+## Investigate root cause 
 
 Once you've identified clear patterns, use the pattern characteristics to guide your root cause investigation. Different pattern types suggest different investigation approaches.
 
@@ -650,33 +765,4 @@ Pattern trend dashboards: Create custom dashboards showing:
 
 These approaches scale pattern analysis from ad-hoc investigation to continuous, proactive quality monitoring.
 
-## Troubleshooting
-
-### Can't find clear patterns in failures
-
-### Error messages are too generic to group effectively
-
-### Patterns identified but root cause still unclear
-
-### Too many patterns to prioritize effectively
-
-## Role-Based Workflows
-
-[### Automation Engineer Workflow
-See how Automation Engineers use error pattern analysis to identify systemic issues, prioritize test stabilization efforts, and reduce flaky test maintenance burden by fixing root causes affecting multiple tests.](/docs/workflows/automation-engineer)
-
-## See Also
-
-- [Investigating Test Failures](/docs/test-failures/investigating-test-failures) - Step-by-step workflow for investigating individual test failures
-
-- [Identifying Flaky Tests](/docs/test-failures/identifying-flaky-tests) - Detect unreliable tests with inconsistent pass/fail patterns using PFS metrics
-
-- [AI-Powered Test Failure Analysis](/docs/customization/ai-test-failure-analysis) - Use AI to automatically categorize failures and get plain-English explanations
-
-- [Test Failure Analysis Report](/docs/reports/test-failure-analysis) - Understand the built-in report for failure rate visualization and analysis
-
-- [Best Practices for Test Maintenance](/docs/test-failures/test-maintenance-best-practices) - Proactive strategies to prevent common failure patterns
-
-[Identifying Flaky Tests with Stability IntelligenceLearn how to systematically find and analyze flaky tests using Test Stability Intelligence features including PFS scores, Smart Tags, and trend visualization in Katalon TestOps.](/docs/test-failures/identify-flaky-tests)[Configure Failure Analysis SettingsCustomize stability detection settings and Smart Tag thresholds—configure time windows, minimum executions, and tag sensitivity to match your team's testing patterns and quality standards.](/docs/test-failures/configure-failure-analysis-settings)
-
--->
+<content/>

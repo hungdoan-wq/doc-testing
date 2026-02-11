@@ -37,19 +37,23 @@
           "Cross-project Dashboards": ""
         }
       },
+      "Test Quality": {
+        "children": {
+          "View test results details":"docs/katalon-testops/analytics/test-results-failures/view-test-result-details.md",
+          "Assess Test Quality":"docs/katalon-testops/analytics/test-results-failures/assess-test-case-quality.md",
+          "Analyze test results trends": "docs/katalon-testops/analytics/test-results-failures/analyze-test-results-trends.md",
+          "Review Test Runs": "docs/katalon-testops/analytics/test-results-failures/review-test-runs.md"
+        }
+      },
       "Failures": {
         "children": {
-          "View Test Results":"docs/katalon-testops/analytics/test-results-failures/view-test-result-details.md",
-          "Analyze Test Results Trends": "docs/katalon-testops/analytics/test-results-failures/analyze-test-results-trends.md",
-          "Assess Test Quality":"docs/katalon-testops/analytics/test-results-failures/assess-test-case-quality.md",
           "Investigate Failures":"docs/katalon-testops/analytics/test-results-failures/investigate-test-failures.md",
-          "Analyze Test Run Pattern": "docs/katalon-testops/analytics/test-results-failures/review-test-runs.md",
-          "View Common Automation Errors":"",
           "Analyze Failure Patterns":"docs/katalon-testops/analytics/test-results-failures/analyze-failure-patterns.md",
+          "View Common Automation Errors":"",
           "Investigate Flakiness":"docs/katalon-testops/analytics/test-results-failures/investigate-flaky-tests.md"
         }
       },
-      "Defects and errors": {
+      "Defects": {
         "children": {
           "Analyze Defects Issues":"docs/katalon-testops/analytics/defects/analyze-defects-issues.md",
           "View Defect Trends":"docs/katalon-testops/analytics/defects/view-defect-trends.md"
@@ -62,18 +66,11 @@
           "Track Automation Progress":"docs/katalon-testops/analytics/test-case-activity/track-automation-progress.md"
         }
       },
-      "Testing coverage": {
+      "Coverage & Traceability": {
         "children": {
           "Analyze Configuration Coverage":"docs/katalon-testops/analytics/test-coverage/analyze-configuration-coverage.md",
           "Analyze Traceability":"docs/katalon-testops/analytics/test-coverage/analyze-traceability.md",
           "Track Requirement Coverage":"docs/katalon-testops/analytics/test-coverage/track-requirement-coverage.md"
-        }
-      },
-      "Customizations": {
-        "children": {
-          "Advanced Filters Combinations":"docs/katalon-testops/analytics/customizations/advanced-filters-combinations.md",
-          "Custom Dashboards":"docs/katalon-testops/analytics/customizations/custom-dashboards.md",
-          "Custom Widgets":"docs/katalon-testops/analytics/customizations/custom-widgets.md"
         }
       },
       "References": {

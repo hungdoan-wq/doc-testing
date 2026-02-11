@@ -37,7 +37,7 @@
           "Cross-project Dashboards": ""
         }
       },
-      "Test Quality": {
+      "Results": {
         "children": {
           "View test results details":"docs/katalon-testops/analytics/test-results-failures/view-test-result-details.md",
           "Assess Test Quality":"docs/katalon-testops/analytics/test-results-failures/assess-test-case-quality.md",

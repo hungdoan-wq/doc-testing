@@ -10,51 +10,6 @@ By grouping failures with similar characteristics—such as shared error message
 
 TestOps provides multiple reports that help you detect recurring failure patterns from different angles.
 
-### Common Automation Error Report
-
-Use this report to analyze automation failures caused by tooling, scripts, environments, or infrastructure.
-
-Rather than listing failures one by one, the report **automatically groups similar error messages**, giving you a consolidated view of the most frequent and impactful automation issues. This makes large-scale automation failure analysis clearer and more actionable.
-
-**Key insights provided:**
-
-- **Error Distribution by Failure Category** – Breakdown of automation failures by category (Environment, AUT Issue, Test Script, etc.).
-    
-- **Common Errors** – Number of distinct automation error groups.
-    
-- **Impacted Test Cases** – Number of test cases affected by each error group.
-    
-- **Common Error Data Table** – Error details including occurrence count, affected test cases, sample messages, and failure categories.
-    
-
-#### Report view modes
-
-The report offers two view modes depending on your analysis goal:
-
-**Latest Error Only (Default)**  
-Use this view to understand what is currently failing:
-
-- Shows only the most recent occurrence of each grouped error.
-    
-- Charts reflect latest failures only.
-    
-- Impacted test cases are calculated from the latest occurrences.
-    
-- Selecting an error opens the most recent failed run.
-    
-
-**All Errors**  
-Use this view to assess recurring or historical issues:
-
-- Shows all occurrences of each error across the selected timeframe.
-    
-- Charts reflect both current and historical failures.
-    
-- Impacted test cases include all affected tests.
-    
-- Selecting an error opens the **Test Result Analysis report** filtered by that error, allowing deeper investigation across runs and test cases.
-    
-
 ---
 
 ### Test Failure Analysis Report
@@ -74,43 +29,6 @@ By analyzing failure rates rather than individual results, you can quickly spot 
 
 ---
 
-### Test Results Analysis Report
-
-Use this report to review **all execution statuses** across test results, including Passed, Failed, Error, Blocked, and Skipped.
-
-This report helps you:
-
-- Identify which execution statuses are increasing or trending
-    
-- Detect patterns such as rising Error or Blocked rates
-    
-- Compare failure behavior across runs, test cases, or environments
-    
-
-It is often used as a drill-down destination from other reports (such as Common Automation Error Report) for deeper analysis.
-
----
-
-## Investigate root cause
-
-Once failure patterns are identified, use the grouped insights to guide root cause investigation.
-
-Instead of debugging each test separately:
-
-- Focus on **high-frequency error groups**
-    
-- Examine **shared characteristics** such as environment, configuration, or timing
-    
-- Investigate representative samples from each pattern
-    
-
-This approach helps you:
-
-- Identify systemic issues affecting multiple tests
-    
-- Reduce Mean Time to Repair (MTTR)
-    
-- Prioritize fixes that resolve the largest number of failures
 
 <!--
 <content>

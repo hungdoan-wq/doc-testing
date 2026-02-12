@@ -9,7 +9,7 @@ Step 1: detect failed test
 When QA detects failed tests in any entry point:
   - **Executions**: quickly see a list of all executions
   - **Live monitor**: see today's executions
-  - Trends & analytics + test results analysis: see failure distribution
+  - Trends & analytics + test results analysis: see failure distribution 
   - Test run analysis: see test run statuses by day, a way to prioritize investigating
   - Test failure analysis: see fail % distribution, to learn which is flaky, which failed the most, which has low fail % which is likely recently failed.
 

@@ -1,6 +1,6 @@
 # Analyze Automation Error Patterns
 
-This document explains how to view common failure patterns to identify deep root causes behind test failures. Instead of investigating each failed test in isolation, TestOps helps you detect patterns across failures, enabling faster, higher-impact troubleshooting.
+This document explains how to use the Common Automation Errors Report to detect failure patterns due to automation errors, to identify deep root causes behind test failures. Instead of investigating each failed test in isolation, TestOps helps you detect patterns across failures, enabling faster, higher-impact troubleshooting.
 
 <img src="https://tw-cdn.katalon.com/katalon-platform/Analyze/Reports/common-automation-error-report.png" alt="common automation error report" width="700px" />
 

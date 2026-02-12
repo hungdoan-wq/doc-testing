@@ -14,3 +14,19 @@ Main features:
 - Test execution trends to group executions by results (passed, failed, skipped, error...) for easy trend detection
 - Test execution distribution chart to quickly understand situation
 - Result ID: for deep-diving
+
+
+### Test Results Analysis Report
+
+Use this report to review **all execution statuses** across test results, including Passed, Failed, Error, Blocked, and Skipped.
+
+This report helps you:
+
+- Identify which execution statuses are increasing or trending
+    
+- Detect patterns such as rising Error or Blocked rates
+    
+- Compare failure behavior across runs, test cases, or environments
+    
+
+It is often used as a drill-down destination from other reports (such as Common Automation Error Report) for deeper analysis.

@@ -1,23 +1,35 @@
-# Investigate Failures
+# Tutorial: Investigate Failures 
 
 Outline:
 
 This document explains how to investigate failed tests.
   
-- When QA detects failed tests in any entry point: Executions, dashboards, or reports, they can go to test runs details to investigate
-  - Executions: quickly see a list of all executions
-  - Live monitor: see today's executions
-  - Trends & analytics + test results: see failure distribution
+Step 1: detect failed test
+
+When QA detects failed tests in any entry point:
+  - **Executions**: quickly see a list of all executions
+  - **Live monitor**: see today's executions
+  - Trends & analytics + test results analysis: see failure distribution
   - Test run analysis: see test run statuses by day, a way to prioritize investigating
   - Test failure analysis: see fail % distribution, to learn which is flaky, which failed the most, which has low fail % which is likely recently failed.
-- Switch the tabs to see:
+
+Step 2: view test run details
+
+They can then navigate to that **test runs details** to start investigating. 
+Once they're there, switch the tabs to see:
   - overview: see common error. if this is a common error => can go through common error report for a thorough resolution
   - unstable (flaky): save for later, as this might need stabilized
   - this failure doesn't share anything: can be prioritized
+
+Step 3: investigate with AI
+
 - To investigate/understand failures:
   - AI-analysis: root cause & actions
+
+Step 4: investigate manually
   - logs, traces, context
-- Determine error type and take action:
+
+Step 5: determine error type and take action:
   - **Product Defect**: Application behaves incorrectly → Create defect, attach evidence
   - **Test Issue**: Faulty assertions, locators, or logic → Fix test and re-run
   - **Environment Issue**: Infrastructure, configuration, or network failures → Escalate to DevOps / infra team
@@ -25,6 +37,27 @@ This document explains how to investigate failed tests.
     
 Document findings directly in TestOps for future reference.
 
+---
+
+## Investigate root cause
+
+Once failure patterns are identified, use the grouped insights to guide root cause investigation.
+
+Instead of debugging each test separately:
+
+- Focus on **high-frequency error groups**
+- Examine **shared characteristics** such as environment, configuration, or timing
+    
+- Investigate representative samples from each pattern
+    
+
+This approach helps you:
+
+- Identify systemic issues affecting multiple tests
+    
+- Reduce Mean Time to Repair (MTTR)
+    
+- Prioritize fixes that resolve the largest number of failures
 <!--
 
 This document epxlains how to investigate failed tests root cause using the Test Failures Analysis Report.

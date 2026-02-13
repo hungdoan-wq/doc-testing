@@ -48,6 +48,11 @@ Once the test completes, data are gathered to display in other tabs, to help you
 - On each test run’s details page, **TestOps** includes only the data available up to the selected run. Any executions performed after that run are excluded, to maintain accurate and consistent analytics across all runs.
 - If you switch to the **Test Results** tab while a **Dynamic Test Suite** (**DTS**) is running, the tab may appear empty. This is because a **DTS** contains queries to select test cases, and does not contain test case data. After the test run completes, execution data will be parsed, and you can view the results as usual.
 
+
+:::tip
+- The Test Run Overview tab provides context for failures, with the error auto-categorized by AI to help you identify if this is an isolated issue, or a systemic problem. Check [Investigate Failures](docs/katalon-testops/analytics/test-results-failures/investigate-test-failures.md) to learn how to resolve test failures using TestOps analytics features.
+:::endtip
+
 ## View Test Result details
 
 Use this view to quickly deep dive into each test case's log, and review execution issues.

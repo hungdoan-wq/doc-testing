@@ -75,7 +75,8 @@ AI analysis also acts as a quick failure documenting tool, to help you communica
 Use AI guidance to focus your manual review.
 
 1. Open the **Execution Logs** tab to **view complete log output** with info, warnings, errors, and stack traces.
-2. **Review error messages** highlighted in red.
+2. **Review error messages** highlighted in red. 
+3. **View similar errors**: clicking "View similar failures" to navigate to the **Common Automation Errors Report**, to show failures matching the current pattern and potentially fix the root cause to multiple failures. See [] to learn more.
 3. **Analyze stack traces** for exception messages, error location, framework calls... and cross-reference with AI. E.g., "Broken Selector" + NoSuchElementException = confirmation.
 4. **Check execution environment**: browser, device, OS type, and execution profile. If AI suggested "Environment Issue," verify if environment details reveal missing dependencies.
 5. **Review screenshots/videos**: go back to the test run details from the test results, and review images or videos for visual clues. E.g. wrong page loaded, elements overlaying, ...

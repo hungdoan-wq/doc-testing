@@ -68,8 +68,58 @@ Use this view to quickly deep dive into each test case's log, and review executi
 - **Test run configurations** at the top.
 - **Execution log** with test step details.
 - **Failure information** (if the result is `failed`) with **category** and, and the **similar failures** button that redirects you to a failure report filtered by the current failure's category.
-- **Stability trend line** with history of past runs. You can hover on each node to view details of each run's result.
+- **Stability trend line** with history of past runs. You can hover on each node to view details of each run's result. See [] to learn more about investigating flaky tests.
 
 You can switch to **AI-analysis** tab (failed results only), to have **Katalon's AI** analyze the root cause, impact, and recommendation to troubleshoot this failure:
 
 For each test case, **TestOps** does calculations in the background and displays at the test case level, so you can quickly identify problematic tests. Hovering on each label shows more details, and how smart tags are calculated. See [Smart Tags](/katalon-platform/analyze/configure-smart-tags) for more details on smart tags.
+
+---
+
+
+
+Taking Action from Test Result Details
+Once you've investigated a test result, several actions are available:
+
+Create Defect Ticket
+If the failure indicates an application bug:
+
+Click the Create Defect button in the Test Result Details header
+TestOps pre-fills the defect form with:
+Test name and execution details
+Error message and stack trace excerpts
+Links to logs, screenshots, and videos
+Review and add additional context (steps to reproduce, expected vs. actual behavior)
+Submit to create a linked defect ticket in Jira, Azure DevOps, or your configured issue tracker
+For complete guidance, see Linking Test Failures to Defects.
+
+Re-run Test to Verify Fix
+After developers fix a bug or you update test code:
+
+Click the Re-run Test button
+Select execution environment and profile (or use defaults)
+Monitor the new test run
+Compare results in the History tab to verify the fix resolved the issue
+Share Result with Team
+Share execution evidence with stakeholders:
+
+Copy URL:
+
+Copy the Test Result Details page URL from your browser
+Paste in Slack, email, or Jira comments
+Team members with TestOps access can click to view full details
+Export evidence:
+
+Download logs, screenshots, or videos as attachments
+Include in defect reports or incident documentation
+Archive for compliance or audit purposes
+Copy AI summary:
+
+Use AI-generated plain-English summary for non-technical stakeholders
+Paste into status updates, retrospectives, or executive reports
+Add Comments or Notes
+Some TestOps configurations allow adding comments directly to test results:
+
+Document workarounds or known issues
+Tag team members for review
+Track investigation status and assigned owners

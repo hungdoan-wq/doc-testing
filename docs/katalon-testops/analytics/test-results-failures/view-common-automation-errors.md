@@ -1,6 +1,6 @@
 # Analyze Automation Error Patterns
 
-This document explains how to use the Common Automation Errors Report to detect failure patterns due to automation errors, to identify deep root causes behind test failures. Instead of investigating each failed test in isolation, TestOps helps you detect patterns across failures, enabling faster, higher-impact troubleshooting.
+This document explains how to use the **Common Automation Errors Report** to detect failure patterns due to automation errors, to identify deep root causes behind test failures. Instead of investigating each failed test in isolation, TestOps helps you detect patterns across failures, enabling faster, higher-impact troubleshooting.
 
 <img src="https://tw-cdn.katalon.com/katalon-platform/Analyze/Reports/common-automation-error-report.png" alt="common automation error report" width="700px" />
 
@@ -24,6 +24,10 @@ Widgets on this report:
 - **Common Error Data Table**: error details with occurrence counts, number of affected test cases, sample messages, and [failure categories](#failure-categories).
 
 ## Explore the Report
+
+:::tip
+Analyze failure patterns is one step in our recommended failure investigation workflow. See [Investigate failures](docs/katalon-testops/analytics/test-results-failures/investigate-test-failures.md) to understand how you can use TestOps capabilities to optimize your failure investigation process.
+:::endtip
 
 Follow these below steps to effectively analyze automation error patterns:
 
@@ -194,9 +198,3 @@ To analyze correlations:
 - If 80%+ of a specific error occurs in one environment/suite/time, strong correlation suggests targeted root cause
 
 - If error is evenly distributed, root cause likely systemic (framework, shared utility, or application-wide issue)
-
-:::tip
-
-Analyze failure patterns is one step in our recommended failure investigation workflow. See [Investigate failures](docs/katalon-testops/analytics/test-results-failures/investigate-test-failures.md) to understand how you can use TestOps capabilities to optimize your failure investigation process.
-
-:::endtip

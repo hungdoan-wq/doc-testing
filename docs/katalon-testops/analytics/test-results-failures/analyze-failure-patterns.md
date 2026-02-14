@@ -43,7 +43,7 @@ Before analyzing patterns, scope your data to a relevant subset. Below are a few
 
 The histogram visualizes how many test cases fall within each failure rate range (e.g., 0–10%, 10–20%, etc.)
   - **High concentration at 100%** > Broken or invalid tests.
-  - **Spread in 20–80% range** > Flaky or environment-sensitive tests.
+  - **Spread in 20–80% range** > Flaky or environment-sensitive tests. See [Investigate Flaky Tests](docs/katalon-testops/analytics/test-results-failures/investigate-flaky-tests.md) if you are in doubt that these tests are flaky.
   - **Low failure density (less than 10%)** > Generally stable tests.
 
 The test faiures summary lists total executed test cases, failure counts, and [avg. failure rate](docs/katalon-testops/analytics/references/failure-metrics.md#average-failure-rate---test-failure-analysis-report) to help you quickly assess the data's current failure state.

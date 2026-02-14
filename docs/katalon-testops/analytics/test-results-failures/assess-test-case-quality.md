@@ -463,23 +463,15 @@ For defect linking guidance, see [Analyzing Defects](/docs/defects/analyzing-def
 
 ### What's the difference between Error and Failed status?
 
-## See Also
 
-- [Using Filters & Analysis Scope](/docs/getting-started/filters-and-scope) - Filtering techniques
+### Step 2: Accessing the Test Results Page
 
-- [Understanding Analysis Scope Types](/docs/getting-started/analysis-scope-types) - Time vs build-based scope
+- From the TestOps main menu, select Test Results (or Test Cases if you prefer test-centric view)
 
-- [Configuring Quality Gates](/docs/dashboards/configuring-quality-gates) - Pass rate thresholds
+- Select the project, release, or test suite you want to analyze
 
-- [Investigating Test Failures](/docs/test-failures/investigating-test-failures) - Failure analysis
+- Look for the Stability Intelligence toggle or filter in the page toolbar
 
-- [Test Stability Intelligence](/docs/customization/test-stability-intelligence) - Flakiness and reliability
+- Enable Show Stability Indicators to display PFS scores and Smart Tags in the test list
 
-- [Analyzing Defects](/docs/defects/analyzing-defects-and-issues) - Linking failures to defects
-
-## Role-Based Workflows
-
-[### Automation Engineer Workflow
-See how Automation Engineers track test case quality and reliability metrics, monitor automated test pass rates, and identify unstable tests requiring stabilization work.](/docs/workflows/automation-engineer)[### QA Manager Workflow
-Learn how QA Managers use test case quality tracking to assess automation effectiveness, monitor team testing health, and make data-driven decisions about test maintenance priorities.](/docs/workflows/qa-manager)[Analyze Test Execution HistoryTrack test stability trends over sprints, compare release quality objectively, and identify degrading tests using the Test Results Analysis Report.](/docs/test-case-reports/health-stability/analyze-test-execution-history)[Test Case Activity & Productivity MetricsTrack team productivity through test case publishing activity, monitor test case creation velocity, and identify productivity patterns in Katalon TestOps.](/docs/test-case-reports/publishing-lifecycle/analyze-team-productivity)
 -->

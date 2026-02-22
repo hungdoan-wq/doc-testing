@@ -1,182 +1,6 @@
 # Assess Test Quality
 
-This document is about Test Case Health Analysis Report. Another use is [Investigate Flakiness](docs/katalon-testops/analytics/test-results-failures/investigate-flaky-tests.md)
-
-You can use this report to understand how reliable your test cases are, to grade automation quality, and help you shift focus.
-
-mention:
-- where to access
-- what widgets, filters
-- use cases:
-
-### Sprint Health Check
-
-- Scope: _Last 7 days_
-- Filter: _Failed + Error_
-- Outcome: Daily prioritized fix list
-    
-### Automation Effectiveness Review
-
-- Scope: _Last 30 days_
-- Compare automated vs manual pass rates
-- Outcome: Identify flaky or low-ROI automation
-
-### Team or Executor Review
-
-- Filter by _Author_ or _Last Executed By_
-- Outcome: Detect training gaps or environment issues
-    
-### Release Readiness Signal
-
-- Scope: Release window
-- Review overall pass rate and unresolved failures
-- Outcome: Go / no-go input for release decisions
-
-<!--
-<concise>
-Assess test case health, surface unreliable tests, and compare automation versus manual reliability using execution pass rates in TestOps.
-
----
-
-## Overview
-
-The **Test Case Health Analysis** report provides a consolidated view of test case reliability across manual and automated testing. It helps teams quickly identify failing or error-prone tests, evaluate automation quality, and focus QA improvement efforts where they matter most.
-
-Use this report to answer:
-
-- Which test cases are consistently unhealthy?
-    
-- Is automation as reliable as manual testing?
-    
-- Where should test maintenance or process improvements focus?
-    
-
----
-
-## Access
-
-1. Go to **Reports**.
-    
-2. Select **Test Case Health Analysis**.
-    
-3. The report opens with a default 30-day view.
-    
-
----
-
-## Core Capabilities
-
-- Pass rate comparison between **Automated** and **Manual** tests
-    
-- Status distribution (Passed / Failed / Error / Skipped)
-    
-- Filterable test case list with latest execution status
-    
-- Drill-down into individual test case history
-    
-- Export for reporting and review
-    
-
----
-
-## Key Filters (Commonly Used)
-
-- **Analysis Scope**: Adjust time window (7 / 30 / 90 days or custom)
-    
-- **Type**: Automated or Manual
-    
-- **Latest Status**: Focus on Failed or Error for fix prioritization
-    
-- **Author / Last Executed By**: Identify ownership, environment, or training issues
-    
-
----
-
-## Interpreting the Data
-
-- **High Failed rate** → Product risk or test instability
-    
-- **High Error rate** → Infrastructure or brittle automation
-    
-- **Automation pass rate significantly lower than manual** → Automation reliability issue
-    
-- **Large Not Executed count** → Gaps in coverage or inactive tests
-    
-
-A healthy suite typically maintains:
-
-- 85–95%+ overall pass rate
-    
-- Low error and skipped percentages
-    
-
----
-
-## Common Workflows
-
-### Sprint Health Check
-
-- Scope: _Last 7 days_
-    
-- Filter: _Failed + Error_
-    
-- Outcome: Daily prioritized fix list
-    
-
-### Automation Effectiveness Review
-
-- Scope: _Last 30 days_
-    
-- Compare automated vs manual pass rates
-    
-- Outcome: Identify flaky or low-ROI automation
-    
-
-### Team or Executor Review
-
-- Filter by _Author_ or _Last Executed By_
-    
-- Outcome: Detect training gaps or environment issues
-    
-
-### Release Readiness Signal
-
-- Scope: Release window
-    
-- Review overall pass rate and unresolved failures
-    
-- Outcome: Go / no-go input for release decisions
-    
-
----
-</concise>
-
-
-<!-- 
-Content coming soon.
-Test Case ActivityHealth & Stability
-# Test Case Quality & Reliability Tracking
-
-Monitor test case execution health, identify problematic test cases, and assess automation effectiveness through pass rate analysis in Katalon TestOps.
-
-# Test Case Quality & Reliability Tracking
-
-Time required: 15 minutes
-Prerequisites:
-
-- Access to Katalon TestOps Reports & Analytics module
-
-- Test cases with execution history in your project
-
-- Familiarity with [Using Filters & Analysis Scope](/docs/getting-started/filters-and-scope)
-
-Related guides:
-
-- [Understanding Analysis Scope Types](/docs/getting-started/analysis-scope-types)
-
-- [Investigating Test Failures](/docs/test-failures/investigating-test-failures)
-
-- [Test Stability Intelligence](/docs/customization/test-stability-intelligence)
+You can use the Test Case Health Analysis report report to understand how reliable your test cases are, to grade automation quality, and help you shift focus.
 
 ## Overview
 
@@ -184,175 +8,59 @@ The Test Case Health Analysis report provides a comprehensive view of your test 
 
 Use this report to answer: Which test cases are consistently failing? How does your automation compare to manual testing in reliability? Where should you focus QA improvement efforts?
 
-## How to Access the Test Case Status Report
+## Get Started
+
+1. Access the Test Case Status Report
 
 Navigate to the Test Case Health Analysis report:
 
 - From the main navigation menu, select Reports
-
 - Locate and click Test Case Health Analysis
-
 - The report opens with default settings (last 30 days)
 
 The initial view displays a summary banner, pie chart (status distribution), pass rate breakdown (Automation vs Manual), and detailed data table.
 
 Note: If you see "No data available," verify your project has test cases with execution history.
 
-## How to Configure Filters
+2. Configure filters to view 
 
-### Date Range Selection
+These filters/scopes are available:
+- Date range selection: last 7 days, last 30 days,...
+- Filter by Test Case Author
+- Filter by Test Case Type (automated, manual, or both)
+- Filter by Latest Status (passed, failed, error, skipped)
+- Filter by Executor
 
-- Click Analysis Scope dropdown
+3. View charts and data table
 
-- Select: Last 7 days, Last 30 days (default), Last 90 days, or Custom range
+The following visualizations are on the report: 
+- **Big numbers**: numbers counting executed tests tagged with [smart tags](/docs/katalon-testops/analytics/references/test-stability-metrics.md), for test stability analysis and investigating flaky tests. See [Investigate Flaky Tests](/docs/katalon-testops/analytics/test-results-failures/investigate-flaky-tests.md#step-1-detect-flaky-tests) to learn more.
+- **Test Case Distribution By Execution Status**: breaking down all executed tests' results by four result status categories: passed, failed, error, and skipped. 
 
-- Click Apply to refresh
-
-For scope options, see [Understanding Analysis Scope Types](/docs/getting-started/analysis-scope-types).
-
-### Filter by Test Case Author
-
-- Click Author dropdown
-
-- Select one or multiple authors
-
-- Clear filter by clicking X or deselecting all
-
-Use this to review individual team member test quality.
-
-### Filter by Test Case Type
-
-- Click Type dropdown
-
-- Choose: Automated, Manual, or Both (default)
-
-- Report recalculates pass rates for selected type
-
-Essential for assessing automation ROI.
-
-### Filter by Latest Status
-
-- Click Latest Status dropdown
-
-- Select: Passed, Failed, Error, or Skipped
-
-- Data table updates to show matching test cases
-
-Common use: Filter to "Failed" and "Error" for prioritized fix lists.
-
-### Filter by Executor
-
-- Click Last Executed By dropdown
-
-- Select executors (users or agents)
-
-- View test cases by specific executor
-
-Helps identify environment issues or training needs.
-
-### Combining Filters
-
-Sprint health check: Set scope to "Last 7 days" + Type "Automated" + Status "Failed/Error"
-
-Manual testing review: Type "Manual" + specific Author/Executor
-
-Filters persist across navigation. Click Clear All Filters to reset.
-
-## How to Interpret Visualizations
-
-### Pie Chart Analysis
-
-The status distribution pie chart shows test case health at a glance:
-
-- Each slice = status category (Passed, Failed, Error, Skipped)
-
-- Hover for exact counts and percentages
-
-- Color coding: Green (Passed), Red (Failed), Orange (Error), Gray (Skipped)
-
-Concerning patterns:
+    Concerning patterns:
 
 - Failed greater than 10%: Product quality issues or test maintenance needed
-
 - Error greater than 5%: Infrastructure problems or brittle scripts
-
 - Skipped greater than 15%: Disabled tests may hide quality issues
 
-Healthy suite: Passed 85-95%+, Failed less than 5%, Error less than 3%, Skipped less than 10%
+    Healthy suite: Passed 85-95%+, Failed less than 5%, Error less than 3%, Skipped less than 10%
+- **Test Flakiness Distribution**: breaking down executed tests by flakiness categories: stable, potentially flaky, flaky, highly flaky.
+- **Data table**: listing test case names with basic details and link to its latest result.
 
-### Pass Rate Breakdown
+With the data table, you can :
 
-Compares automation and manual test effectiveness:
+- Sort data by each column.
+- View a test case details, or its latest result.
 
-- Automation Pass Rate: Percentage of automated tests passed
+4. Data sharing and exporting
 
-- Manual Pass Rate: Percentage of manual tests passed
+You can share a view with existing filters, for easy revisiting:
 
-- Calculation: (Passed / Total executed) × 100
+<img/>
 
-Interpreting differences:
+Each view can be exported to a CSV file, or shared with stakeholders:
 
-- Automation higher: Reliable; expand automated coverage
-
-- Manual higher: Automation may be brittle; review stability
-
-- Both high (greater than 90%): Balanced, healthy approach
-
-- Both low (less than 80%): Product quality issues
-
-Benchmarks: Excellent 95-100%, Good 90-94%, Warning 80-89%, Critical less than 80%
-
-For quality thresholds, see [Configuring Quality Gates](/docs/dashboards/configuring-quality-gates).
-
-### Total Counts & Summary Statistics
-
-The summary banner displays:
-
-- Total Test Cases: All test cases in scope
-
-- Executed: Run at least once in period
-
-- Not Executed: No execution history in period
-
-- Overall Pass Rate: Combined across types
-
-High "Not Executed" may indicate new tests not yet in runs, disabled tests, or selective execution strategies.
-
-## How to Use the Data Table
-
-Columns:
-
-- ID - Clickable link to test case details
-
-- Name - Test case descriptive name
-
-- Type - Automated or Manual
-
-- Last Executed By - User or agent
-
-- Last Execution Time - Most recent execution
-
-- Latest Status - Visual indicator (🟢 Passed, 🔴 Failed, 🟠 Error, ⚪ Skipped)
-
-Sorting and searching:
-
-- Click column headers to sort ascending/descending
-
-- Use search box to filter by name or ID
-
-- Sort by "Latest Status" to group failed tests
-
-Navigating to details:
-
-- Click any ID or Name to view execution history, failure patterns, requirements, logs
-
-- Use browser back to return
-
-Exporting:
-
-- Click Export button (CSV or Excel)
-
-- Use for executive reports, retrospectives, trend analysis, compliance
+<img/>
 
 ## Common Use Cases & Workflows
 
@@ -394,8 +102,6 @@ Check failure patterns in details
 Flag flaky tests for maintenance
 
 Success metric: Automation pass rate equal to or higher than manual
-
-For stability analysis, see [Test Stability Intelligence](/docs/customization/test-stability-intelligence).
 
 ### Team Performance Review
 
@@ -454,24 +160,3 @@ Workflow:
 - Track resolution by monitoring when tests return to "Passed"
 
 For defect linking guidance, see [Analyzing Defects](/docs/defects/analyzing-defects-and-issues).
-
-### Why are some test cases showing 'No Status'?
-
-### How do I filter to only flaky tests?
-
-### Can I track pass rate trends over time?
-
-### What's the difference between Error and Failed status?
-
-
-### Step 2: Accessing the Test Results Page
-
-- From the TestOps main menu, select Test Results (or Test Cases if you prefer test-centric view)
-
-- Select the project, release, or test suite you want to analyze
-
-- Look for the Stability Intelligence toggle or filter in the page toolbar
-
-- Enable Show Stability Indicators to display PFS scores and Smart Tags in the test list
-
--->

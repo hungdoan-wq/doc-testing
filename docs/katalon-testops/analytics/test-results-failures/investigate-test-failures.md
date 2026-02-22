@@ -1,11 +1,11 @@
 # Tutorial: Investigate Failures 
 
-This document is a tutorial on how to investigate failed tests root cause using TestOps Analytics capabilities.
+This document explains how to investigate failed tests root cause using TestOps Analytics capabilities.
 
-:::requirements
+:::requirement
 - Access to Katalon TestOps with Viewer role or higher. See [Roles in TestOps] for more information.
 - Failed tests in the concerned time frame/release/sprint.
-:::
+:::endrequirement
 
 ## Overview
 

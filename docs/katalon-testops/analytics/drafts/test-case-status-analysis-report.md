@@ -32,14 +32,14 @@ style={{ width: "100%", height: "400px", border: "none" }}>
 
 1. Navigate to **Home > All Reports > Test Case Status Analysis** from the main dashboard.
 2. **Choose a View**
-    - **Automated Test Cases Only** – Focuses analysis on automated executions, including flakiness and stability metrics.
-    - **All Test Cases (Automated & Manual)** – Provides a holistic view of test execution status across both automated and manual test cases.
+- **Automated Test Cases Only** – Focuses analysis on automated executions, including flakiness and stability metrics.
+- **All Test Cases (Automated & Manual)** – Provides a holistic view of test execution status across both automated and manual test cases.
 3. **Set the Analysis Scope**: Select the desired time range, release, or sprint.
 4. Review the **Stability Counts** at the top of the report to quickly see counts of troubling test cases in the scope:
-    - **Flaky**
-    - **New Failure**
-    - **Always Fail**
-    - **Slow**
+- **Flaky**
+- **New Failure**
+- **Always Fail**
+- **Slow**
 5. Analyze the **Test Case Distribution by Execution Status** pie chart to understand overall execution outcomes.
 6. Examine the **Test Flakiness Distribution** pie chart to assess test stability across flakiness categories - **stable** or **flaky** (highly flaky and/or potentially flaky).
 7. Scroll down to the **Test Case Data Table** for detailed, test-level insights.
@@ -93,16 +93,16 @@ Provides a clearer, more actionable view of test reliability - you can click on 
 
 A sortable, filterable data table listing key test case attributes:
 
-    - Test Case ID and Name  
-    - Latest Result
-    - Type (Automated / Manual)  
-    - Failure Rate – Percentage of failed executions within the selected scope
-    - PFS Score – Pass/Fail Stability score indicating execution consistency
-    - Median Duration – Median execution time calculated using P50
-    - Executor  
-    - Tags
-    - Last Executed At  
-    - Source – Origin of the test case (for example, repository or integration)
+- Test Case ID and Name  
+- Latest Result
+- Type (Automated / Manual)  
+- Failure Rate – Percentage of failed executions within the selected scope
+- PFS Score – Pass/Fail Stability score indicating execution consistency
+- Median Duration – Median execution time calculated using P50
+- Executor  
+- Tags
+- Last Executed At  
+- Source – Origin of the test case (for example, repository or integration)
 
 <img src="https://tw-cdn.katalon.com/katalon-platform/Analyze/Reports/testops-test-case-health-analytics-report-table.png" alt="testops test case health analytics report table" width="800px" />
 <br/>

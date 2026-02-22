@@ -11,7 +11,7 @@ This report is especially useful when:
 - You want to prioritize failures that occur most frequently
 - You want to assess test stability over time
 
-## Explore the Report
+## Get Started
 
 :::requirement
 Any failed test cases in your concerned scope. Patterns are clearer with at least 10-20 failures.
@@ -30,14 +30,14 @@ Go to **Home > All Reports > Test Failures Analysis Report**
 Before analyzing patterns, scope your data to a relevant subset. Below are a few examples:
 
   - By time range:
-    - Last 7 days: Recent failures and current sprint issues
-    - Last 30 days: Broader pattern detection across multiple sprints
-    - Custom date range: Target specific release cycles or deployment windows
+- Last 7 days: Recent failures and current sprint issues
+- Last 30 days: Broader pattern detection across multiple sprints
+- Custom date range: Target specific release cycles or deployment windows
 
   - Filter by test suite (optional): Narrow analysis to specific test suites if investigating targeted areas
-    - Regression suite: Critical path failures
-    - Smoke tests: High-priority basic functionality issues
-    - Feature-specific suites: Isolated feature investigation
+- Regression suite: Critical path failures
+- Smoke tests: High-priority basic functionality issues
+- Feature-specific suites: Isolated feature investigation
 
 ### Step 3: Prioritize test cases by failure rates
 

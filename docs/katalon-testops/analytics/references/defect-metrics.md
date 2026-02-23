@@ -258,7 +258,7 @@ Relationship:
 Accumulated Open Defects (End of Period) =
     Accumulated Open Defects (Start of Period)
     + Created Defects (This Period)
-    - Closed Defects (This Period)
+- Closed Defects (This Period)
 
 Example:
 

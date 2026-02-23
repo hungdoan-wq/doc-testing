@@ -63,19 +63,12 @@ ${marked.parse(t[2].trim())}
     }
   );
 
-  // 3. ADMONITIONS
   md = md.replace(
-    /:::(note|tip|info|warning|danger)\s*([\s\S]*?):::end\1/g,
-    (_, type, content) => `
-<div class="admonition ${type}">
-  <div class="admonition-title">${type}</div>
-  <div class="admonition-content">
-
-${marked.parse(content.trim())}
-
-  </div>
-</div>`
+    /^:::(note|tip|info|warning|danger|requirement)[ \t]*\r?\n([\s\S]*?)^\s*:::end\1[ \t]*$/gm,
+    (_, type, content) => `<div class="admonition ${type}"><div class="admonition-title">${type}</div><div class="admonition-content">${marked.parse(content.trim())}</div></div>`
   );
+
+
 
   return md;
 }

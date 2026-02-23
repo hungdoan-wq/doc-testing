@@ -92,6 +92,17 @@
   border-left-color: #22c55e;
 }
 
+main {
+  text-align: left; /* Aligns all inline content to the left */
+}
+
+main img {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+
 .tabs {
   margin: 24px 0;
 }
@@ -709,3 +720,4 @@ body {
   color: var(--primary);
   text-decoration: underline;
 }
+

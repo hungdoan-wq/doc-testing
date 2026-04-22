@@ -1,0 +1,12 @@
+{
+  "path" : "/Users/hung.doan/Katalon Studio/web browser test/OpenAPI Specification/test",
+  "configurations" : [ {
+    "id" : "config-1a3909b5",
+    "name" : "Config 1",
+    "serverUrl" : "https://api.example.com/v1",
+    "testTypes" : [ "POSITIVE", "NEGATIVE" ],
+    "apiPaths" : [ "/todos/{id}" ],
+    "httpMethods" : [ "DELETE", "GET" ]
+  } ],
+  "lastUsedConfigId" : "config-1a3909b5"
+}

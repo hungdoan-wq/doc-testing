@@ -1,0 +1,256 @@
+openapi: 3.1.0
+info:
+  title: Sample To-Do API
+  version: 1.0.0
+  description: |
+    A minimal example OpenAPI spec for a simple to-do service.
+    Includes basic CRUD endpoints, reusable schemas, and bearer auth.
+servers:
+  - url: https://api.example.com/v1
+    description: Production
+  - url: http://localhost:8080/v1
+    description: Local dev
+tags:
+  - name: todos
+    description: Manage to-do items
+paths:
+  /todos:
+    get:
+      tags: [todos]
+      summary: List to-dos
+      operationId: listTodos
+      parameters:
+        - name: limit
+          in: query
+          description: Max number of items to return
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 200
+            default: 50
+        - name: status
+          in: query
+          description: Filter by status
+          required: false
+          schema:
+            $ref: '#/components/schemas/TodoStatus'
+      responses:
+        '200':
+          description: A paginated list of to-dos
+          headers:
+            X-Next-Page:
+              description: Cursor for the next page (omit if no more pages)
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Todo'
+                  count:
+                    type: integer
+                    example: 2
+              examples:
+                sample:
+                  value:
+                    items:
+                      - id: "td_01"
+                        title: "Ship OpenAPI spec"
+                        status: "open"
+                        dueDate: "2025-10-31"
+                      - id: "td_02"
+                        title: "Refactor handlers"
+                        status: "done"
+                        completedAt: "2025-10-10T14:12:03Z"
+                    count: 2
+    post:
+      tags: [todos]
+      summary: Create a to-do
+      operationId: createTodo
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewTodo'
+            examples:
+              default:
+                value:
+                  title: "Write tests"
+                  dueDate: "2025-11-01"
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todo'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  /todos/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        description: To-do identifier
+        schema:
+          type: string
+    get:
+      tags: [todos]
+      summary: Get a to-do
+      operationId: getTodo
+      responses:
+        '200':
+          description: The to-do
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todo'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    patch:
+      tags: [todos]
+      summary: Update a to-do
+      operationId: updateTodo
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: '#/components/schemas/NewTodo'
+              description: Partial update; send only fields to change
+      responses:
+        '200':
+          description: Updated to-do
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todo'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    delete:
+      tags: [todos]
+      summary: Delete a to-do
+      operationId: deleteTodo
+      security:
+        - bearerAuth: []
+      responses:
+        '204':
+          description: Deleted successfully
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  responses:
+    BadRequest:
+      description: The request was invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          examples:
+            badInput:
+              value:
+                code: "bad_request"
+                message: "limit must be between 1 and 200"
+    Unauthorized:
+      description: Authentication required or invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          examples:
+            noToken:
+              value:
+                code: "unauthorized"
+                message: "Missing or invalid bearer token"
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          examples:
+            missing:
+              value:
+                code: "not_found"
+                message: "To-do not found"
+  schemas:
+    TodoStatus:
+      type: string
+      enum: [open, done, archived]
+    Todo:
+      type: object
+      required: [id, title, status]
+      properties:
+        id:
+          type: string
+          example: "td_01"
+        title:
+          type: string
+          example: "Ship OpenAPI spec"
+        description:
+          type: string
+          nullable: true
+        status:
+          $ref: '#/components/schemas/TodoStatus'
+        dueDate:
+          type: string
+          format: date
+          nullable: true
+        createdAt:
+          type: string
+          format: date-time
+          example: "2025-10-20T10:00:00Z"
+        completedAt:
+          type: string
+          format: date-time
+          nullable: true
+    NewTodo:
+      type: object
+      required: [title]
+      properties:
+        title:
+          type: string
+          minLength: 1
+        description:
+          type: string
+        dueDate:
+          type: string
+          format: date
+        status:
+          $ref: '#/components/schemas/TodoStatus'
+          description: Optional at create; defaults to "open"
+    Error:
+      type: object
+      required: [code, message]
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+externalDocs:
+  description: OpenAPI specification docs
+  url: https://spec.openapis.org/oas/v3.1.0

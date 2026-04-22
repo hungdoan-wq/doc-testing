@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Login to CURA demo site using variables from default execution profile and verify Appointment page after login.</description>
+   <name>TC_Login_With_Default_Profile</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2c138de8-984d-4e6f-ac54-ce387efaa8cd</testCaseGuid>
+</TestCaseEntity>

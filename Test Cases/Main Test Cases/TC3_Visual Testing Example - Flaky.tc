@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Visual Testing example with additional waits/retry to reduce flakiness on visual checkpoints and booking action.</description>
+   <name>TC3_Visual Testing Example - Flaky</name>
+   <tag>GenAI</tag>
+   <comment></comment>
+   <origin>STUDIOASSIST</origin>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>90d80f19-71cc-4da6-a47e-1c9f8b8b38f6</testCaseGuid>
+</TestCaseEntity>

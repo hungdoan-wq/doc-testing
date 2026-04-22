@@ -1,0 +1,228 @@
+1
+00:00:00,049 --> 00:00:00,056
+1. creds = findTestData("Data Files/Login_Credentials_Random")
+
+2
+00:00:00,061 --> 00:00:00,063
+5. assert creds != null : "Test data not found: Data Files/Login_Credentials_Random"
+
+3
+00:00:00,063 --> 00:00:00,068
+9. logInfo("[DEBUG] class=" + getClass().getName())
+
+4
+00:00:00,069 --> 00:00:00,070
+13. logInfo("[DEBUG] type=" + creds.getType())
+
+5
+00:00:00,071 --> 00:00:00,072
+17. logInfo("[DEBUG] sourceUrl=" + creds.getSourceUrl())
+
+6
+00:00:00,073 --> 00:00:00,076
+21. logInfo("[DEBUG] rowCount=" + creds.getRowNumbers())
+
+7
+00:00:00,076 --> 00:00:00,077
+25. rowCount = creds.getRowNumbers()
+
+8
+00:00:00,078 --> 00:00:00,078
+29. assert rowCount > 0 : "No rows found in Data Files/Login_Credentials_Random"
+
+9
+00:00:00,079 --> 00:00:00,087
+33. pickedRow = 1 + Random().nextInt(rowCount)
+
+10
+00:00:00,087 --> 00:00:00,092
+37. username = creds.getValue("username", pickedRow)
+
+11
+00:00:00,092 --> 00:00:00,093
+41. password = creds.getValue("password", pickedRow)
+
+12
+00:00:00,094 --> 00:00:04,876
+45. openBrowser("")
+
+13
+00:00:04,876 --> 00:00:05,401
+49. maximizeWindow()
+
+14
+00:00:05,402 --> 00:00:11,741
+53. navigateToUrl(G_SiteURL)
+
+15
+00:00:11,741 --> 00:00:11,743
+57. waitForElementVisible(byCss("#btn-make-appointment"), G_Timeout)
+
+16
+00:00:11,743 --> 00:00:11,755
+1. to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+
+17
+00:00:11,755 --> 00:00:11,760
+5. to.addProperty("css", EQUALS, css)
+
+18
+00:00:11,760 --> 00:00:12,077
+9. return to
+
+19
+00:00:12,077 --> 00:00:12,078
+61. click(byCss("#btn-make-appointment"))
+
+20
+00:00:12,078 --> 00:00:12,079
+1. to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+
+21
+00:00:12,079 --> 00:00:12,079
+5. to.addProperty("css", EQUALS, css)
+
+22
+00:00:12,079 --> 00:00:13,314
+9. return to
+
+23
+00:00:13,314 --> 00:00:13,315
+65. waitForElementVisible(byCss("#login"), G_Timeout)
+
+24
+00:00:13,316 --> 00:00:13,317
+1. to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+
+25
+00:00:13,318 --> 00:00:13,320
+5. to.addProperty("css", EQUALS, css)
+
+26
+00:00:13,320 --> 00:00:13,670
+9. return to
+
+27
+00:00:13,670 --> 00:00:13,671
+69. verifyElementPresent(byCss("#login"), G_Timeout)
+
+28
+00:00:13,671 --> 00:00:13,672
+1. to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+
+29
+00:00:13,673 --> 00:00:13,676
+5. to.addProperty("css", EQUALS, css)
+
+30
+00:00:13,676 --> 00:00:13,915
+9. return to
+
+31
+00:00:13,915 --> 00:00:13,917
+73. waitForElementVisible(byCss("#txt-username"), G_Timeout)
+
+32
+00:00:13,917 --> 00:00:13,918
+1. to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+
+33
+00:00:13,918 --> 00:00:13,919
+5. to.addProperty("css", EQUALS, css)
+
+34
+00:00:13,919 --> 00:00:14,146
+9. return to
+
+35
+00:00:14,146 --> 00:00:14,147
+77. setText(byCss("#txt-username"), username)
+
+36
+00:00:14,147 --> 00:00:14,148
+1. to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+
+37
+00:00:14,148 --> 00:00:14,148
+5. to.addProperty("css", EQUALS, css)
+
+38
+00:00:14,148 --> 00:00:14,770
+9. return to
+
+39
+00:00:14,771 --> 00:00:14,771
+81. waitForElementVisible(byCss("#txt-password"), G_Timeout)
+
+40
+00:00:14,771 --> 00:00:14,772
+1. to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+
+41
+00:00:14,772 --> 00:00:14,772
+5. to.addProperty("css", EQUALS, css)
+
+42
+00:00:14,772 --> 00:00:14,998
+9. return to
+
+43
+00:00:14,999 --> 00:00:14,999
+85. setText(byCss("#txt-password"), password)
+
+44
+00:00:14,999 --> 00:00:15,000
+1. to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+
+45
+00:00:15,000 --> 00:00:15,000
+5. to.addProperty("css", EQUALS, css)
+
+46
+00:00:15,000 --> 00:00:15,537
+9. return to
+
+47
+00:00:15,538 --> 00:00:15,545
+89. click(byCss("#btn-login"))
+
+48
+00:00:15,545 --> 00:00:15,546
+1. to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+
+49
+00:00:15,546 --> 00:00:15,547
+5. to.addProperty("css", EQUALS, css)
+
+50
+00:00:15,548 --> 00:00:16,375
+9. return to
+
+51
+00:00:16,379 --> 00:00:16,383
+93. waitForElementVisible(byCss("#appointment"), G_Timeout)
+
+52
+00:00:16,383 --> 00:00:16,388
+1. to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+
+53
+00:00:16,389 --> 00:00:16,396
+5. to.addProperty("css", EQUALS, css)
+
+54
+00:00:16,396 --> 00:00:26,421
+9. return to
+
+55
+00:00:26,421 --> 00:00:26,423
+97. verifyElementPresent(byCss("#appointment"), G_Timeout)
+
+56
+00:00:26,423 --> 00:00:26,424
+1. to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+
+57
+00:00:26,425 --> 00:00:26,425
+5. to.addProperty("css", EQUALS, css)
+

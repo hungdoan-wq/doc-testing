@@ -1,0 +1,82 @@
+2026-04-22 16:52:59.930 INFO  c.k.k.c.l.logback.LogbackConfigurator    - Logback default configuration initialized from: /Users/hung.doan/Downloads/Katalon Studio 5.app/Contents/Eclipse/configuration/org.eclipse.osgi/150/0/.cp/resources/logback/logback-execution.xml
+2026-04-22 16:52:59.932 INFO  c.k.k.c.l.logback.LogbackConfigurator    - Logback custom configuration initialized from: /Users/hung.doan/Katalon Studio/web browser test/Include/config/log.properties
+2026-04-22 16:53:00.352 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/login suite
+2026-04-22 16:53:00.389 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Hung Chris Doan
+2026-04-22 16:53:00.389 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = test
+2026-04-22 16:53:00.389 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = hung.doan - 10.18.45.209
+2026-04-22 16:53:00.389 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Mac OS X 64bit
+2026-04-22 16:53:00.390 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 10.18.45.209
+2026-04-22 16:53:00.390 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 11.1.2.0
+2026-04-22 16:53:00.465 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-04-22 16:53:00.465 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Login/TC_Login_With_Default_Profile
+2026-04-22 16:53:00.970 DEBUG testcase.TC_Login_With_Default_Profile   - 1: creds = findTestData("Data Files/Login_Credentials_Random")
+2026-04-22 16:53:00.983 DEBUG testcase.TC_Login_With_Default_Profile   - 2: assert creds != null : "Test data not found: Data Files/Login_Credentials_Random"
+2026-04-22 16:53:00.984 DEBUG testcase.TC_Login_With_Default_Profile   - 3: logInfo("[DEBUG] class=" + getClass().getName())
+2026-04-22 16:53:00.989 INFO  com.kms.katalon.core.util.KeywordUtil    - [DEBUG] class=com.kms.katalon.core.testdata.InternalData
+2026-04-22 16:53:00.990 DEBUG testcase.TC_Login_With_Default_Profile   - 4: logInfo("[DEBUG] type=" + creds.getType())
+2026-04-22 16:53:00.991 INFO  com.kms.katalon.core.util.KeywordUtil    - [DEBUG] type=InternalData
+2026-04-22 16:53:00.992 DEBUG testcase.TC_Login_With_Default_Profile   - 5: logInfo("[DEBUG] sourceUrl=" + creds.getSourceUrl())
+2026-04-22 16:53:00.993 INFO  com.kms.katalon.core.util.KeywordUtil    - [DEBUG] sourceUrl=/Users/hung.doan/Katalon Studio/web browser test/Data Files/Login_Credentials_Random.dat
+2026-04-22 16:53:00.994 DEBUG testcase.TC_Login_With_Default_Profile   - 6: logInfo("[DEBUG] rowCount=" + creds.getRowNumbers())
+2026-04-22 16:53:00.997 INFO  com.kms.katalon.core.util.KeywordUtil    - [DEBUG] rowCount=6
+2026-04-22 16:53:00.998 DEBUG testcase.TC_Login_With_Default_Profile   - 7: rowCount = creds.getRowNumbers()
+2026-04-22 16:53:00.999 DEBUG testcase.TC_Login_With_Default_Profile   - 8: assert rowCount > 0 : "No rows found in Data Files/Login_Credentials_Random"
+2026-04-22 16:53:01.000 DEBUG testcase.TC_Login_With_Default_Profile   - 9: pickedRow = 1 + Random().nextInt(rowCount)
+2026-04-22 16:53:01.008 DEBUG testcase.TC_Login_With_Default_Profile   - 10: username = creds.getValue("username", pickedRow)
+2026-04-22 16:53:01.013 DEBUG testcase.TC_Login_With_Default_Profile   - 11: password = creds.getValue("password", pickedRow)
+2026-04-22 16:53:01.015 DEBUG testcase.TC_Login_With_Default_Profile   - 12: openBrowser("")
+2026-04-22 16:53:01.135 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome (headless)' driver
+2026-04-22 16:53:01.138 INFO  c.k.k.c.w.util.WebDriverPropertyUtil     - User set preference: ['prefs', '{profile.password_manager_leak_detection=false}']
+2026-04-22 16:53:01.157 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+2026-04-22 16:53:05.765 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 4c4bbc296378bb29d5dd6739ae47ca7e
+2026-04-22 16:53:05.766 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 146.0.7680.165
+2026-04-22 16:53:05.766 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Mac OS X
+2026-04-22 16:53:05.767 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.39.0
+2026-04-22 16:53:05.771 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2026-04-22 16:53:05.798 DEBUG testcase.TC_Login_With_Default_Profile   - 13: maximizeWindow()
+2026-04-22 16:53:06.323 DEBUG testcase.TC_Login_With_Default_Profile   - 14: navigateToUrl(G_SiteURL)
+2026-04-22 16:53:12.663 DEBUG testcase.TC_Login_With_Default_Profile   - 15: waitForElementVisible(byCss("#btn-make-appointment"), G_Timeout)
+2026-04-22 16:53:12.665 DEBUG testcase.TC_Login_With_Default_Profile   - 1: to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+2026-04-22 16:53:12.676 DEBUG testcase.TC_Login_With_Default_Profile   - 2: to.addProperty("css", EQUALS, css)
+2026-04-22 16:53:12.681 DEBUG testcase.TC_Login_With_Default_Profile   - 3: return to
+2026-04-22 16:53:12.998 DEBUG testcase.TC_Login_With_Default_Profile   - 16: click(byCss("#btn-make-appointment"))
+2026-04-22 16:53:12.999 DEBUG testcase.TC_Login_With_Default_Profile   - 1: to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+2026-04-22 16:53:13.000 DEBUG testcase.TC_Login_With_Default_Profile   - 2: to.addProperty("css", EQUALS, css)
+2026-04-22 16:53:13.000 DEBUG testcase.TC_Login_With_Default_Profile   - 3: return to
+2026-04-22 16:53:14.235 DEBUG testcase.TC_Login_With_Default_Profile   - 17: waitForElementVisible(byCss("#login"), G_Timeout)
+2026-04-22 16:53:14.237 DEBUG testcase.TC_Login_With_Default_Profile   - 1: to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+2026-04-22 16:53:14.239 DEBUG testcase.TC_Login_With_Default_Profile   - 2: to.addProperty("css", EQUALS, css)
+2026-04-22 16:53:14.241 DEBUG testcase.TC_Login_With_Default_Profile   - 3: return to
+2026-04-22 16:53:14.591 DEBUG testcase.TC_Login_With_Default_Profile   - 18: verifyElementPresent(byCss("#login"), G_Timeout)
+2026-04-22 16:53:14.592 DEBUG testcase.TC_Login_With_Default_Profile   - 1: to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+2026-04-22 16:53:14.594 DEBUG testcase.TC_Login_With_Default_Profile   - 2: to.addProperty("css", EQUALS, css)
+2026-04-22 16:53:14.597 DEBUG testcase.TC_Login_With_Default_Profile   - 3: return to
+2026-04-22 16:53:14.837 DEBUG testcase.TC_Login_With_Default_Profile   - 19: waitForElementVisible(byCss("#txt-username"), G_Timeout)
+2026-04-22 16:53:14.838 DEBUG testcase.TC_Login_With_Default_Profile   - 1: to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+2026-04-22 16:53:14.839 DEBUG testcase.TC_Login_With_Default_Profile   - 2: to.addProperty("css", EQUALS, css)
+2026-04-22 16:53:14.840 DEBUG testcase.TC_Login_With_Default_Profile   - 3: return to
+2026-04-22 16:53:15.068 DEBUG testcase.TC_Login_With_Default_Profile   - 20: setText(byCss("#txt-username"), username)
+2026-04-22 16:53:15.068 DEBUG testcase.TC_Login_With_Default_Profile   - 1: to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+2026-04-22 16:53:15.069 DEBUG testcase.TC_Login_With_Default_Profile   - 2: to.addProperty("css", EQUALS, css)
+2026-04-22 16:53:15.069 DEBUG testcase.TC_Login_With_Default_Profile   - 3: return to
+2026-04-22 16:53:15.692 DEBUG testcase.TC_Login_With_Default_Profile   - 21: waitForElementVisible(byCss("#txt-password"), G_Timeout)
+2026-04-22 16:53:15.693 DEBUG testcase.TC_Login_With_Default_Profile   - 1: to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+2026-04-22 16:53:15.693 DEBUG testcase.TC_Login_With_Default_Profile   - 2: to.addProperty("css", EQUALS, css)
+2026-04-22 16:53:15.694 DEBUG testcase.TC_Login_With_Default_Profile   - 3: return to
+2026-04-22 16:53:15.920 DEBUG testcase.TC_Login_With_Default_Profile   - 22: setText(byCss("#txt-password"), password)
+2026-04-22 16:53:15.920 DEBUG testcase.TC_Login_With_Default_Profile   - 1: to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+2026-04-22 16:53:15.921 DEBUG testcase.TC_Login_With_Default_Profile   - 2: to.addProperty("css", EQUALS, css)
+2026-04-22 16:53:15.921 DEBUG testcase.TC_Login_With_Default_Profile   - 3: return to
+2026-04-22 16:53:16.460 DEBUG testcase.TC_Login_With_Default_Profile   - 23: click(byCss("#btn-login"))
+2026-04-22 16:53:16.466 DEBUG testcase.TC_Login_With_Default_Profile   - 1: to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+2026-04-22 16:53:16.467 DEBUG testcase.TC_Login_With_Default_Profile   - 2: to.addProperty("css", EQUALS, css)
+2026-04-22 16:53:16.469 DEBUG testcase.TC_Login_With_Default_Profile   - 3: return to
+2026-04-22 16:53:17.301 DEBUG testcase.TC_Login_With_Default_Profile   - 24: waitForElementVisible(byCss("#appointment"), G_Timeout)
+2026-04-22 16:53:17.306 DEBUG testcase.TC_Login_With_Default_Profile   - 1: to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+2026-04-22 16:53:17.310 DEBUG testcase.TC_Login_With_Default_Profile   - 2: to.addProperty("css", EQUALS, css)
+2026-04-22 16:53:17.317 DEBUG testcase.TC_Login_With_Default_Profile   - 3: return to
+2026-04-22 16:53:27.339 WARN  k.k.c.w.k.b.WaitForElementVisibleKeyword - Web element with id: 'css=#appointment' located by 'By.cssSelector: #appointment' not found
+2026-04-22 16:53:27.343 DEBUG testcase.TC_Login_With_Default_Profile   - 25: verifyElementPresent(byCss("#appointment"), G_Timeout)
+2026-04-22 16:53:27.344 DEBUG testcase.TC_Login_With_Default_Profile   - 1: to = new com.kms.katalon.core.testobject.TestObject((css= + css))
+2026-04-22 16:53:27.346 DEBUG testcase.TC_Login_With_Default_Profile   - 2: to.addProperty("css", EQUALS, css)
+2026-04-22 16:53:27.347 DEBUG testcase.TC_Login_With_Default_Profile   - 3: return to
